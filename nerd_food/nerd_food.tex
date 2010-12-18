@@ -1,0 +1,3623 @@
+\documentclass{memoir}
+% change paper size to novel.
+\usepackage[a5paper,twoside]{geometry}
+
+% enable graphics, needed to display the pictures.
+\usepackage[pdftex]{graphicx}
+
+% print pages with header, footer and page number.
+%\pagestyle{headings}
+
+% supplies in-line enumerations.
+\usepackage{paralist}
+
+% increase the size of the mini page width for epigraphs.
+\setlength{\epigraphwidth}{.5\textwidth}
+
+\setlength{\parskip}{0.2ex plus 0.0ex minus 0.0ex}
+
+\usepackage{lettrine}
+
+\begin{document}
+\pagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\HUGE\textsf{Nerd Food: $\leq$ 2009}\par
+\end{center}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{pics/lonsv-babb-nerbild} % [angle=90, width=0.7\textwidth]
+\end{center}
+\end{figure}
+
+\vspace*{\fill}
+\begin{center}
+\Large\textsf{Marco Craveiro}\par
+\end{center}
+
+\clearpage
+\pagestyle{headings}
+\chapter*{}
+\begin{flushright}
+\emph{FIXME: Dedication}
+
+\bigskip
+
+\end{flushright}
+
+\clearpage
+\pagestyle{headings}
+\tableofcontents
+
+\chapter*{Acknowledgements}
+\begin{epigraphs}
+\qitem{test}
+      {test}
+\end{epigraphs}
+
+\chapter*{Introduction}
+
+here
+
+\chapter{My Emacs and I}
+
+\begin{epigraphs}
+\qitem{Anyone could learn Lisp in one day, except that if they already
+  knew Fortran, it would take three days.}
+      {Marvin Minsky}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Circa 1999.}
+\end{flushright}
+
+\lettrine{W}{hen} you are a newbie both to C and to Linux the world is
+bleak, dark and full of menaces. Every time there is an extremely
+upsetting bug in a package you use often, say Gnome, you prefer
+avoiding it rather then solving the problem by reinstalling the newest
+version; pure windows luser logic. And that is what you feel, that you
+are a natural born luser. 23 years old, computer lover since 12 and
+you cannot recompile the kernel or even install packages from source:
+``darn, another dependency problem!  But why doesn't it \emph{just
+  work}?  Install Shield does!!''. People tell you about the
+advantages of the command line interface (CLI) and you start crying.
+
+I bet this is a very common picture. You see, I started using linux
+with RH 5.2 mainly because I was tired of DOS (the whole lot, starting
+with 3.0 to Windows 98), but also because I felt that I wasn't
+learning anymore. For Christ sake, if the NIC doesn't work then
+reinstall Windows and five times out of ten your problem is solved!
+And why can't I just exit the ``Network'' applet with an OK without
+waiting forever when I didn't make any alterations at all? Why
+reinstalling the same files and rebooting?  It was just wrong.
+
+But, just like a kid that lived his entire life in a small town, I was
+not prepared for the big OS; It was a huge and problematic change. My
+486/66 did not like Linux~--- I never managed to get past the
+``Calibrating delay loop'' message~--- and for 6 months I booted from
+a floppy. My 14'' monitor did only 640x400 in X and most programs at
+the time weren't made with people like me in mind; for example, while
+playing FreeCiv I had to move the window to see the bottom of the
+screen. Nothing compared to those days when you had to install Linux
+from floppies, the gurus will say, but bear in mind that Windows 95
+ran in my machine, in 800x600, and didn't complain a lot. Office 97
+was there without a problem.
+
+Still, there was something about this OS... Can't quite put it in
+words but it definetly had the same flair that my ZX Spectrum or
+Borland's Turbo Pascal had, long, long time ago. The fact that I now
+had in my computer the efforts of thousands of developers, the tools
+used by the biggest minds in the computing world for their daily
+hacking was very inspiring; I just couldn't quit and be a standard
+luser.
+
+And now~--- when I'm almost reaching my larval stage~--- I can see why
+I need to go through this ordeal, probably for years to come. It's
+because I was living a lie, because I thought I really knew about
+computers but in fact what I was learning was Microsoft speak, a
+language designed to take you away from the machine and get you into
+the world of ``easiness''. A world where you don't really need to know
+what you're doing because the wizards do it for you, and where people
+develop languages without believing the least in them. Where you are a
+certified systems engineer, but only for 12 months.
+
+Yes, that is the right attitude for the mainstream. After all, they
+buy the right clothes, the right music, the right tooth paste and the
+right OS because it is easy, its on the telly
+\footnote{Ken Tilton said it best:
+  \begin{quote}
+    That absolutely terrifies the herd-following, lockstep-marching,
+    mainstream-saluting cowards that obediently dash out or online to
+    scoop up books on The Latest Thing. They learn and use atrocities
+    like Java, C++, XML, and even Python for the security it gives
+    them and then sit there slaving away miserably, tediously,
+    joylously paying off mortgages and supporting ungrateful teenagers
+    who despise them, only to look out the double-sealed thermo-pane
+    windows of their central-heated, sound-proofed, dead-bolted,
+    suffocating little nests into the howling gale thinking ``what do
+    they know that I do not know?'' when they see us under a lean-to
+    hunched over our laptops to shield them from the rain laughing our
+    asses off as we write great code between bong hits.... what was
+    the question?
+  \end{quote}
+}. And if you don't, you're a rogue, end of story. But us, those who
+preferred hacking to playing, the ones who were genuiningly curious
+about the works of the beast, well, we were the betrayed
+generation. We were not commercially viable~--- and so, forgotten; we
+had to content ourselves with the demented GWBASIC while other people
+were experimenting with C. How many clever minds did humanity loose in
+this process? We'll never know.
+
+When KDE presented the beta version of their IDE, I sent a post in
+Slashdot praising them and also asking for some unity between the
+Gnome and KDE worlds. As some people pointed out, I was terribly
+wrong. The fact that you can still compile, edit and debug your code
+from emacs in text mode on a 386 is one of the biggest triumphs of the
+free software community; its not commercially viable, but then again,
+freedom is probably not commercially viable. Making things properly is
+never easy, but that shouldn't stop us from trying since it didn't
+stop R. Stallman, L. Tordsvalds or M. Khan\footnote{Mumit Khan,
+  incidentally, was an important figure in Cygwin around the long
+  forgotten days of the 18 or 19b release.} to name a few, and it's
+because of them we are now where we are.
+
+The way I see it, if you can't see the advantages of Linux, you were
+simply not made to be free. End of story.
+
+\chapter{Gnome: A User Perspective}
+
+\begin{epigraphs}
+\qitem{We cannot choose one desktop over the other~--- Gnome or
+  KDE~--- because there's users for both code bases.}
+      {Miguel de Icaza}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Circa 1999.}
+\end{flushright}
+
+\lettrine{T}{here's} been enough direct and indirect ranting on
+desktop environments over the last few weeks, from articles about how
+C and UNIX are not a match made in heaven to discussions on Slashdot
+that start with ``KDE 2.X is out'' and end with complaints on how
+``Gnome moves at a pace that is so much slower than KDE''. I know
+people are getting a bit tired of these sort of flamewars~--- and I
+apologise beforehand if what I'm about to say does cover the same
+ground~--- but I feel there is a need for some analysis from a user
+perspective.
+
+In particular, I would like to comment on some of the most
+controversial aspects of Gnome and give some ideas as to why things
+are like they are and where they may end in the future. I know I lack
+authority to speak about some matters, but this contribution strikes
+me has important since people with more authority seem to lack time or
+inclination; and although I am not a Gnome developer, I do use it
+since the bug infested days of 1.0.x and I do follow quite closely our
+community. So lets get the ball rolling.
+
+\section{Why does KDE move \emph{so} much faster than Gnome?}
+
+There are no easy explanations as to why people perceive gnome as
+being slow, but there are a few factors that might shed some
+light. Unfortunately, we have to go and dig a bit, back to those long
+forgotten days where licenses were still an issue. Lets make this as
+swift and painless as possible.
+
+\subsection{The history issue}
+
+As it is known to all, KDE made a very pragmatic decision when things
+were starting off and chose Qt as their toolkit. It was a decision
+based purely on technical merit, and on these grounds Qt had no real
+competitors. Unfortunately, Qt was not under a free license then (free
+as in speech), so this provoked a reaction from the GNU-er side of the
+community. Led by Miguel, developers got together and formed the Gnome
+project, with the goal of developing a totally free desktop
+environment. With time, Qt was re-licenced under the GPL, but by then
+it was too late~--- too much effort had already been done.
+
+Now, apart from all the nasty things that have been said by both sides
+and worldwide trolls, this event marked the future progression of
+these two projects. You see, KDE started off with a mature toolkit
+that offered many things programmers expect: a) a good, well
+documented API b) a lot of abstraction from GCC's problems
+with C++ c) a lot of man hours spent in making sure everything was in
+working order d) a lot of scope, being more of a framework for
+application development than a toolkit.
+
+With regards to d), I'm certainly not the right person to talk about
+Qt's merits as I have never done any development with it; but a quick
+glance at KDevelop shows me that it includes support for containers,
+XML, DOM, a socket abstraction, FTP, and a lot more.
+
+Also, one should not treat a) lightly. From my knowledge of wxWindows,
+Qt appears to be very well designed and quality of its design surely
+teaches new developers to try to follow the same practice, especially
+with an OO language. And while we're talking about new users,
+I think we all agree when I say that documentation by itself is almost
+decisive when learning something new (hence why I'm such a big
+fan of wxWindows). No one likes to be struggling with the language
+while at the same time trying to make sense of 3rd party libraries.
+
+On the other hand, things are quite different in our side of the
+fence. Whatever the circumstances were when decisions were made, we
+have to coldly deal with the present. Gnome folks are more like an
+architect who must worry about designing the building while
+simultaneously dealing with the production of almost all the materials
+he's going to use.
+
+As things stand (1.4), we lack maturity in GTK, in some important
+Gnome libraries, in most of our applications and in our
+documentation. All of this with varying degrees, of course. At this
+point I can hear you say ``Isn't that like, in everything?''
+
+Well, you must bear in mind that there are only so many programmers we
+can throw at a problem, especially at the boring ones. Worst, we cant
+just stop everything and focus our attention in making the building
+blocks because we are not a company. This makes our users and new
+developers very confused: why do I need so many libraries to get ZXY
+going? Why can't I have the latest X package and the latest Z package
+simultaneously? Where's the documentation for XYZ? Why is your file
+manager slow? And the answer is normally ``we're working on it!''.
+
+What we must not allow people to believe is that this is the Gnome way
+of doing things, that things are like they are on purpose. When they
+say ``we're working on it!'' they're actually working on it, and
+there's much to work on at the moment.
+
+Gnome people are not bad developers, lazy gits who don't care about
+documentation, or schizophrenic people who hate integration and love
+having different address books for each of its many mail
+applications. Its just that they're juggling with many balls at the
+same time and its hard to compete with people that juggle with less
+balls. Sometimes you are developing an application and have to stop
+and create or improve an entire library before you can go back to what
+you were doing. Obviously some of those libraries end up not having
+widespread use while some others are seen as The Right Thing (TM). Its
+all part of the learning process.
+
+And there's no point in saying ``if you had started with a more mature
+toolkit, you'd be much better off'', because when those decisions
+where taken the world was a very different place, regardless of which
+side you were on at the time, and now nothing can be done about it.
+
+But for those that think this is a bleak view of Gnome, it
+isn't. There is an extraordinary amount of work being done in a very
+short space of time, most of it in things that are not visible to end
+users, and the mere fact that people still put Gnome in line with KDE
+demonstrates the quality of the work.
+
+In fact, Gnome 2.0 will probably be a turning point in terms of
+professional-ness, because as time goes by the core gets stable and
+the side effect is we have more time on our hands so other things will
+get more CPU time and therefore improve; you cant worry about nifty
+documentation when the API itself is changing!
+
+Alas, when maturity is reached, we can count on our friends at SUN or
+IBM to start a professional documentation of all of the API, together
+with some nifty examples that will make any newbie a Gnome developer
+in no time. They'll be very interested in doing so by then, believe
+me. By then we'll also have a couple of nice IDE's to chose from so
+things will be much better for people starting.
+
+\subsection{The language issue}
+
+I have to say I am a big C++ fan; its my main language and I
+appreciate its elegance. But honestly do not believe the language is
+playing too important a role here. Lets think: in a UNIX environment,
+how many hackers are experts in C? How many have done it for years,
+and are experienced in developing large, complex applications?
+
+In fact, if we look at the work of a famous writer in OO theory,
+Bertrand Meyer, we can see that many of the things he considers to be
+determinant factors in a program are present in many C programs:
+robustness, correctness, extensibility, re-usability, compatibility,
+efficiency, portability. All of these apply to our beloved kernel~---
+excelling in some~--- and its done in C. (In terms of re-usability,
+although you cannot inherit functionality cleanly in C, it is
+certainly not the only way to reuse; at any rate I'd probably consider
+design reuse more important that code reuse.)
+
+Influenced by Meyer's thinking, I too believe OO is more of a way of
+thinking than it is a language, although languages can embody a bit of
+that way of thinking~--- and some do it more than others. While being
+designed strictly for OOP is an important advantage, it cannot be
+denied that years of experience produce results that are quite close
+to it.
+
+C++ is a language that requires a lot of experience in OO, a lot of
+theory to get the design right and that's why most large free software
+projects tend to be rather bad when done in C++~--- being Abiword,
+Mozilla, KDE and its applications some notable exceptions. I believe
+there is a very good explanation for these exceptions. All of the
+projects share one fact in common, and that is there were some very
+experienced C++ hackers that laid out the foundations, making tough
+structural decisions at an early stage. For instance, look at
+Abiword's source one of these days and you'll see things along the
+lines of Design Patterns; the code is absolutely
+marvellous\footnote{Changed my mind FIXME.}. That's not work of a kid in
+college that is learning as he goes along.
+
+More: to get a lot of people to that sort of level you need solid and
+proven standards, a good compiler that respects those standards, lots
+of time and lots of sample code to learn from. C++ just hasn't been
+out in the free software community long enough for us to have many
+expert hackers as we have in C. The standards are new (1998, I
+believe), the compiler is just out, the sample code is quite daunting
+and complex. The successful projects solve some of these problems by
+re-inventing a lot of the core functionality of C++ (for example, the
+STL is not very popular).
+
+Please note that I'm not saying KDE is where it is solely because its
+based on Qt; KDE developers have a lot of merit for things like their
+own object model, Konqueror, KDevelop, and many, many other
+applications that are astonishing accomplishments which cannot be
+argued with. But an important part of its structure is inherited from
+Qt and that gave them the solid foundations on which to build.
+
+My point being, it has little to do with the language and a lot more
+to do with maturity. Soon, when GTK reaches a level of maturity
+comparable to Qt, we'll see a lot less people saying that C is
+dead. There's just far too many good C hackers for that to be the
+truth.
+
+\section{Packaging issues}
+
+The second issue I think is interesting is the role of Ximian in the
+Gnome community. Their merit, knowledge and spirit cannot be argued
+with. But unfortunately, having a center of gravity as large as Ximian
+is generating some friction. Lets go through some problems we have at
+the moment.
+
+\subsection{Can the real Gnome please stand up?}
+
+It is most annoying when you get a Red Hat machine and it starts with
+a Red Hat Gnome, and I'm sure most people feel the same way. Red Hat
+is sometimes conservative on their tastes~--- so we don't get the most
+up to date stuff like we're used to with Ximian (or \emph{were} used
+to...); and for those unfortunate enough to live where Dial Up is
+king, upgrading is an issue.
+
+Besides, even if you do have the latest Gnome packaged by Red Hat, you
+may want to install something distributed by Ximian or vice-versa and
+although things may work well together, the idea of installing a
+package from different distros is daunting. Its almost like installing
+a Mandrake RPM in a Red Hat box: its probably scarier if it installs
+without any error messages.
+
+My view here is that we do not need this duplication of efforts, and I
+think it is doing a lot of damage in terms of public image. Just try
+to explain this to a newbie: not only there are multiple distros for
+the operative system, there are also multiple distros for the desktop
+environments!
+
+There's also the issue of package selection, or in other words, what
+gets included and what doesn't. A KDE standard install includes a lot
+more applications than a Ximian Gnome one, and that's not because of
+the lack of GTK/Gnome apps. Part of it is possibly to do with
+commercial reasons: Ximian wants a stable product, not a mix between
+solid and bleeding edge. Or it may be that they don't want to have to
+package too many things, instead they prefer to do less and do it
+well.
+
+Either way this is where things get tricky: if they're the main
+packager we're stuck and \emph{we} represents mainly the Dial Up crowd
+that can't spend hours hoping from site to site to get all the
+libraries and then get the new apps.
+
+So what do we need? I can see some solutions:
+
+\begin{itemize}
+\item We need to stop this packaging nonsense of my Gnome and your
+  Gnome. We need to have a standard packaging the Gnome core, with all
+  the libraries needed. That someone should be the distro. so Red Hat
+  would make RPM's for all the platforms it runs on. This core is
+  distributed as one package, that you can install or un-install
+  easily.
+\item This same core offers a set of tools that allow customisation
+  without rebuilding: change the initial splash screen, change the
+  menu's, etc. so that a distro can configure it without having to
+  rebuild it. And that should be the same for all platforms, different
+  binaries but same contents.
+\end{itemize}
+
+Just my two cents.
+
+\chapter{On Optimization}
+
+\begin{epigraphs}
+\qitem{You know you've achieved perfection in design, not when you
+  have nothing more to add, but when you have nothing more to take
+  away.}
+      {Antoine De Saint-exupery}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Thursday, December 14, 2006}
+\end{flushright}
+
+\section{The Gnome Has Been Losing Weight}
+
+\lettrine{I}{f} you're a Linux head, in particular a Gnome one, you've
+bound to have noticed the huge amount of work on optimization that has
+been carried out of late. People such as Federico, Ben Maurer, Michael
+Meeks, the OLPC guys and many, many others have been tireless in their
+efforts of shaving memory and cycles from all sorts of libraries and
+applications in the Gnome stack. There is even talk of colouring
+functions according to their cost so that developers are more aware of
+the price they'll pay when they make function calls.
+
+I believe no one, outside or inside the Gnome camp, will dispute that
+it has gotten a bit too fat. Even Gnome 2.16 (desktop and
+applications) seems to require 512 Mb of RAM to run comfortably. Yes,
+one can squeeze it to fit 256 Mb~--- or even 128 Mb~--- but such
+configurations are only usable with one or two applications running
+simultaneously, and certainly no more than one user on the
+machine. Some people may argue that this fattening is an inevitable
+consequence of the Free Software development methodology: since most
+developers are scratching their itch, and their itch is features,
+there is no natural evolutionary pressure towards efficiency.
+
+There is, perhaps, some merit in this line of thinking. However, I
+think it takes a static view of software development, an activity
+which is inherently dynamic. In my view, there's nothing wrong with
+focusing on features. First create an app, load it with functionality
+and expose it to the world (as always ``release early, release
+often''). Then, once the problem domain is understood, factor out
+common code into libraries that can be used by other applications
+requiring the same functionality. Finally, when the libraries are
+proved to be a bottleneck, optimise them. This generalisation models
+the life-cycle of many free applications. Take the GIMP, for
+example. First, it made sense to have GTK in the GIMP. One had to
+explore the problem domain and get something out there first. Then,
+the library became sufficiently useful that it made sense to separate
+the two. Now there is a large community of applications that depend on
+GTK, and the bottlenecks are being investigated by a rather large
+number of developers. Remember Hoare? ``Premature optimization is the
+root of all evil''. This is optimization done at the optimal time.
+
+In addition, this demonstrates one of the strongest points of Free
+Software: its emphasis in reuse. This is such an interesting topic
+that deserves an entire post on its own, so we'll save that discussion
+proper for later. With regards to optimization, the best thing about
+reuse is that, when someone spots and fixes a particular memory or CPU
+hog, all applications that depend on the offending library will
+benefit from the fix. In many cases, these changes don't even require
+modifications at the application level~--- just an upgrade to the
+latest version of the shared library. While in theory the exact same
+logic applies to commercial software, the reality is that vendor
+lock-in and NIH stop reuse at the scale done in the Free Software
+community. In addition, few vendors have the incentive to continuously
+optimise their wares.
+
+So, in my view, bloat in free software applications or libraries is
+not a bad thing per se; it just denotes that the application or
+library just hasn't reached maturity yet. Which brings me neatly to my
+next point.
+
+Gnome, as it stands is pretty much feature complete for the vast
+majority of users. There are things missing, but these are mainly
+polish. Once the multimedia situation is comprehensively sorted out~---
+and GStreamer seems to be on the way to achieve this objective, in
+particular by allowing both free and commercial codecs to coexist~---
+we're pretty much there. Now, I know you'll disagree and tell me that
+feature X is stopping you from migrating to Gnome. I personally
+believe that Wine is the key to really unlock the Windows market; but
+this is not what we are talking about here. Gnome is now good enough
+for most normal users: people that browse the web, write documents,
+and need access to email; kids that want to learn to program; people
+that need to learn basic computer literacy skills; small
+businesses. As far as providing an alternative goes, well, we're
+there.
+
+It will be an incredibly difficult battle to unseat Microsoft (even an
+impossible one), but, as any good General knows, one should fight the
+battles one can win~--- not the battles we're sure to lose. Going
+straight after Microsoft's 90\% share of the desktop market is
+suicidal. One has to look for the easy pickings first. This is what
+Free Software has done very successfully in many segments; and it is
+the Right Thing for the desktop too.
+
+\section{The Battle at the Low End of the Market}
+
+Everyone knows that there is one important dent in Microsoft's armour:
+its constant upgrade cycle requires more and more hardware and more
+and more money for licences. The hardware costs were originally
+exploited by Linux in the fight for the server market but the low
+prices have made it less significant as a competitive advantage in
+that segment.
+
+However, on the desktop front this hasn't been exploited at all. In
+the past, one could say that Gnome and its applications used a lot
+less resources than Windows. I remember Gnome pre-1.0 happily running
+on 64 Mb of RAM on my 486-DX. The problem then was lack of
+features. The features are there now but this was a bit of a phyrric
+victory for the low end as the footprint has increased
+dramatically. One can hardly say that Gnome uses significantly less
+resources than Windows XP. The converse may even be true, although
+this is disputable. No matter; the key point here is you can't run the
+latest version of Gnome with a web browser, an email client, a
+spreadsheet and a word processor open on a Pentium I with 64 megs of
+RAM. The thing is, you can do all of these things with Windows
+95/98. Which is why, when you go to the developing world you see lots
+of people running these versions of Windows on the hardware they can
+afford.
+
+Microsoft has no interest in this end of the market. Little money can
+be made by making windows lighter. Getting Vista to run on a Pentium I
+does not provide Microsoft with any additional revenue: if you can't
+afford the latest hardware, you can't afford Vista anyway. But think
+about it: if you could run a full blown Gnome the same way you can run
+Windows 95/98 on a Pentium I with 64 megs of RAM, suddenly you can get
+access to the latest applications and features. There is no
+competition between Windows 95/98 and Gnome 2.16 or later; its a
+battle we're sure to win. Even if Microsoft were to give away free
+licences of these operating systems, just on functionality alone Gnome
+would win. And, as we've seen, there is no incentive to get Vista or
+XP to run on low end.
+
+Being in Africa made me realise just how much we take things for
+granted. In Europe everyone has broadband, TFT monitors and fast
+machines at home. When you travel around in Africa you see top end
+cybercafes with Pentium IIIs and connections that make Dial Up look
+fast. Very few people have PCs at home. The thing is, they could
+actually afford them. A Pentium I in England is so cheap as to be
+practically free. And yet, you see high-school students paying
+extortionate fees to use cybercafes (of course, electricity at home is
+also an issue but we can't do much on that front).
+
+When I was in Namibia I spoke to a well-off high-school student who
+was learning Turbo Pascal at school. I also learned Turbo Pascal at
+school in Portugal, but that was in 1992; and at the time, it was already
+\emph{pass\'e} in England~--- Portugal has always been a bit behind
+the times. But these guys are learning it in 2006. This makes me
+cringe. And all because these are the licences they can afford on the
+hardware they can afford. They could and should using Monodevelop to
+learn C\#, Eclipse to lean Java or Anjuta to learn C/C++. But none of
+these fit the hardware they've got. Africa is performing so badly in
+the information age one can't even say its competing at all.
+
+One can easily imagine that the same thing happens all over India and
+China, but because these countries are so big everyone focuses on the
+privileged 10\% of the population. Although hardware is getting
+cheaper and cheaper, low end second-hand hardware will always be
+cheaper if not free; and there's always someone who can only afford
+the cheapest.
+
+And before you mention LTSP, remember how hard it is get it setup. You
+may think its easy, and sure, its has progressed quite a lot, but it
+still not as easy as installing Windows 95/98. And it requires at
+least one decent PC as the main server, plus a network.
+
+\section{Conclusion}
+
+OLPC and associated initiatives are an eye opener for what can be done
+to bridge the digital divide. However, the front in the fight for the
+low end should be extended not just to special slimmed versions of
+important programs or to smaller, less featureful environments such as
+XFCE; there is much to be gained in having the latest and greatest
+versions of Gnome targeting low end hardware.
+
+Just imagine if Ubuntu, with its easy installation and setup, was
+available on low end hardware. And I don't mean Xubuntu, I mean the
+normal, standard Ubuntu.
+
+Whilst the Gnome hackers are doing a sterling job in general,
+optimising as much as they can, there is scope for more action. In my
+view, companies such as IBM, Novell, Redhat, Canonical and perhaps
+Google should get together and fund a comprehensive dieting program
+for Gnome and Linux in general. Whilst this is not something that can
+benefit any one particular actor in the Free Software community~--- as
+we've seen, there isn't much money to be made right now at the low end
+- it would have huge implications for the future. Linux could become
+the defacto operative system for the low end market, replacing Windows
+95/98 and thus opening the doors for future growth.
+
+\chapter{On World Domination}
+
+\begin{epigraphs}
+\qitem{I think my ``plan'' says something like ``World
+  domination. Fast''. But we'll see.}
+      {Linus Torvalds}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Friday, March 23, 2007 }
+\end{flushright}
+
+Well, three months into 2007 and very few mass migrations to desktop
+Linux have been announced. A few thousands here and there, but not the
+millions we all want. Its beginning to look like our hopes for 2007 as
+the Linux Desktop Year (TM) have been misplaced yet again. The
+algorithm for the Linux Desktop Year is becoming clear now: n + 1,
+where n is the current year. Yep, its always next year. What's going
+on here? Are we never going to have Linux on the desktop? Products
+like Ubuntu and Novell are looking more and more solid, why aren't
+people installing it en masse? What about World Domination?
+
+Lets start by defining what we really mean by ``World Domination''. It
+is unlikely that we will see a world where Linux has 90\% of market
+share across all segments, in particular on the Desktop. There's just
+too big an installed based for that, and inertia is too strong. Nor
+would that happen overnight, as any migration at the corporate level
+can take years to plan. My personal definition of World Domination is
+much more pragmatic:
+
+\begin{itemize}
+\item For every new PC being sold, the buyer would consider whether to
+  install Windows or Linux, basing his or her decision on technical
+  and financial aspects;
+\item for every migration to the latest version of Windows, the IT
+  department would consider migrating to Linux, basing his or her
+  decision on technical and financial aspects.
+\end{itemize}
+
+In other words, I want to join a company and be asked whether I want
+Linux or Windows on my desktop, rather than just be given Windows and
+be told to shut up. And when I go to PC World, I want to be asked if I
+want Linux or Windows. A lot of people think that these things are not
+happening because a) Microsoft is putting illegal pressure on vendors
+to stop Linux adoption b) there are too many Linux variants so vendors
+don't know what to do (DELL was a good example). Actually, whilst I
+think these two factors are important, they are also very
+misleading. For starters, that didn't stop Linux in other market
+segments. Lets look at the recent history.
+
+A few years ago, fifteen or so, Linux was virtually unknown in all
+computing markets (call it markets, call it segments, you choose). The
+mainstay of Linux support were the college dorms and the homebrew
+engineers. If you were to read the articles about Linux in those days,
+the few that existed, they all said that Linux would never leave the
+college dorms. Not so long after that Linux became one of the most
+popular platforms for ISPs and web servers in general, in partnership
+with Apache. We were then told that Linux would never be more than a
+platform for web-serving. Fast forward a few years more, around the
+turn of the century, and we were then told that Linux would never
+leave the server room. This was a time were Linux proved itself as a
+good file and print server, and a good citizen on a Windows network,
+all thanks to Samba. It was also the time when Linux's presence in the
+clustering, super computing and the embedded markets was
+consolidated. Around this time we also noticed Linux's presence in the
+high end server market, in databases and proprietary server
+applications. Fast forward again, now to the present time. To all
+these segments we've now added POS, kiosking and other more restricted
+desktop markets. We are now told that Linux will never leave the
+restricted Desktop markets.
+
+If you consider my narrower definition of world domination, then one
+can say that it has been obtained in all these markets. In all of
+these, people spend time looking at alternatives before settling in
+Windows or Linux. In some cases Linux has got more than 50\% market
+share, in many other cases it has not, but there is an ongoing battle
+for market share.
+
+But let's have a closer look at the database segment, because many
+lessons can be learned from it. The high end is dominated by colossus
+such as DB2 and Oracle. Here Linux is extremely successful, mainly
+because people don't really care about the operative system; they care
+about the database product. Move over to the middle and low ends of
+the market though, and Linux penetration is very small. Yes, MySQL and
+PostgreSQL are making inroads, but the truth is they are yet to make a
+dent in the market share of SQLServer and Access, both Microsoft
+products. The same principle applies: people don't want to run
+PostgreSQL, they want to run SQLServer; and since it only works on
+Windows, well, that means they can only consider Windows.
+
+The lesson to take home from all of this is simple. Linux is extremely
+competitive in markets: a) that have no installed base, or where the
+field moves so fast that the installed base is obsoleted quickly and
+has to be replaced (embedded, clustering, supercomputing) b) that
+depend only in standard protocols or protocols that can be legally
+reversed engineered (file serving, web serving, authentication) c)
+that depend on applications which have already been ported to Linux,
+and where the port is of the same grade or higher as the original
+version (Java Application Servers, SAP, Oracle, DB2, bespoke
+applications, game servers) d) where there is a clone of a key
+application, and the clone offers a superset of the features of the
+original application, providing full compatibility e) where there is a
+compatibility layer that allows Linux to run applications designed for
+other platforms (.Net SWF GUI applications, Wine).
+
+All these are pretty self explanatory, with the exception of d) and e)
+so lets have a look at those.
+
+In terms of d), I don't mean cloning here like the GIMP is a clone of
+Photoshop; I mean cloning like EnterpriseDB. EnterpriseDB, the
+PostgreSQL derivative which aims to be fully compatible with Oracle,
+is experiencing huge growth, and the root cause of this growth is the
+claimed drop-in Oracle compatibility. It appears companies are buying
+the product in droves, trying to save money in Oracle licenses. In my
+personal opinion, whilst the principle is brilliant, EnterpriseDB made
+a mistake by going after Oracle. Most people that buy their products
+have money to spare and are not worried about costs. This does not
+mean there aren't many people who buy Oracle because they have to, but
+the number of people in this situation is rather small. However, if
+EnterpriseDB were to offer a drop-in SQLServer replacement, I am
+convinced their demand would have been much higher, by many orders of
+magnitude. I am talking specifically about a product that can: talk
+TDS, requiring no modification from clients to connect to it; import
+stored procedures, data and schemas from SQLServer with one click; be
+managed from Enterprise Manager and any other SQLServer tools as if it
+was another instance of SQLServer; run TSQL stored procedures without
+modification. Such a product would sell a lot more because people that
+buy SQLServer are much more cost sensitive than people that buy
+Oracle. But the principle here is that a clone can open a lot of
+doors.
+
+As far as e) is concerned, this hasn't been proved yet because the
+emulation layers are not 100\% complete. The big difference between
+.Net and Java is that many .Net GUI applications rely on Windows Forms
+(SWF), which means they are a lot more Windows dependent. Mono is
+working hard in getting a good SWF implementation, but this is a hard
+task and 100\% compatibility will take a while. The same can be said
+for Wine, on the making for over a decade, forever getting closer but
+still struggling with compatibility. IMHO, all big Linux companies
+should get together and finance Wine, either through investing in
+CodeWeavers or by having their own Wine developers. If Wine was able
+to run \emph{all} windows applications say up to XP, and do so
+smoothly, without any problems, this would open many, many doors to
+Linux (and all other operative systems with Wine). I'm not talking
+about ``it almost works, or it works sometimes'' type of compatibility,
+I'm talking about rock-solid, uncrashable, perfect, flawless
+support. This will require huge amounts of investment. However, such
+level of compatibility would allow IT departments to consider
+Linux/Windows migration separately from the migration of Office and
+other key windows applications. To migrate everything in one go is
+just too deep a plunge for many people, too much risk. It's not that
+OpenOffice and other applications aren't good; its just a question of
+reducing the amount of change required in one go. Both approaches are
+good and should be pursued, for different reasons. OpenOffice caters
+for a less demanding segment of the population, Office on Wine caters
+for a totally different segment.
+
+One last rant goes for the multimedia situation. We need to have
+\emph{all} popular codecs available in Linux legally and Fluendo's
+work is a significant milestone in this regard. Ubuntu is also making
+strides in this department, and pragmatism is the only way to win the
+day here. Don't take me wrong, there is a lot of merit in a lot of the
+religious causes. OGG over MP3 any day. Software patents are evil. GNU
+rules. But to create an operative system that ignores the current
+state of the world and is instead designed for the world we all would
+like to live in, is to doom it to failure. A case in point: last year
+the basketball World Cup was on, and I desperately wanted to watch
+Angola play. I then found out that the games were available on-line,
+but could not get any of the existing Linux media players to work with
+FIBA's website. Yes, proprietary codecs are evil but this is the World
+Cup we're talking about and I'm not RMS, so I compromised. Since we
+don't have anything else other than Ubuntu at home, I ended up having
+to watch the games at work. Fortunately I had understanding bosses,
+but is it really fair to demand this sort of commitment from the mass
+market? And to shut this people from Linux is not beneficial for us
+because, as we all know, critical mass is important. If Linux had 20\%
+of the desktop market we would get a lot more attention from hardware
+companies, media websites, game developers, the world at large. They
+would think about us when they release new products. Would we really
+care if 19\% of the 20\% didn't know anything about freedom and GNU?
+Would we be worse off with them on board than without? Besides, it is
+a lot more likely that they would find out about freedom once they've
+started using Linux. ``Who are this people who give their time for free
+to create such a good product?''
+
+Forget about all the religious wars for a moment and lets put our
+business hats on. The truth is, the \emph{vast} majority of people out
+there never heard about Linux. Let me tell you this, I have walked
+around Africa for four months and met \emph{two} people that heard
+about Linux, and even then only vaguely. ``Like Mac right?''. A girl
+asked me if my Debian t-shirt had anything to do with lesbians. Even
+in South Africa, the home of Ubuntu, I've seen nowt, not even a single
+mention of it. Not on telly, not on the shops, not on the streets, not
+on the cybercafes, not on the big supermarket chains. You ask about
+Ubuntu on the streets and people think you're trying to learn Zulu or
+Khosa and you mean peace and unity. If we want mind share we need to
+be able to be functionally equivalent to Windows, with no excuses. You
+have to understand, from an outsider perspective religion \emph{is} an
+excuse. You can't really promote Linux to this people and then say
+``but you can't really play proprietary media without breaking the law,
+and even then it will take you days to configure''. To start promoting
+Linux we first need the ability to play all the popular media formats,
+and to do so legally and without placing \emph{any} configuration
+demands to the user other than clicking a button. Keep in mind that
+when we do get to this level, we still have a long mind share struggle
+to face; it will take years to get the word out there, to get people
+to try.
+
+So when are we going to get world domination?
+
+\begin{itemize}
+\item When we can run all the popular applications faultlessly, in
+  particular the Windows ones, regardless how that is done (port,
+  emulation);
+\item When we can play all the media formats flawlessly and legally;
+\item When Linux is mass advertised.
+\end{itemize}
+
+We are getting close. But remeber the rule of credibility: ``The first
+90\% of the code accounts for the first 90\% of the development
+time. The remaining 10\% of the code accounts for the other 90\% of
+the development time.''
+
+\chapter{On Maintenance}
+
+\begin{epigraphs}
+\qitem{Perfection is achieved, not when there is nothing more to add,
+  but when there is nothing left to take away.}
+      {Antoine de Saint-Exupery}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Thursday, May 24, 2007}
+\end{flushright}
+
+The many years I've spent working for the bespoke industry and using
+free software finally made me understand the obvious: the single most
+important aspect in the whole of software development is
+maintenance. Yes, you heard it right. Its not the language, not the
+platform, not the methodologies, not the technologies involved, not
+even the pretty Gantt charts. All these tools are important, of
+course, but if one looks at the entire lifespan of a program,
+maintenance overshadows every other aspect by a wide margin. You may
+think I'm not saying anything new here, and with good reason. Classic
+texts like Bertrand Meyer's Object Oriented Software Construction
+already pointed out that the highest cost in a software project is
+maintenance; Meyer was not the first, by far, to pick up on this. The
+problem was not with their diagnosis but rather with the cure they
+proposed. Allow me to expand on this.
+
+The first thing one must realise is that code is in itself the only
+complete system specification there is. I'm not going to spend much
+time explaining this view of the world since I cannot possibly improve
+upon Jack Reeves' ``What is Software Design?''. Any experienced
+developer knows that the only way to really understand how a system
+works is by looking at the source. Let's face it, in the real world
+manuals don't exist. Comments are sketchy and, more often than not,
+totally wrong. You may get developers to write good documentation on
+the early stages but in all these years I'm yet to see a large
+five-year old project properly documented. The only thing you can
+always rely on, the only thing that truly documents the behaviour of a
+program is its source code. I know, I know, you'll bring up Knuth and
+literate programming. Unfortunately, I have no option but to
+check-mate you with real world experience. Sad truth is, most people
+don't even know about Knuth. While Doxygen et al are nice and make
+documenting much easier, very few people bother making sure the text
+matches the source when they are on a tight deadline, and the life of
+a bespoke developer is nothing but one tight deadline after another,
+ad infinitum. You can imagine your project manager's face when you
+explain that the deadline won't be met because you still need to
+finishing off commenting.
+
+Speaking in very empirical terms, most projects seem to have an
+average lifespan of around seven to ten years, with the caveat that
+the final stage can drag on for a very long time. The first two or
+three years are all about adding large amounts of new features,
+cramming in as much as possible in the shortest possible time. During
+this period, lurking in the shadows, there is a steady increase of
+complexity. If these things were easily quantifiable, I'd expect the
+data would display a high correlation between the number of added
+features and the increase in complexity (i.e. each feature
+dramatically raises the complexity bar). Thus, adding each feature
+(and fixing each bug) starts taking longer and longer over time. At
+some point the project will reach the ``complexity barrier''; this is
+the point at which adding new features (or fixing existing bugs) is so
+expensive that it's cheaper to create a new product from scratch, one
+which addresses all the ``scalability'' issues that the current system
+cannot. At this point the code-base is kept in ``life-support'' mode,
+with a bare minimum number of developers working on it to keep
+existing customers happy, but unable to do any fundamental changes to
+the project's core. If any new major features are required, they are
+implemented by extremely complex workarounds over existing
+architectural deficiencies. Eventually, the next generation system
+leaves the sheltered green house and is ready for
+deployment. Customers are moved over with varying degrees of
+grumbling, but with little choice on the matter. This pretty much
+describes every other project I have worked on over the last decade,
+some of them in different stages, of course, but all of them
+describing the exact same arc. First, let's make this clear: this
+methodology works. Companies are making ridiculous amounts of money by
+religiously following it, and at the end of the day, from a financial
+perspective, all that matters is the bottom line. However, this can't
+be The Right Way from an engineering perspective. I'm afraid you'll
+need your engineering hat on for the remaining of the article.
+
+Lets step back for a second and reflect. Why do we throw away
+code-bases in the bespoke market so readily, when both commercial and
+open source shops do it a lot less frequently? It's all to do with the
+development process. Truth is, bespoke projects die \emph{by design};
+their environment is so entropic and hostile that they cannot but
+die. Software development changed fundamentally when the day to day
+running of a project was taken from the hands of programmers and
+handed over to professionals. In time, project management became a
+science in itself, complete with its own language of Gantt charts,
+milestones and deliverables. The entire development ecosystem in which
+we now live is geared towards delivering more and more features in
+ever smaller timescales by people who have less and less technical
+ability~--- i.e. people that think at ever higher levels of
+abstraction. The first victim in this quest for ``time to market'' is
+the code-base. When a developer is asked to implement a new feature
+the key question asked by a good project manager is: can you ``reuse''
+some of the existing infrastructure to do this? The project manager
+may not even know what reuse means technically, but he knows that
+``with reuse'' the estimates are much lower than ``without reuse''. So
+``reuse'' is good, writing from scratch or re-engineering is bad, really
+bad. The developer will most likely explain that the existing
+infrastructure was not designed with the new feature in mind, and so,
+given the current timescales, there is no option but to bend the
+code-base beyond shape to shoehorn the functionality in (also known as
+a kludge). In the ears of a good project manager this is equal to
+``yes, we can reuse the existing infrastructure, we'll sort the mess
+later''. Alas, later never comes. Eventually, after years of kludges to
+deliver features, the code-base becomes so unmaintainable~--- so
+complex~--- that it is cheaper to write a new system from scratch than
+to maintain the existing system. The complexity barrier has been
+reached, the dreaded point of no return.
+
+What the project manager fails to grasp~--- or does not want to
+grasp~--- is that the code-base is in itself a repository of knowledge
+of sorts; the summary of the experience of a large group of developers
+over a long period of time attempting to tame a given problem
+domain. To make an extreme analogy, this is akin to someone taking
+every single copy of every volume of The Art of Computer Programming,
+writing a few sketchy notes about in fifty or so pages and then
+burning the books, happily thinking that all important detail has been
+captured. You'd think that most software houses would understand the
+importance of the code-base as an asset; after all, ask to take a copy
+of the code home and you'll have the police breathing down your neck
+in seconds. However, this sort of behaviour is a bit like the attitude
+of the peasant who keeps his money under the mattress, not really
+knowing what it's worth but thinking that it must be really
+important. Companies don't really understand the value of the
+code-base. If they did, they would take \emph{really} good care of
+it. Instead, they treat it like any other perishable resource, a
+computer or a car, a trite commodity spewed out of a production line
+of developer drones. The decommissioning of a software system should
+always be seen as an immense tragedy, a great loss of
+knowledge. Management is just not able to comprehend the amount of
+detail that is contained in a code-base, detail that simply cannot be
+transposed to a new system and will have to be rediscovered. Problem
+is, an existing code-base hasn't got an easily computable dollar
+value~--- man years are a very bad way of estimating effort nor is it
+possible to estimate the cost of a yet-to-develop system~--- so we're
+all in the dark. (Not being an expert, I'm not going to try to propose
+ways of valuing an existing code-base, but whatever methodology one
+comes up with it is bound to produce some astonishingly high figures.)
+
+Unconvinced, you may ask, what is so wrong with starting new projects?
+After all many lessons can be learned, new technologies can be used
+and the end result will be a faster, more featureful, more
+maintainable system. Before everyone starts chanting ``oh, you luddite
+in disguise'', it's important to bear in mind the following:
+
+\begin{itemize}
+\item The failure rate for new projects is extremely high;
+\item Incremental changes have a lower risk, whereas big changes are
+  always highly risky;
+\item Its much easier to estimate costs and timescales in an existing
+  project which has been running for years rather than on a new one,
+  for which baselines are yet to be created;
+\item The second system effect forces architects and developers to
+  create new projects that aim to boil the ocean and use every other
+  new technology, adding even more variables to an already complex
+  problem;
+\item New systems introduce a host of new bugs;
+\item you're basically trading an existing set of bugs that are either
+  known, or not known but also not known to seriously impact
+  production, with an unknown (but almost always large) quantity;
+\item You'll need to find new people or retrain existing people for the
+  new skills required~--- particularly on the developer side, but quite
+  often in the user side too;
+\item Your system and component requirements will almost always miss
+  vital features or important little bits of detail and ignore many of
+  the lessons already learned simply because the latest crop of
+  developers writing the specs is not aware of them;
+\item Your project planning will almost always underestimate the
+  complexity of implementing some or all of the existing features;
+\item Your project managers may be excellent at managing an existing
+  system but totally inexperienced at managing at this huge scale of
+  uncertainty; Your developers may be excellent maintainers of an
+  ageing code-base but terrible green house developers, getting
+  continuously lost in blue-skies approaches;
+\item The architecture of the existing system may not transpose very
+  well to the new technologies your developers insist in using,
+  limiting reuse even at this fundamental level.
+\end{itemize}
+
+As you can see, replacing an established system is close to spending a
+million dollars in a casino over a few months. If you do win, you'll
+make a fortune~--- but the odds are heavily stacked against you. For all
+the reasons above~--- and probably many more which I failed to uncover~---
+it is vital to try to keep an existing code-base running healthily,
+avoiding the complexity barrier at all costs. In order to do so one
+must maintain a system properly. This entails:
+
+\begin{itemize}
+\item Removing functionality which is no longer necessary, thereby
+  reducing complexity; Looking for opportunities to refactor existing
+  code into separate modules, and replace existing modules with open
+  source libraries if suitable ones exist;
+\item Tracking and fixing \emph{all} reported bugs; Ensuring the code
+  compiles with no warnings at the maximum warning level;
+\item Refactoring code when implementing new functionality that does
+  not fit the existing infrastructure;
+\item Continuously measuring system performance, ensuring it does not
+  degrade over time;
+\item Ensuring consistency with existing standards and conventions,
+  avoiding in-house protocols; Improving readability of existing code;
+\item Regression testing the code-base after changes;
+\item Striving for platform independence; Making continuous releases
+  after changes to ensure there isn't a feature pile-up;
+\item in other words, release early, release often.
+\end{itemize}
+
+Yep, you've noticed it. These are all obvious tasks, pretty much the
+standard you'd expect from an average free software
+maintainer. Unfortunately, for reasons outlined above, these tasks are
+rarely present in bespoke software houses' project plans. You may find
+that some commercial off-the-shelf shops actually take maintenance
+seriously, but most bespoke houses just can't afford to spend the
+required time on maintenance. IMHO, herein lies the key, the biggest
+needed change: project managers have to start allocating slots for
+maintenance. They have to treat maintenance work like they treat
+enhancements, allocating adequate resources for it, asking developers
+to make and keep updated a list of top issues in the code-base and
+make sure these are addressed.
+
+The intrepid reader may reasonably ask: but what if the system is
+designed in such a way that a large new feature just cannot be
+implemented within its framework? To that I must counter that
+\emph{no} feature is too complex as to be unimplementable in
+\emph{any} existing system which has been well maintained. This is a
+fallacy in which I believed for many years but which I think has been
+comprehensively disproved by many projects such as the linux kernel,
+GTK and Qt. Take the kernel. If a system that was designed to run only
+on x86, with no virtual memory, minimal driver support, minimal
+filesystem support and all sorts of other constraints can be made to
+do what linux does today then any project can do the same. I mean, the
+v2.6.x kernel has excellent portability, large SMP scalability, close
+to real time scheduling, and many, many more features that are all but
+impossible when looking at them from a v0.0.1 perspective. Linus feels
+quite strongly about the fact that the kernel was not originally
+designed to do any of these things, but \emph{evolved} solutions to
+these problems over time and in many cases these solutions work
+extremely well. The question is not whether it is possible or not, but
+rather how much effort is required to get there. And any discussion
+about resource allocation must always take into account the huge
+benefits of keeping the same code-base.
+
+The other important aspect of maintenance is code-base reduction,
+mentioned on the first two points above. Code-base reduction may
+appear counter-intuitive at first sight; after all, new features must
+require adding code. However, the best way to look at this is from a
+resource allocation perspective. There is a finite number of
+developers, call it d, working on a code-base of a given size, say
+s. Let's call c the ratio between s and d. I always dreamed to come up
+with a law, and here finally is my chance: Craveiro's law states that
+the higher c is, the harder it is to maintain a code-base. Of course,
+this is a highly empirical law, but useful nonetheless. Now, there are
+two very straightforward ways of reducing c: either increase the
+number of developers until you meet Brook's law, or decrease the size
+of the code-base until you start impacting required features. The
+latter is more interesting, very much reminiscent of St. Exupry: a
+designer knows he has achieved perfection not when there is nothing
+left to add, but when there is nothing left to take away.
+
+Since you can't literally start removing required functionality, the
+next best thing is to find other people who are willing to share the
+maintenance burden with you, reducing the individual maintenance cost
+(if not the overall cost). This is routinely done in open source
+projects, and it is incredibly successful. Basically, you want your
+developers to aggressively look at parts of your code-base which offer
+no discernible competitive advantage; once located, these are stripped
+out of the system and added to your company's portfolio of open source
+components. These have an important strategic value and should be
+managed very carefully (a community needs to be developed around them,
+the maintainer must listen to the community, etc.). The end result
+should be a significant reduction in your core code-base size.
+
+I'll leave you with a couple of interesting corollaries from
+Craveiro's law:
+
+\begin{itemize}
+\item Like many other ``new'' technologies, OOP by itself does not help
+  or hinder the maintenance problem. Regardless of how elegantly your
+  system is designed and implemented, if you are not maintaining it
+  properly it will die. Conversely, a system designed in perl that is
+  actively and adequately maintained may prove to be extremely
+  resilient to time. \emph{However}, choosing a popular language will
+  have an important indirect impact on maintenance because it will
+  define the size of the developer pool you can tap.
+\item Java and C\# are incredibly useful programming languages, but not
+  for the reasons you might expect: i.e. not because of garbage
+  collection, nice syntactical sugar, improved security or the VM. The
+  one key element that distinguishes them from most other languages is
+  their extensive and standardised class library, readily supplemented
+  with huge amounts of open and close source components. These reduce
+  the footprint of your code-base dramatically. Why are these
+  languages better than say Delphi or RogueWave's extensions to C++?
+  Because they insure vendor independence by standardising most of
+  their interfaces.
+\end{itemize}
+
+\chapter{Take a Walk on the Server Side}
+
+\begin{epigraphs}
+\qitem{Memory is like an orgasm. It's a lot better if you don't have
+  to fake it}
+      {Seymour Cray}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Saturday, September 22, 2007}
+\end{flushright}
+
+When it comes to programming, for me there isn't much of a choice: the
+place to be is the server side. I may work a lot on the client side
+these days, but GUIs and chrome never had much of an attraction for
+me. I do have a healthy dose of respect for those who love it: client
+side work is a mixture of coding mastery, design skills and a big
+dollop of human psychology. For some reason when I visualise the
+client side I always imagine nice, pristine offices with lots of light
+and huge amounts of human interaction between programmers as well as
+between programmers and users.
+
+The server side is a totally different beast. I always visualise it as
+the dark place of green terminals and server rooms, of never ending
+performance charts and monitor applications, the land of blinken
+lights. Of course, these days we all have to share the same desks and
+deal with the same layers of managerial PHBs~--- and with HR and their
+latest social experiments~--- but the fundamental point is that these
+are two very different crafts.
+
+Thing is, I find that the server side is extremely misunderstood
+because the vast majority of developers out there come from a client
+background. When developers cross over, their bias introduces many,
+many problems on server side applications, simply because they are not
+used to the server way of thinking.
+
+This article covers many mistakes I've seen or made over the years, in
+the hope you may avoid some of them.
+
+\section{The Languages}
+
+There really is only one langucage to do server side work: C++. Yes,
+I'm a zealot. Yes, I know that both .Net and Java are much easier to
+get along with, and have none of the tricky memory allocation problems
+that riddle C++ applications (those that haven't discovered shared
+pointers, at any rate). I agree that, in theory, both Java and C\# are
+better options. In practice, however, they become problematic.
+
+\emph{The right staff}. It's difficult to find a good Java/C\#
+programmer, just like it was difficult to find a good VB
+programmer. The client side is a very forgiving land, and not only can
+bad programmers get away with it for years but you also have to
+remember that great client side programmers don't need to know their
+tools to the level of detail that server side programmers do. How many
+times do you need to read up on scheduling to do a GUI? Or on TCP
+flags? Not often, I'd wager. So the reality is, if you have been doing
+any of these languages for a while, you can talk all the right TLAs
+and describe all the right concepts with easiness and fly through most
+interviews. But when it comes to doing the job, you will probably be
+reading manuals for days trying to figure out which subset of
+technologies on your stack are good for server side and which ones are
+just plain evil performance killers. A good server side Java/C\#
+programmer will use only the smallest set of features of the language
+when programming, knowing exactly the cost of those features.
+
+It is, of course, really hard to find a good C++ programmer too. But
+here, there are two things that help us. There are not that many left
+doing C++ work~--- most of them have migrated to higher pastures by now,
+in particular those that always felt uncomfortable with the
+language. The few that are left are doing server side work. The second
+thing is, due to C++'s lower level of abstraction, even a bad C++
+programmer is well aware of the bare metal. It basically forces you to
+think harder, rather than just pickup a manual and copy an example.
+
+\emph{Minimise layers of indirection}. Another problem I have with
+Java/C\# is indirection, which is another way of saying
+performance. Now, I know all you Java and .Net heads have many
+benchmarks proving how your AOT compilers optimise on the fly and make
+them even faster than native code, or how your VM is much better at
+understanding application's run time behaviour and optimising itself
+for it. And the fact that you never worry about memory leaks goes
+without saying. Well, that's all fine and dandy as far as the lab is
+concerned.
+
+What I found out on the field is different. Resource allocation is
+still a massive problem, either due to complex cyclical referencing,
+or just plain programmer incompetence. Memory consumption is massive,
+because programmers don't really understand the costs involved in
+using APIs, and thus just use whatever is easier. This, of course,
+also impacts performance badly. And to make things even worse, you
+then have to deal with the non-deterministic behaviour of the VM. It's
+bad enough not knowing what the kernel will decide and when, but when
+you put in a VM~--- and god forbid, an application server!~--- then its
+nigh impossible. It could be a VM bug. Or it could be that you are not
+using certain API properly. Or it's just your complex code. Or it's
+the OS's fault. Who knows. That's when you have to fork out mega-bucks
+and pay an expensive Java/.Net consultant to sort it all out. And pray
+he/she knows what he/she is talking about.
+
+The truth is, I've never heard of a Java/.Net application on the field
+that was found to be more performant than it's C++ counterpart. In
+part, this is because we are comparing apples with oranges~--- the
+rewrites seldom cover the same functionality, adding large amounts of
+new features and making straight comparisons impossible. But there
+must be more to it too, since, from experience, Java/.Net engineers
+seem to spend an inordinate amount of time trying to improve
+performance.
+
+Now, before you go and start rewriting your apps in C++, keep this in
+mind: the biggest decision factor in deciding a language is the
+competence of your staff. If you have a Java/.Net house, and you ain't
+going to hire, don't use C++. It will only lead to tears and
+frustration, and in the end you will conclude C++ is crap. If you are
+really serious about C++, you will need a team of very strong,
+experienced C++ developers leading the charge. If you haven't got
+that, best use whatever language you are most competent at.
+
+Another very important thing to keep in mind is the greatest C++
+shortcoming: its small standard class library. It is perhaps the
+language's biggest problem (and probably the biggest reason for
+Java/c\#'s success). This means you either end up writing things from
+scratch, buying a third party product (vendor lock-in) or using one or
+several open source products, each with their own conventions, styles,
+etc. At present Boost is a must have in any C++ shop, but it does not
+cover the entire problem domain of server side development. These are
+the following things to look for in any library:
+
+\begin{itemize}
+\item Networking
+\item Database access
+\item Threading
+\item Logging
+\item Configuration
+\item Serialisation
+\end{itemize}
+
+\section{The Hardware Platform}
+
+As far as the client side is concerned, platform is almost a
+non-issue: you will most likely only support Windows on x86. After
+all, Linux and Mac are so far behind in terms of market share it's not
+even funny. The cautious developer will point out that a Web
+application is a safer bet, although you may loose much richness due
+to the limitations of the technology. AJAX is nice, but not quite the
+same as a solid GUI. If kiosks and POS are some or all of your target
+market, you will be forced to look at cross-platform since Linux is
+making inroads in this market. And you can always use Java.
+
+With regards to the server side, one must look at the world in a
+totally different light. Because you never know what your scalability
+requirements are, there is no such thing as an ideal hardware
+platform. Today, one 32-bit Windows server with 2 processors and 4
+gigs or RAM may be more than enough; tomorrow you may need to run apps
+that require 20 gigs of RAM and 16 processors, and big iron is your
+only option.
+
+So the most important aspect in terms of the hardware platform is
+this: whatever you do, \emph{never commit} yourself to one. Write a
+cross-platform application from the start, and ensure it remains
+one. Even on a Windows only shop, it's not hard to use a
+cross-platform toolkit and have a PowerPC Linux box on the side to run
+tests on. Its actually not much harder to write cross-platform
+\emph{server side} code, as long as you have a library you can trust
+to abstract things properly. And as long as you take cross-platform
+testing seriously.
+
+Think of it as an insurance policy. One day, when your boss asks you
+for a 10-fold increase in deal volume, you know you can always run to
+the shop and buy some really, really big boxen to do the job. Tying
+yourself to an hardware platform is like putting all of your eggs in
+one basket; better not drop it.
+
+\section{The Architecture}
+
+The single most important lesson to learn on the server side is that
+architecture is everything. No server side project should start
+without first having a top notch architect, known to have built at
+least two large scale systems. You can always do it on the cheap, save
+the money and get more programmers instead, but remember: you will pay
+the cost later. Things would be different if maintenance was taken
+seriously; but don't kid yourself, it's not.
+
+When the business suddenly tells you that you need to double up
+capacity, or support Asia and America, or add some products that are
+radically different from the ones your system now processes~--- that's
+when you'll feel the pain. And that's when you'll have to start
+designing v2.0 of your system, starting mainly from scratch.
+
+One of the key differences between client side and server side work is
+this focus on scalability. After all, there is only so much work a
+single person can do, so many simultaneous instances of a client side
+application that can be started on any one machine, and so many trades
+that can be loaded into a single PC. Not so with the server side. You
+may think that processing N trades is more than enough, but that is
+today; tomorrow, who knows, 10xN could be the average.
+
+A good architect will probably look at the problem and find ways to
+distribute it. That is, to design a very large number of small,
+well-defined servers, each of which with a small subset of
+responsibilities~--- all talking to each other over a messaging bus of
+some kind. The system will use a narrow point of access to the
+database, and huge amounts of caching on each server. This will allow
+the system to scale as demand grows, just by adding more
+servers. Hardware is cheap; software engineers are expensive.
+
+The ideal architect will also be clever enough to allow client tools
+to be written on Java or C\#, and let someone with more experience on
+these matters lead its development.
+
+In summary, the key components of a system will be along these lines:
+
+\begin{itemize}
+\item A solid, cross-platform, scalable relational database. Oracle
+  and Sybase are likely candidates, and PostgreSQL on the
+  free-software side of things;
+\item A solid, cross-platform, scalable messaging bus. Tibco,
+  Talarian, etc. Choose something you have experience with. Never,
+  ever, under any circumstances write your own (at present, I'm not
+  aware of any free software alternatives for messaging);
+\item A large number of small servers, communicating over the
+  messaging bus.
+\end{itemize}
+
+Getting the architecture right is essential; but once you're there,
+you must work hard to maintain it.
+
+\section{The Database}
+
+Just as you need an architect, you also need a DBA. You may be a
+hotshot when it comes to databases, you think, but the truth is a good
+DBA will take your optimal code and optimise it ten times
+over. Minimum. It's what they do for a living. It's important to get
+the DBA early into the system design process to ensure no crass
+mistakes are made on the early stages. These are much harder to fix
+afterwards. And make sure the schema is designed by him/her, with
+large input from developers~--- minimising the impedance mismatch
+between the C++ datamodel and the database schema.
+
+If your DBA hasn't got the bandwidth to write all the stored procs
+directly, at least make sure he/she sets down the guide lines on how
+to write the stored procs, and if at all possible reviews code before
+check-ins.
+
+You should also create a repeatable testing framework for performance
+on all procs, to detect quickly when somebody makes a change that
+impacts performance. But a good DBA will tell you all about it, and
+many things more.
+
+\section{A Catalogue of Mistakes}
+
+There are many small mistakes to be found on server side apps, some at
+the architectural level, others at the implementation. This is a
+summary of a few I've seen over the years.
+
+\subsection{Overusing XML}
+
+Whilst XML is a brilliant technology to enable cross-platform
+communication, and it has many benefits for client side development,
+it is of very limited usage on the server side. Pretty much the only
+things it should be considered for are:
+
+\begin{itemize}
+\item Allow Java / .Net clients to talk to the server side
+\item Allow external parties to send data into our system
+\item Save the configuration settings for servers
+\end{itemize}
+
+
+It should not be used for anything else\footnote{And even then, you
+  should still think really hard about each of these cases~--- in
+  particular the first one, which can lead to severe performance
+  problems.}. It certainly should not be used for communication
+between servers within the server side, nor should it be used, god
+forbid, in any kind of way within the database. De-serialising XML in
+a stored proc is an aberration of server side nature.
+
+Bear in mind the following XML constraints:
+
+\begin{itemize}
+\item The vast majority of the message is redundant information,
+  making messages unnecessarily large. This will clog up your pipes,
+  and have particularly nasty effects in terms of throughput on
+  high-latency links (any large message will).
+\item XML messages normally have associated a schema or DTD. Servers
+  that you yourself wrote will use the same serialisation code, so
+  there shouldn't be any need to validate these messages against a
+  DTD/schema (you will of course have some sanity checks in C++ code).
+\item Serialising and de-serialising from XML is horrendously
+  expensive. In particular, if all your servers are running on the
+  same hardware platform, there are absolutely no benefits~--- and the
+  costs are massive.  Compressed XML is a solution in need of a
+  problem. You may save costs on transport, but these have been
+  transferred to an intensive CPU bound process (decompressing and
+  compressing).
+\end{itemize}
+
+In conclusion, XML is not cheap. As your deal volumes increase, you
+will find that you're spending more and more of your absolute time
+transporting, serialising, de-serialising and validating. It's fine
+for one-offs, for sure, but not for volume.
+
+The only type of serialisation permitted on the server room is binary
+serialisation. You can make it cross-platform using something along
+the lines of XDR or X.409.
+
+The lesson we learn from XML is applicable everywhere else on the
+server side: always evaluate cautiously a technology and make sure you
+fully understand its costs~--- in particular with regards to increases
+in volume.
+
+XML is a brilliant technology, and fit for purpose; that purpose is
+not efficiency.
+
+\subsection{Cool technologies}
+
+If you did not heed my advice regarding C++ and insisted in using Java
+or C\#~--- or, god forbid, you found a way of doing it in C++~--- you
+may have started using reflection. This, and many other technologies
+are utterly forbidden on the server side.
+
+Very much like XML, the problem with such technologies is that in 99\%
+of cases they are used to solve problems that never existed in the
+first place. I mean, do you really need to dynamically determine the
+database driver you are going to use? How often do you change
+relational database providers without making any code changes? Of
+course, those calls would be cached, but still, it's the principle
+that matters. And does it really help application design to determine
+at run-time which method to call, and its parameters and their types?
+This is several orders of magnitude more expensive than virtual
+functions. Does it really make coding any simpler? Because the cost is
+huge, and the scalability is poor. If you are thinking about using
+reflection because there is large amount of repetitive code which can
+be factored out with reflection, consider using a text processing
+language to generate the repetitive code at compile time. This is a
+clean, maintainable and performant solution.
+
+Another pet peeve are components and distributed technologies. Do you
+really need complex technologies such as (D)COM and CORBA? Components
+are nice in theory, but in reality they add huge amounts of
+maintenance problems, configuration costs, debugging becomes much
+harder and performance is hindered in mysterious ways.
+
+In the vast majority of cases, you can create your own little
+messaging layer in extremely simple C++~--- code that anyone
+understands and can debug in seconds~--- built on top of a
+serialisation framework such as Boost.Serialisation. Whilst
+Boost.Serialisation is not the most performant of them all, nor does
+it have great support for cross-platform binary serialisation, it is
+good enough for a large number of cases; and you can extend its binary
+serialisation to fit your needs.
+
+The server side is not the place to experiment. Cool and hip are
+bad. Pretty much all technologies that are required to make
+large-scale, scalable applications have been invented decades ago~---
+they just need to be used properly. When choosing a server side
+technology, always go down the proven path.
+
+\subsection{Performance testing}
+
+One mistake many shops make is to create servers that can only be
+loaded up from a database or another server, and can only send their
+results to a database or another server. This is a crushing
+limitation, introduced for no reason other than laziness or bad
+project planning (``test tools? no time for them!''). The whole point
+of server side development is to be able to offer guarantees in terms
+of scalability. Those guarantees can only be offered if there is a
+reliable way of stress testing your components independently, and
+create a baseline of such tests so that regressions can be found
+quickly.
+
+Having to setup an entire environment to test a given server is not
+just troublesome, it hinders fault isolation and makes people lazy. It
+often also means limitations on the number of test systems
+available~--- when, ideally, each developer should be able to have at
+least one environment to play with to their hearts content.
+
+Of course, don't take me wrong: one should have system-wide
+performance tests; but these are only relevant if all components
+passed their individual load tests.
+
+\subsection{GUI tools}
+
+One thing you should consider from the beginning is the ecosystem of
+GUI tools that are required to manage your system, ideally written in
+a high-level language such as Java/C\#. Here, in the vast majority of
+cases, usability is more important than performance, and this is where
+Java/C\# are at their best.
+
+The GUI tools should focus on things like:
+
+\begin{itemize}
+\item Account administration: adding new users, deleting them, etc.
+\item Monitoring and diagnostics: graphs on deal volume, health checks
+  to ensure servers are still alive, memory usage, cpu usage.
+\item Maintenance, deployment, configuration: restarting servers when
+  they die, easy deployment and configuration of servers.
+\item Data administration: special functions to perform on the data to
+  resolve cases where duff data was inserted, etc. This is sort of a
+  client for power users.
+\end{itemize}
+
+The biggest problem of not having a good ecosystem of GUI management
+tools is that your development work will became more and more
+operational, since the system is too complex to give it to real
+operators.
+
+\subsection{Database Serialisation}
+
+This is one of the most important aspects of any server side system,
+and has to be carefully thought out. You should keep it to a bare
+minimum the number of servers that touch the database directly, and
+make sure they are physically located as close as possible to the
+database~--- but no closer; never on the same machine. All other
+servers must go to these data servers to read and write to the
+database.
+
+The second important point is to try to ``automate'' the serialisation
+as much as possible. All objects that are serialisable to the database
+should have auto-generated code (never reflection!) responsible for
+reading/writing the data. They should also interface with the database
+via stored procs~--- never reading tables directly~--- all making
+sensible use of transactions.
+
+\subsection{Keep it simple and Know Your Costs}
+
+Optimal code is normally very simple; sub-optimal code is
+non-performant due to its complexity. This simple truism underlies
+very much all performance work. It's very rare that one needs to
+increase complexity to improve performance. In the majority of cases,
+the easiest way is to ask the simple question: do we really need to do
+this? And when you decide you really need to do something, make sure
+you are fully aware of its O cost. Choosing a O(N) approach (or worse)
+should never be taken lightly because it's a scalability time bomb and
+it will always blow up when you need it the least~--- i.e. when the
+system is overloaded.
+
+I found that Object Orientation is in many cases detrimental to
+performance, because people are so focused in API's and abstraction
+that they forget about the hidden costs. For instance, it's common to
+see a call-stack five levels deep (or more) just to do something as
+simple as changing the value of a variable. Inheritance is
+particularly evil due to its encapsulation breaking and
+tight-coupling. When you think in terms of algorithms and data
+structures, the costs are much more obvious.
+
+In designing a modern OO system, it's best to:
+
+\begin{itemize}
+\item keep inheritance to an absolute minimum, using either interfaces
+  or client-supplier relationships;
+\item keep behaviour to a minimum in the objects of your data
+  model~--- probably best if they are but glorified data structures
+  with getters/setters, on which other, more specialised classes
+  operate on.
+\end{itemize}
+
+\subsection{Do not optimise early}
+
+One classic case of early optimisation in C++ is not using virtual
+functions because of performance. This may be true in certain cases
+(embedded development springs to mind) but you need to be coding
+really close to the metal to start suffering from it. However, many
+programmers refuse to consider inheritance or interfaces at
+design-time~--- even in systems where microsecond performance will
+never be an issue~--- limiting their options dramatically, for no real
+gain whatsoever. There are many, many other such examples~--- like
+designing your own string class before you proved it to be a
+bottleneck.
+
+Its extremely important not to optimise until there is numeric proof
+of the existence of a problem. This, of course, should not be confused
+with ``pessimisation'', e.g. choosing an approach that is known to be
+non-performant (such as using XML for large data volumes).
+
+\subsection{Misuse of threads}
+
+Another classic case in server side programming is thread misuse. Many
+developers look at every bit of code and think: ``I'll stick a thread
+pool in there; this will scale really neatly when we have more
+processors''. The end result of this sort of thinking was apparent at
+one customer site, where they had over 170 threads (!!!)  for one
+single server application. This application was running in boxes with
+64 processors, and sharing them with other instances as well as other
+servers which also made liberal use of threads.
+
+The problem with this approach is obvious:
+
+\begin{itemize}
+\item very rarely is there a need to have more threads than processors
+  (unless you're doing IO bound work; and even then, threading may not
+  be the best solution; consider multiplexing);
+\item really thread-safe code requires lots of locking; when you
+  finally make your code multithread-safe you may find it performs as
+  badly as single threaded code~--- if not worse!  having ridiculous
+  amounts of threads hinders performance even if they are doing
+  nothing (as it was the case with our application above) because
+  threads consume resources and take time to construct and destroy.
+\end{itemize}
+
+Server side and threading go hand-in-had, like bread and butter. But
+they should only be used in cases where little or no locking is
+required~--- and that requires large amounts of experience in
+application design.
+
+\section{Conclusion}
+
+Designing large-scale, server side systems is a very difficult job and
+should not be taken lightly. Lack of experience normally leads to
+using the wrong technologies and making wrong fundamental
+architectural decisions, which cannot be fixed at a later date. When
+designing a large system from scratch, one should always prefer the
+proven approaches to the new ideas the market keeps on churning.
+
+\chapter{.signature: David Hilbert}
+
+\begin{epigraphs}
+\qitem{We must know, we shall know}
+      {David Hilbert}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Saturday, September 29, 2007}
+\end{flushright}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/david_hilbert}
+\end{center}
+\end{figure}
+
+David Hilbert was a great German mathematician. What I appreciate the
+most about him is his quixotic personality and single-mindedness,
+going along with Bertrand Russel on their impossible quest to clean
+mathematics of all doubt and uncertainty, always searching for strict
+solutions through pure thought. In 1900, Hilbert came up with a list
+of 23 fundamental problems, many of which are still being investigated
+to this day. In 1930, Hilbert finished a famous speech in Königsberg
+with the words ``We must know, we shall know'', a phrase that fits
+perfectly the life-long devotion he had for mathematics.
+
+\chapter{Interview: Federico Mena-Quintero}
+
+\begin{epigraphs}
+\qitem{Gnome is People.}
+      {Luis Villa}
+
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Wednesday, October 03, 2007}
+\end{flushright}
+
+Pretty much anyone who is involved with Free Software~--- even just as
+a lowly user like myself~--- has heard of Federico. His blog is a
+source of insightful ideas on Gnome, and lately, on performance~---
+combined with a healthy dose of interest in politics and, more
+importantly, good food. I decided to send a few questions to Federico,
+mainly on the topics I was most curious about, and he kindly replied
+to my questions~--- and did so in record time! Many thanks to Federico
+for taking time off his busy hacking schedule for this interview.
+
+\bigskip
+
+\emph{You are one of the founders of the Gnome project, which is
+  currently celebrating ten years of existence. On a recent interview
+  you gave to Fosdem, you considered the platform to be
+  maturing. However, as we all know, the last 10\% normally take 90\%
+  of the time, and it's considered to be boring work. What do you
+  think the Gnome project needs to do to get people to focus on those
+  remaining 10\%?}
+
+\bigskip
+
+Basically, to provide an incentive to get that last 10\% of the work
+done :) Instead of smacking people with a stick for not writing
+documentation, you could have a web page with a bar chart of
+``percentage of documentation coverage''. Then it becomes a competition:
+use a carrot instead of a stick.
+
+I'd also like companies to get more involved in this. If they want to
+ship Gnome as a development platform they support, then they could
+very well employ people to do those missing bits.
+
+\bigskip
+
+\emph{You have been one of the champions of performance in Gnome for a
+while now. As functionality increased, Gnome started suffering more
+and more from performance problems, particularly when looked at from a
+low end perspective. You have been trying to explain to the masses
+that performance work is interesting. What do you think can be done to
+increase developer focus on this neglected area?}
+
+\bigskip
+
+The thing about fixing performance problems is that nobody teaches you
+how to do it. There is very little documentation out there on how to
+generically approach an optimization problem (I intend to do something
+about this, but oh, time, time, time!) :)
+
+Also, sometimes you fix a performance problem, but it reappears in the
+future. This happens when you don't leave an infrastructure in place
+to let you run a benchmark periodically. You need to be able to see if
+there are performance regressions.
+
+Our tools are slowly getting better, but there are really very few
+people working on optimization and profiling tools. It takes a
+\emph{ton} of time and skill to write a good tool; maybe that's why
+there are so few of them.
+
+Finally, profiling and optimizing is really about following the
+scientific method (``make a hypothesis, change one thing at a time,
+measure, confirm your hypothesis, etc.''). This requires discipline and
+a lot of patience.
+
+Basically, it's a problem of education :)
+
+\bigskip
+
+\emph{Earlier on this year, Gnome users and developers met for
+GUADEC. Did you find the conference as productive as in previous
+years? How important is GUADEC for the Gnome user and developer
+community?}
+
+\bigskip
+
+Yes, this GUADEC was tremendously productive! I think the venue helped
+a lot; the Birmingham Conservatoire is rather compact and has nice
+practice rooms that anyone can use. So, you could grab a couple of
+hackers and go to a room to hack peacefully.
+
+GUADEC has always been important, even more so now that our community
+is large and widespread. It is about the only time in the year when
+most of the Gnome contributors get together in a single place and are
+able to talk in person. Do not underestimate the productivity of
+talking over a beer :)
+
+\bigskip
+
+\emph{From the outside world, it appears Novell is a company who has
+regained it's soul and direction with Linux. How was the transition
+from Ximian into Novell?}
+
+\bigskip
+
+Like all acquisitions, it was a bit rought at first. It's what you get
+when you switch from being in a small company where you know all of
+the employees, to one with several thousands of people. You have to
+adjust to bigger processes, more layers of management, new locations,
+new paperwork...
+
+It has been very interesting to see the mindset of the old-time Novell
+people change over time. At first they seemed reluctant to touch Linux
+and free software, since they were of course Windows users. Then we
+had a period with lots of questions, lots of bugs that needed to be
+fixed, lots of re-training... and now we are in a very nice period,
+when people have accepted that we must all use our own free
+software. People seem to be productive with it and happy.
+
+I miss the monkeys, though.
+
+\bigskip
+
+\emph{You are currently telecommuting from Mexico, a position envied by a
+most developers out there. Do you find that telecommuting helps
+improving your productivity? Are there any downsides to it?}
+
+\bigskip
+
+It has good things and bad things. Good things: working in your
+pajamas if you feel like it, not having to commute, taking a pause
+when you are stuck in a hard problem to do a bit of gardening. Bad
+things: you can't talk to people in person. You must fix all your
+networking problems yourself. Sometimes, when you are uninspired, it's
+nice to be able to look over someone else's shoulder or talk to them.
+
+\bigskip
+
+\emph{Can you describe your typical day at work?}
+
+\bigskip
+
+Well, since I work from home... :)
+
+I wake up. If my wife and I are hungry, we make breakfast while my
+email gets downloaded. If we are not hungry, I'll just check for
+super-urgent email and then start programming (fixing bugs, doing new
+development, reviewing patches, etc.).
+
+I usually try to get some programming done in the morning, while my
+brain is fresh. Processing your email in the morning is a really bad
+idea; it will take you up to the afternoon and by then you'll be tired
+to really write code.
+
+We have lunch at really irregular hours. Sometimes it's more like an
+early dinner. I have the bad habit of not stopping working until I'm
+exhausted or my wife is angry that we haven't gone out to the
+supermarket yet, but I'm trying to fix that :)
+
+In the afternoon I tend to do ``light'' work... maintaining wikis,
+answering email, coordinating people. I don't really have a fixed work
+schedule.
+
+\bigskip
+
+\emph{Many developing countries are increasingly looking at Free
+  Software as a way to bring down the digital divide. Do you find that
+  Mexico is taking advantage of Free Software~--- particularly since it
+  has two lead Free Software developers? Are there any lessons to be
+  learned from Mexico's experience?}
+
+\bigskip
+
+Mexico is blessed and cursed to be so close to the USA. There is
+plenty of basic usage of free software by individuals (often
+enthusiastic students), but relatively little usage in the public and
+private sectors.
+
+People in Mexico get very impressed by rich people; most Mexicans want
+to be like the rich people from the USA they see on TV. It's very easy
+to woo us into accepting their ways.
+
+So, every time there has been some noise about using free software in
+the public sector, Bill Gates has flown down, organized a big business
+lunch with government officials, and made sure that they keep using
+Microsoft products. If you are an ignorant politician, you will love
+to gloat that you had lunch (imagine, lunch!) with Bill Gates, the
+richest man in the world~--- and whatever he says must be correct, of
+course. The problem we have is that most of our politicians don't have
+the faintest idea of the economic and cultural implications of free
+software, unlike those in the European Union (see the recent report on
+the economic impact of free software there!).
+
+\bigskip
+
+\emph{Thanks for the interview!}
+
+\chapter{.signature: Alan Perlis}
+
+\begin{epigraphs}
+\qitem{One man's constant is another man's variable}
+      {Alan Perlis}
+\end{epigraphs}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/alan_perlis}
+\end{center}
+\end{figure}
+
+\begin{flushright}
+  \emph{Saturday, October 20, 2007}
+\end{flushright}
+
+Alan Perlis was one of the finest specimens of the Real Programmer
+breed. Back in the days where Computer Scientists didn't exist, he and
+his kind were responsible for making many of the decisions that shape
+our view of computers today. I'm particularly fond of Perlis because
+of his views on Compuer Science:
+
+\begin{quote}
+I think that it's extraordinarily important that we in computer
+science keep fun in computing. When it started out, it was an awful
+lot of fun. Of course, the paying customers got shafted every now and
+then, and after a while we began to take their complaints
+seriously. We began to feel as if we really were responsible for the
+successful, error-free perfect use of these machines. I don't think we
+are. I think we're responsible for stretching them, setting them off
+in new directions, and keeping fun in the house. I hope the field of
+computer science never loses its sense of fun. Above all, I hope we
+don't become missionaries. Don't feel as if you're Bible salesmen. The
+world has too many of those already. What you know about computing
+other people will learn. Don't feel as if the key to successful
+computing is only in your hands. What's in your hands, I think and
+hope, is intelligence: the ability to see the machine as more than
+when you were first led up to it, that you can make it more.
+\end{quote}
+
+\begin{flushright}
+  Source: \emph{The Structure and Interpretation of Computer
+    Programs by Abelson, Sussman, and Sussman}
+\end{flushright}
+
+Unfortunately, things haven't quite turned out like Perlis would have
+wanted. Besides of his many contributions to Computer Science, such as
+his work on ALGOL, Perlis is very well known for his Epigrams on
+Programming, of which our quote is the first one. I like this quote
+because it reminds me that there can never be an ultimate truth in
+programming due to our human condition.
+
+\chapter{On Evolutionary Methodology}
+
+\begin{epigraphs}
+\qitem{Unix's durability and adaptability have been nothing short of
+  astonishing. Other technologies have come and gone like
+  mayflies. Machines have increased a thousand-fold in power,
+  languages have mutated, industry practice has gone through multiple
+  revolutions~--- and Unix hangs in there, still producing, still paying
+  the bills, and still commanding loyalty from many of the best and
+  brightest software technologists on the planet.}
+      {ESR}
+\end{epigraphs}
+\begin{epigraphs}
+\qitem{Unix...is not so much a product as it is a painstakingly
+  compiled oral history of the hacker subculture.}
+      {Neal Stephenson}
+\end{epigraphs}
+
+\begin{flushright}
+  \emph{Wednesday, June 11, 2008}
+\end{flushright}
+
+
+\section{The Impossibly Scalable System}
+
+If development in general is an art or a craft, its finest hour is
+perhaps the maintenance of existing systems which have high
+availability requirements but are still experiencing high rates of
+change. As we covered previously, maintenance in general is a task
+much neglected in the majority of commercial shops, and many products
+suffer from entropic development; that is, the piling on of changes
+which continuously raise the complexity bar, up to a point where it is
+no longer cost-effective to continue running the existing system. The
+word \emph{legacy} is in itself filled with predestination, implying
+old systems cannot avoid time-decay and will eventually rot into
+oblivion.
+
+The story is rather different when one looks at a few successful Free
+and Open Source Software (FOSS) systems out there. For starters,
+\emph{legacy} is not something one often hears on that side of the
+fence; projects are either maintained or not maintained, and can
+freely flip from one state to the other. Age is not only \emph{not} a
+bad thing, but, in many cases, it is a remarkable advantage. Many
+projects that survived their first decade are now stronger than ever:
+the Linux kernel, x.org, Samba, Postgresql, Apache, gcc, gdb,
+subversion, GTK, and many, many others. Some, like Wine, took a decade
+to mature and are now showing great promise.
+
+Each of these old timers has its fair share of lessons to teach, all
+of them incredibly valuable; but the project I'm particularly
+interested in is the Linux kernel. I'll abbreviate it to Linux or ``the
+kernel'' from now on.
+
+As published recently in a study by Kroah-Hartman, Corbet and
+McPherson, the kernel suffers a daily onslaught of unimaginable
+proportions. Recent kernels are a joint effort of thousands of kernel
+hackers in dozens of countries, a fair portion of which working or
+well over 100 companies. On average, these developers added or
+modified around 5K lines per day during the 2.6.24 release cycle and,
+crucially, removed some 1.5K lines per day~--- and \emph{day} here
+includes weekends too. Kernel development is carried out in hundreds
+of different kernel trees, and the merge paths between these trees
+obeys no strictly enforced rules~--- it does follow convention, but
+rules get bent when the situation requires it.
+
+It is incredibly difficult to convey in words just how much of a
+technical and social achievement the kernel is, but one is still
+compelled to try. The absolute master of scalability, it ranges from
+the tiniest embedded processor with no MMU to the largest of the large
+systems~--- some spanning as many as 4096 processors~--- and
+covering pretty much everything else in between: mobile phones,
+Set-Top Boxes (STBs), game consoles, PCs, large severs,
+supercomputers. It supports more hardware architectures than any other
+kernel ever engineered, a number which seemingly keeps on growing at
+the same rate new hardware is being invented. Linux is increasingly
+the kernel of choice for new architectures, mainly because it is
+extremely easy to port. Even real time~--- long considered the
+unassailable domain of special purpose~--- is beginning to cave in,
+unable to resist the relentless march of the penguin. And the same is
+happening in many other niches.
+
+The most amazing thing about Linux may not even be its current state,
+but its pace, as clearly demonstrated by Kroah-Hartman, Corbet and
+McPherson's analysis of kernel source size: it has displayed a near
+constant growth rate between 2.6.11 and 2.6.24, hovering at around
+10\% a year. Figures on this scale can only be supported by a
+catalytic development process. And in effect, that is what Linux
+provides: by getting better it implicitly lowers the entry barrier to
+new adopters, which find it closer and closer to their needs; thus
+more and more people join in and fix what they perceive to be the
+limitations of the kernel, making it even more accessible to the next
+batch of adopters.
+
+Although some won't admit it now, the truth is none of the
+practitioners or academicians believed that such a system could ever
+be delivered. After all, Linux commits every single schoolboy error:
+started by an ``inexperienced'' undergrad, it did not have much of an
+upfront design, architecture and purpose; it originally had the firm
+objective of supporting only a single processor on x86; it follows the
+age-old monolithic approach rather than the ``established''
+micro-kernel; it is written in C instead of a modern, object-oriented
+language; its processes appear to be haphazard, including a clear
+disregard for Brook's law; it lacks a rigorous Q\&A process and until
+very recently even a basic kernel debugger; version control was first
+introduced over a decade after the project was started; there is no
+clear commercial (or even centralised) ownership; there is no
+``vision'' and no centralised decision making (Linus may be the final
+arbiter, but he relies on the opinions of a lot of people). The list
+continues ad infinitum.
+
+And yet, against all expert advice, against all odds, Linux is the
+little kernel that could. If one were to write a spec covering the
+capabilities of vanilla 2.6.25, it would run thousands of pages long;
+its cost would be monstrous; and no company or government department
+would dare to take on such an immense undertaking. Whichever way you
+look at it, Linux is a software engineering singularity.
+
+But how on earth can Linux work at all, and how did it make it thus
+far?
+
+\section{Linus' Way}
+
+\begin{epigraphs}
+\qitem{I'm basically a very lazy person who likes to get credit for things other people actually do.}
+      {Linus Torvalds}
+\end{epigraphs}
+
+The engine of Linux's growth is deeply rooted in the kernel's
+methodology of software development, but it manifests itself as a set
+of core values~--- a culture. As with any other school of thought,
+not all kernel hackers share all values, but the group as a whole
+displays some obvious homogeneous characteristics. These we shall call
+Linus' Way, and are loosely summarised below (apologies for some
+redundancy, but some aspects are very interrelated).
+
+\subsection{Small is beautiful}
+
+\begin{itemize}
+\item Design is only useful on the small scale; there is no need to
+  worry about the big picture~--- if anything, worrying about the big
+  picture is considered harmful. Focus on the little decisions and
+  ensure they are done correctly. From these, a system will emerge
+  that \emph{appears} to have had a grand design and purpose.
+\item At a small scale, do not spend too long designing and do not be
+  overambitious. Rapid prototyping is the key. Think simple and do not
+  over design. If you spend too much time thinking about all the
+  possible permutations and solutions, you will create messy and
+  unmaintainable code which will very likely going to be wrong. Best
+  implement a small subset of functionality that works well, is easy
+  to understand and can be evolved over time to cover any additional
+  requirements.
+\end{itemize}
+
+\subsection{Show me the Code}
+
+\begin{itemize}
+\item Experimentation is much more important than theory by several
+  orders of magnitude. You may know everything there is to know about
+  coding practice and theory, but your opinion will only be heard if
+  you have solid code in the wild to back it up.
+\item Specifications and class diagrams are frowned upon; you can do
+  them for your own benefit, but they won't sell any ideas by
+  themselves.
+\item Coding is a messy business and is full of compromises. Accept
+  that and get on with it. Do not search for perfection before showing
+  code to a wider audience. Better to have a crap system (sub-system,
+  module, algorithm, etc.) that works somewhat today than a perfect
+  one in a year or two. Crap systems can be made slightly less crappy;
+  vapourware has no redeeming features.
+\item Merit is important, and merit is measured by code. Your ability
+  to do boring tasks well can also earn a lot of brownie points
+  (testing, documentation, bug hunting, etc.) and will have a large
+  positive impact on your status. The more you are known and trusted
+  in the community, the easier it will be for you to merge new code in
+  and the more responsibilities you will end up having. Nothing is
+  more important than merit as gauged by the previous indicators; it
+  matters not what position you hold on your company, how important
+  your company is or how many billions of dollars are at stake~--- nor
+  does it matter how many academic titles you hold. However, past
+  actions do not last forever: you must continue to talk sense to have
+  the support of the community.
+\item Testing is crucial, but not just in the conventional sense. The
+  key is to release things into a wider population (``Release early,
+  release often''). The more exposure code has the more likely bugs
+  will be found and fixed. As ESR put it, ``Given enough eyeballs, all
+  bugs are shallow'' (dubbed Linus' law). Conventional testing is also
+  welcome (the more the merrier), but its no substitute for releasing
+  into the wild.
+\item Read the source, Luke. The latest code is the only authoritative
+  and unambiguous source of understanding. This attitude does not in
+  anyway devalue additional documentation; it just means that the
+  kernel's source code overrides any such document. Thus there is a
+  great impetus in making code readable, easy to understand and
+  conformant to standards. It is also very much in line with Jack
+  Reeve's view that source code is the only real specification a
+  software system has.
+\item Make it work first, then make it better. When taking on existing
+  code, one should always first make it work as intended by the
+  original coders; then a set of cleanup patches can be written to
+  make it better. Never start by rewriting existing code.
+\end{itemize}
+
+\subsection{No sacred cows}
+
+\begin{itemize}
+\item \emph{anything} related to the kernel can change, including
+  processes, code, tools, fundamental algorithms, interfaces,
+  people. Nothing is done ``just because''. Everything can be
+  improved, and no change is deemed too risky. It may have to be
+  scheduled, and it may take a long time to be merged in; but if a
+  change is of ``good taste'' and, when required, provided the
+  originator displays the traits of a good maintainer, it will
+  eventually be accepted. Nothing can stand on the way of progress.
+\item As a kernel hacker, you have no doubts that you are right~---
+  but actively you encourage others to prove you wrong and accept
+  their findings once they have been a) implemented (a prototype would
+  do, as long as it is complete enough for the purpose) b) peer
+  reviewed and validated. In the majority of cases you gracefully
+  accept defeat. This may imply a turn-around of 180 degrees; Linus
+  has done so on many occasions.
+\item Processes are made to serve development. When a process is found
+  wanting~--- regardless of how ingrained it is or how useful it has
+  been in the past~--- it can and will be changed. This is often done
+  very aggressively. Processes only exist while they provide visible
+  benefits to developers or, in very few cases, due to external
+  requirements (ownership attribution comes to mind). Processes are
+  continuously fine-tuned so that they add the smallest possible
+  amount of overhead to real work. A process that improves things
+  dramatically but adds a large overhead is not accepted until the
+  overhead is shaved off to the bare bone.
+\end{itemize}
+
+\subsection{Tools}
+
+\begin{itemize}
+\item Must fit the development model~--- the development model should
+  not have to change to fit tools;
+\item Must not dumb down developers (i.e. debuggers); a tool must be
+  an aid and never a replacement for hard-thinking;
+\item Must be incredibly flexible; ease of use can never come at the
+  expense of raw, unadultered power;
+\item Must not force everyone else to use that tool; some exceptions
+  can be made, but on the whole a tool should not add
+  dependencies. Developers should be free to develop with whatever
+  tools they know best.
+\end{itemize}
+
+\subsection{The Lieutenants}
+
+One may come up with clever ways of doing things, and even provide
+conclusive experimental evidence on how a change would improve
+matters; however, if one's change will disrupt existing code and
+requires specialised knowledge, then it is important to display the
+characteristics of a good maintainer in order to get the changes
+merged in. Some of these traits are:
+
+\begin{itemize}
+\item Good understanding of kernel's processes;
+\item Good social interaction: an ability to listen to other kernel
+  hackers, and be ready to change your code;
+\item An ability to do boring tasks well, such as patch reviews and
+  integration work;
+\item An understanding of how to implement disruptive changes,
+  striving to contain disruption to the absolute minimum and a deep
+  understanding of fault isolation.
+\end{itemize}
+
+\subsection{Patches}
+
+Patches have been used for eons. However, the kernel fine-tuned the
+notion to the extreme, putting it at the very core of software
+development. Thus all changes to be merged in are split into patches
+and each patch has a fairly concise objective, against which a review
+can be performed. This has forced all kernel hackers to \emph{think}
+in terms of patches, making changes smaller and concise, and splitting
+scaffolding and clean up work and decoupling features from each
+other. The end result is a ridiculously large amount of positive
+externalities~--- unanticipated side-effects~--- such as technologies
+that get developed for one purpose but find uses that were never
+dreamt of by their creator. The benefits of this approach are far too
+great to discuss here but hopefully we'll have a dedicated article on
+the subject.
+
+\subsection{Other}
+
+\begin{itemize}
+\item Keep politics out. The vast majority of decisions are taken on
+  technical merits alone, and very rarely for political
+  reasons. Sometimes the two coincide (such as the dislike for binary
+  modules in the kernel), but one must not forget that the key driver
+  is always the technical reasoning. For instance, the kernel uses the
+  GNU GPL v2 purely because its the best way to ensure its openness, a
+  key building block of the development process.
+\item Experience trumps fashion. Whenever choosing an approach or a
+  technology, kernel hackers tend to go for the beaten track rather
+  than new and exciting ones. This is not to say there is no
+  innovation in the kernel; but innovators have the onus of proving
+  that their approach is better. After all, there is a solid body of
+  over 30 years of experience in developing UNIX kernels; its best to
+  stand on the shoulders of giants whenever possible.
+\item An aggressive attitude towards bad code, or code that does not
+  follow the standards. People attempting to add bad code are told so
+  in no uncertain terms, in full public view. This discourages many a
+  developer, but also ensures that the entry bar is raised to avoid
+  lowering the signal-to-noise (S/N) ratio.
+\end{itemize}
+
+If there ever was a single word that could describe a kernel hacker,
+that word would have to be ``pragmatic''. A kernel hacker sees
+development as a hard activity tht should remain hard. Any other view
+of the world would result in lower quality code.
+
+\section{Navigating Complexity}
+
+Linus has stated in many occasions he is a big believer of development
+by evolution rather than the more traditional methodologies. In a way,
+he is the father of the evolutionary approach when applied to software
+design and maintenance. I'll just call this the evolutionary
+methodology (EM) by want of a better name. EM's properties make it
+strikingly different from everything that has preceded it. In
+particular, it appears to remove most forms of centralised
+control. For instance:
+
+\begin{itemize}
+\item It does not allow you to know where you're heading in the long
+  run; all it can tell you is that if you're currently on a favourable
+  state, a small, gradual increment is \emph{likely} to take you to
+  another, slightly more favourable state. When measured in a large
+  timescale it will appear as if you have designed the system as a
+  whole with a clear direction; in reality, this ``clearness'' is an
+  emergent property (a side-effect) of thousands or small decisions.
+\item It exploits parallelism by trying lots of different gradual
+  increments in lots of members of its population and selecting the
+  ones which appear to be the most promising.
+\item It favours promiscuity (or diversity): code coming from anywhere
+  can intermix with any other code.
+\end{itemize}
+
+But how exactly does EM work? And why does it seem to be better than
+the traditional approaches? The search for these answers takes us
+right back to the fundamentals. And by ``fundamentals'', I really mean
+the absolute fundamentals~--- you'll have to grin and bear, I'm
+afraid. I'll attempt to borrow some ideas from Popper, Taleb, and
+Dawkins to make the argument less nonsensical.
+
+That which we call reality can be imagined as a space with a really,
+really large number of variables. Just how large one cannot know, as
+the number of variables is unknowable~--- it could even be infinite~---
+and it is subject to change (new variables can be created; existing
+ones can be destroyed, and so on). With regards to the variables
+themselves, they change value every so often but this frequency
+varies; some change so slowly they could be better describbed as
+constants, others so rapidly they cannot be measured. And the
+frequency itself can be subject to change.
+
+When seen over time, these variables are curves, and reality is the
+space where all these curves live. To make matters more interesting,
+changes on one variable can cause changes to other variables, which in
+turn can also change other variables and so on. The changes can take
+many forms and display subtle correlations.
+
+As you can see, reality is the stuff of pure, unadulterated complexity
+and thus, by definition, any attempt to describe it in its entirety
+cannot be accurate. However, this simple view suffices for the
+purposes of our exercise.
+
+Now imagine, if you will, a model. A model is effectively a) the
+grabbing of a small subset of variables detected in reality; b) the
+analysis of the behaviour of these variables over time; c) the issuing
+of statements regarding their behaviour~--- statements which have not
+been proven to be false during the analysis period; d) the validation
+of the models predictions against past events (calibration). Where the
+model is found wanting, it needs to be changed to accommodate the new
+data. This may mean adding new variables, removing existing ones that
+were not found useful, tweaking variables, and so on. Rinse,
+repeat. These are very much the basics of the scientific method.
+
+Model are rather fragile things, and its easy to demonstrate
+empirically why. First and foremost, they will always be incomplete;
+exactly how incomplete one cannot know. You never know when you are
+going to end outside the model until you are there, so it must be
+treated with distrust. Second, the longer it takes you to create a
+model~--- a period during which validation is severely impaired~---
+the higher the likelihood of it being wrong when its ``finished''. For
+very much the same reasons, the larger the changes you make in one go,
+the higher the likelihood of breaking the model. Thirdly, the longer a
+model has been producing correct results, the higher the probability
+that the next result will be correct. But the exact probability cannot
+be known. Finally, a model must endure constant change to remain
+useful~--- it may have to change as frequently as the behaviour of the
+variables it models.
+
+In such an environment, one has no option but to leave certainty and
+absolutes behind. It is just not possible to ``prove'' anything, because
+there is a large component of randomness and unknown-ability that
+cannot be removed. Reality is a messy affair. The only certainty one
+can hold on to is that of fallibility: a statement is held to be
+possibly true until proven false. Nothing else can be said. In
+addition, empiricism is highly favoured here; that is, the ability to
+look at the data, formulate an hypothesis without too much theoretical
+background and put it to the test in the wild.
+
+So how does this relate to code? Well, every software system ever
+designed is a model. Source code is nothing but a set of statements
+regarding variables and the rules and relationships that bind them. It
+may model conceptual things or physical things~--- but they all
+inhabit a reality similar to the one described above. Software systems
+have become increasingly complex over time~--- in other words, taking
+on more and more variables. An operative system such as multics,
+deemed phenomenally complex for its time, would be considered normal
+by today's standards~--- even taking into account the difficult
+environment at the time with non-standard hardware, lack of experience
+on that problem domain, and so on.
+
+In effect, it is this increase in complexity that breaks down older
+software development methodologies. For example, the waterfall method
+is not ``wrong'' per se; it can work extremely well in a problem
+domain that covers a small number of variables which are not expected
+to change very often. You can still use it today to create perfectly
+valid systems, just as long as these caveats apply. The same can be
+said for the iterative model, with its focus on rapid cycles of
+design, implementation and testing. It certainly copes with much
+larger (and faster moving) problem domains than the waterfall model,
+but it too breaks down as we start cranking up the complexity
+dial. There is a point where your development cycles cannot be made
+any smaller, testers cannot augment their coverage, etc. EM, however,
+is at its best in absurdly complex problem domains~--- places where
+no other methodology could aim to go.
+
+In short, EM's greatest advantages in taming complexity are as
+follows:
+
+\begin{itemize}
+\item \emph{Move from one known good point to another known good
+  point}. Patches are the key here, since they provide us with small
+  units of reviewable code that can be checked by any experienced
+  developer with a bit of time. By forcing all changes to be split
+  into manageable patches, developers are forced to think in terms of
+  small, incremental changes. This is precisely the sort of behaviour
+  one would want in a complex environment.
+\item \emph{Validate, validate and then validate some more}. In other
+  words, Release Early, Release Often. Whilst Linus has allowed
+  testing and Q\&A infrastructure to be put in place by interested
+  parties, the main emphasis has always been placed in putting code
+  out there in the wild as quickly as possible. The incredibly diverse
+  environments on which the kernel runs provide a very harsh and
+  unforgiving validation that brings out a great number of bugs that
+  could not have possibly been found otherwise.
+\item \emph{No one knows what the right thing is, so try as many
+  possible avenues as possible simultaneously}. Diversity is the key,
+  not only in terms of hardware (number of architectures, endless
+  permutations within the same architecture, etc.), but also in terms
+  of agendas. Everyone involved in Linux development has their own
+  agenda and is working towards their own goal. These individual
+  requirements, many times conflicting, go through the kernel
+  development process and end up being converted into a number of
+  fundamental architectural changes (in the design sense, not the
+  hardware sense) that effectively are the superset of all
+  requirements, and provide the building blocks needed to implement
+  them. The process of integrating a large change to the kernel can
+  take a very long time, and be broken into a sequence of never ending
+  patches; but many a time it has been found that one patch that adds
+  infrastructure for a given feature also provides a much better way
+  of doing things in parts of the kernel that are entirely unrelated.
+\end{itemize}
+
+Not only does EM manage complexity really well but it actually thrives
+on it. The pulling of the code base in multiple directions makes it
+stronger because it forces it to be really plastic and
+maintainable. It should also be quite clear by now that EM can only be
+deployed successfully under somewhat limited (but well defined)
+circumstances, and it requires a very strong commitment to
+openness. It is important to build a community to generate the
+diversity that propels development, otherwise its nothing but the
+iterative method in disguise done out in the open. And building a
+community entails relinquishing the traditional notions of ownership;
+people have to feel empowered if one is to maximise their
+contributions. Furthermore, it is almost impossible to direct this
+engine to attain specific goals~--- conventional software companies
+would struggle to understand this way of thinking.
+
+Just to be clear, I would like to stress the point: it is not right to
+say that the methodologies that put emphasis on design and centralised
+control are wrong, just like a hammer is not a bad tool. Moreover, its
+futile to promote one programming paradigm over another, such as
+Object-Orientation over Procedural programming; One may be superior to
+the other on the small, but on the large~--- the real world~--- they
+cannot by themselves make any significant difference (class libraries,
+however, are an entirely different beast).
+
+I'm not sure if there was ever any doubt; but to me, the kernel proves
+conclusively that the human factor dwarfs any other in the production
+of large scale software.
+
+\chapter{On the UbuntuBox}
+
+\begin{flushright}
+  \emph{Thursday, June 19, 2008}
+\end{flushright}
+
+\section{The Regular User}
+
+As with many other geeks, I find myself in the unofficial position of
+``computer guy'' for family and friends (F\&F). This entails sorting out
+broken computers, providing advice on new purchases for a variety of
+devices and software packages, installing said devices and packages,
+doing security updates and giving security advice, providing
+mini-tutorials on applications, teaching basic programming~--- the list
+goes on and on. The funny thing is, much like all other nerds, I may
+moan about my duties but secretly I enjoy performing them. Sometimes I
+get to setup people with cheap Ubuntu boxen, which they may complain
+about a little in the beginning but eventually use in extremely
+productive ways; and even on windows setups, I get to understand what
+drives people to Microsoft and what its weak and strong points
+are. Its a very instructive job.
+
+Things got even more interesting since I bought my eee PC, a device
+that is selling like fire in the polar winter. The eee PC helped me
+understand a bit better how most people think. All along we, the Linux
+community, have focused on providing a user experience that is very
+similar to Windows: you may not have a Start Menu but you have the
+Ubuntu logo; toolbars and menus are very similar and so on. Even the
+newest eye-candy is similar to Mac and Vista's way of doing things
+(although there's always the chicken-and-egg problem). The end result
+is interesting: developers and regular Linux users are now convinced
+that no one should have any difficulties at all moving from Windows to
+KDE or Gnome; on the other hand, as soon as you sit a user down on a
+Linux box, he or she immediately tells you that something is not
+right. Objectively, the average user will probably not be able to
+point out what's wrong, if anything at all, other than ``this is not
+Windows, can we not have Windows please''.
+
+The fantastic thing about the eee PC was that, of all people I showed
+it to, not a single one said: bah, this is not Windows. Most of them
+got on with the user interface immediately, and found it really
+intuitive. In all my years of advocating Linux I never before seen a
+reaction like this. I did absolutely no advocating whatsoever, no
+mention about freedom or the superiority of free software. Just
+letting them play with it was enough. As an example, my girlfriend has
+been using Linux for over 5 years, and I get the periodic complains of
+``why can't we just use windows'' whenever I have some difficulties
+installing a device, or I break the world on a dist-upgrade. But
+within minutes of playing with the eee, her reaction was: ``I want one
+of these!!''.
+
+The reactions I've seen towards the eee PC are almost the opposite of
+the few Vista users I've spoken to. Sure, Vista looks nice, but have
+you tried installing a one-click wireless router? That's when F\&F call
+me out, when it all goes wrong with the ``one-click'' cheap product they
+bought. But thing is, I can't say much in Ubuntu's defense either. For
+example, I spent several days installing a Huawei e220 modem to
+provide 3G Internet access to my nephews, and let me just tell you,
+trivial would not have been a word one could apply to any part of the
+process. Vodaphone's new clever GUI may be good for Vodaphone users
+but I never got the damn thing to cooperate. True, the whole exercise
+wasn't taxing for a nerd~--- hey, its fun to look at AT commands now and
+then~--- but there is no way, just noooo waaaay a regular user would
+have gone through the pain, even with the brilliant Ubuntu forums to
+hand.
+
+Now, before we go any further, I can already hear the complaints: ``so
+you've chatted to what, twenty people, and now you think you
+understand the market?''. Well, that much is true, I cannot claim any
+statistical accuracy to my diagnostics. These are my opinions; the
+entire article is based on empiricism and small samples. However, if
+my line argumentation is done correctly and rightly interprets the
+success of the eee, then there must be some truth to my views because
+I've tried to align them with the eee. The market has given a verdict
+on this gadget, loudly and unequivocally.
+
+The eee PC is also a brilliant illustration of the huge divide between
+regular users and the developers who are tasked with providing
+software for them. At a moment in time where the Gnome community is
+yet again rethinking the future of Gnome, not a single regular user
+would find this debate interesting. This should send all the alarm
+bells ringing, but unfortunately that doesn't seem to be the case. The
+truth is, regular users don't want flashy 3D desktops, although they
+can eventually cope with them; they don't need spinning cubes although
+they may start using them once they understand it. What they really
+want is simplicity. They have a simple set of tasks to perform, and
+they want to do so cheaply and reliably, and they truly do not
+understand why everything has to be so complicated and why do
+computers have to change so much so often.
+
+So what made the eee popular? In my opinion, there are two key points:
+
+\begin{itemize}
+\item Its cheap. No one would even have a look at it if it was 400 GBP
+\item Its easy.
+\end{itemize}
+
+These are the key selling points to a regular user. To illustrate the
+second point, when I said to my girlfriend I was thinking about
+installing Ubuntu Hardy on the eee, she replied in dismay: ``Why would
+you do that??''.
+
+\section{The Regular User Use Cases}
+
+The key thing to notice about the eee is that most users don't even
+know its not running Windows. Its just an appliance, a bit like a
+PlayStation, and thus there is no need to enquire about it's operative
+system. Like an appliance, it is also expected to be switched on and
+just work~--- the fast boot reinforces this idea. The interface
+provided is also designed for the tasks common to the vast majority of
+regular computer users, and allows them to find things fast. But,
+looking at the wider problem, what do our regular users do with their
+computers?  I compiled a list of all use cases I found in my user
+base:
+
+\begin{itemize}
+\item Internet: email, browsing, playing on-line games and youtube;
+\item Listen to music, sync with their music player;
+\item Watch local video content;
+\item Talk with their friends: IM, VOIP
+\item Play (basic) games: on all cases, real gaming is done on the
+  PlayStation;
+\item Work: word-processor by far, some spreadsheet use but ``it's
+  quite hard'';
+\item Burning and ripping;
+\item Downloading: torrents, etc. Not very popular because ``its
+  complicated'';
+\item Digital photo management: storage, some very basic manipulation
+  (make it smaller for emailing);
+\item Printing: mainly for school/University; pictures in very few
+  cases.
+\end{itemize}
+
+In addition to these, some additional requirements crop up:
+
+\begin{itemize}
+\item Windows users all have proprietary firewalls and virus scanners;
+\item All machines are multi-user, and data must be kept private~---
+  especially with the youngsters;
+\item Machines must withstand battering: switched off at any point,
+  banged about, dropped, etc;
+\item Internet connectivity is vital, ADSL, cable and 3G are
+  used. Computers are useless without the Internet;
+\item Wireless around the house is vital. External wireless is nice,
+  but not frequently used because ``it's too complicated'';
+\item Costs must be kept exceedingly low as IT budget is normally very
+  low;
+\end{itemize}
+
+That's it. You'd be amazed with the percentage of the market one
+covers with only these use cases; not just doing them, but doing them
+well, like a PlayStation plays games.
+
+And what are the biggest complaints about computers?
+
+\begin{itemize}
+\item They're really hard. Installing hardware and software is a
+  nightmare, and they'd be stuffed without the local nerd;
+\item They break easily. One of my Vista users is still in disbelief
+  that installing wireless drivers could cause the DVD drive to stop
+  working;
+\item They're expensive. Sure you can get a cheap'ish box but then
+  everything else is expensive (software, peripherals, etc);
+\item They change far too frequently. Most users just about got around
+  XPs user interface just to see it all change again;
+\item They're insecure. They don't know how or why but that's what
+  they've heard. That and the constant popups that look like viruses.
+\end{itemize}
+
+On one hand, the regular user is quite advanced, making multi-user and
+networking a central part of its computer experience. On the other
+hand, he/she is very naive: the vast majority of computing power goes
+under-utilised~--- the OS gobbling most of the resources for no good
+reason~--- and the majority of software expenses easily avoidable by
+using freely available applications. Regular users haven't got nowhere
+near using Media Centres, ``clever'' media management software, or
+even connecting their PCs to the TVs. All these things they consider
+``advanced'' and yet nerds and more savvy users have been doing it for
+years. One cannot help but feel that there is a massive market out
+there for the taking~--- a market that Vista cannot aim to grab
+because it's diametrically opposed to its needs~--- and yet, no one
+else seems to find the path to its door.
+
+\section{UbuntuBox: The Hardware Platform}
+
+The rest of this article is an Ubuntero Gedankenexperiment: if I was a
+manufacturer, what sort of box would I like my F\&F to have? What would
+make my life and their life easier? The short answer to that question
+is a PlayStation 2 like box but with PC-like functionality. The long
+answer is, well, long.
+
+I'm not going to bother with engineering reality here~--- I'm sure
+some requirements will be so conflicting they cannot possibly be
+implemented. However, I've got zero experience in hardware
+manufacturing, weights, cooling, large scale deployment and so on~---
+so much so that I'm not even going to bother pretending; any
+assumptions I'd make would be wrong anyway. So, to make matters easy,
+I'll just ask for it all~--- impossible or not~--- and wait for the
+reality check to come in.
+
+The first, very different thing about our box is that it's not a
+computer. Well, inside it is a regular PC of course, but it doesn't
+look like one. It is designed to look exactly like a DVD player, and
+to fit your living room. A bog-standard black-box with a basic LED
+display would do. Inside, it has:
+
+\begin{itemize}
+\item Multiple cores: four would be ideal, but at least two. They
+  don't have to be particularly fast (1.x Ghz would do, but I guess 2
+  Ghz would be easier to find);
+\item 4 GB of RAM: can be the slowest around, but we need at least 4;
+  the more the merrier, of course;
+\item 250 to 500 GB hard drive: the more the merrier. Doesn't have to
+  be fast, we just need the space;
+\item Average video card: key things are RGB/HDMI and TV out;
+  resolution decent enough to play most games (not the latest);
+\item Loads of USB ports;
+\item RW DVD drive;
+\item Analog TV + DVB card (for FreeView in England);
+\item Wired and Wireless Ethernet;
+\item Sound card with 5.1 surround sound: doesn't have to be a super
+  card, just an entry level one would do;
+\item SD card, compact flash readers;
+\item Ability to control the box with a remote control;
+\end{itemize}
+
+And now the key limiting factor:
+
+\begin{itemize}
+\item The overall cost of the box must not exceed 200 GBP. This may
+  require some tweaking, e.g. if raising it to 299 means we can put
+  all features in, it may be worthwhile.
+\end{itemize}
+
+Notice that all the hardware will be standard on all boxes of the same
+generation. This is all commodity hardware~--- certainly nothing
+proprietary~--- but without the heterogeneity that is associated with
+it. Note that control is a key feature~--- the limiting of user and
+vendor freedom to swap things at will. We'll return to the topic later
+on, as I'm sure it will prove controversial.
+
+Now, how does the box behave for the regular use case? Well, you buy
+it, plug it in, set all the cables up and start it up. You will see
+only two things on boot: the logo (say the Ubuntu logo) fading in and
+out, and the console password. That's it. No BIOS, no flashing
+X-Server, nothing else. Within a few seconds you'll be prompted for
+the console password and given an option of not needing a password in
+the future (Note: console is \emph{not} root). Lets leave the desktop at
+that for the moment as we'll cover it properly in the next section.
+
+What about Internet access, you ask? Well, you will need to buy one of
+the available modems:
+
+\begin{itemize}
+\item 3G;
+\item ADSL;
+\item Cable.
+\end{itemize}
+
+Each of these modems are made available at market prices (i.e. as
+cheap as possible); however, they will have been officially and
+exhaustively tested and stamped with a ``UbuntuBox compliant vX'' or
+some such, where vX is the box's generation. To be compliant means
+that your hardware has been throughly tested and is known to work with
+the hardware and software in a given generation. When you plug any of
+these devices after console login, a simple wizard will appear asking
+you to choose a provider. Each provider will have been also part of a
+certification program before inclusion.
+
+The other networking device is an Ethernet Switch. This is only
+required if your modem does not come with switching abilities (maybe
+in the 3G case). Network Manager already does a pretty good job of
+this, so all you'll need to do is setup the network on your console
+session (SSID, etc). You can use a USB keyboard for this or just
+endure typing from the remote control.
+
+Note that the certification requirement is extended to all hardware
+used with the box. In other words, there is a pretty draconian control
+on the hardware platform. Users are, of course, free to do as they
+wish with the device they bought, but if they go down the uncertified
+route, all support contracts are rendered void (more on this
+later). The truth is, its impossible to provide cost-effective support
+to all possible permutations of off-the-shelf hardware~--- a fact all
+Linux and Windows nerds are all too aware, as are Mac engineers. There
+will always be some weird combination that makes things break, and it
+can take many, many man-days to fix it; when you have 1M boxen out
+there, this cost would be prohibitive. The only way is to control the
+standard platform.
+
+For all of its closeness, the certification process is actually open
+when compared with other companies. All the criteria involved is made
+available in public websites, APIs with all the hooks required to
+extend wizards are public (with examples), companies are free to do
+public dry runs and any company can request a slot for
+validation. Perhaps some cost needs to be associated with the process
+(time is money after all, and we must discourage the less serious
+companies), but in general, the process is fair and public. The tests,
+however, are stringent; hardware that passes \emph{cannot} fail when
+deployed in the wild.
+
+One final note with regards to entry level hardware. Some people may
+not be aware, but the computing power available as standard today is
+incredibly high. For example, one of the PCs I maintain has a 1Ghz
+CPU, 512 MB of ram, 10 GB hard drive and an average ATI card; I bought
+it for 60 GBP. This machine runs Ubuntu Hardy and sometimes has to
+cope with as many as 3 users logged on. It doesn't do any of the 3D
+Compiz special effects due to the dodgy ATI card, but it does pretty
+much everything else. You'd be surprised on what you can do with the
+slowest RAM, cheapest sound-card and so on.
+
+\section{UbuntuBox: The Software Platform}
+
+By now you must have guessed that the box would be running Ubuntu; but
+this is not your average Ubuntu. Using an interface along the lines of
+Remix, we would make a clear statement that this is an appliance~---
+not a PC. As the eee has demonstrated, perceptions matter the
+most. Remix's interface will remind no one of Windows, whilst at the
+same time making the most common tasks really easy to locate.
+
+In addition to regular Ubuntu, the software platform would provide,
+out-of-the box, complete media support. This entails having GStreamer
+will all the proprietary plugins, Adobe's flash and any other plug-ins
+that may be required for it to play all the media one can throw at it.
+
+The UbuntuBox is mainly a clever Media Centre, and, as such,
+applications such as Elisa, Rhythmbox/Banshee, F-Spot, etc are at the
+core of the user experience. These applications would need to be
+modified slightly to allow for a better multi-user experience
+(e.g. shared photo/music collections, good PVR and DVB support, etc),
+but on the whole the functionality they already provide is more than
+sufficient for most users.
+
+As with the hardware side, the software platform is tightly
+controlled. Only official Ubuntu repositories are allowed, and all
+software is tested and known to work with the current generation of
+boxen. And, as with hardware, the software platform is made available
+for third-party who want to deploy their wares. An apt interface
+similar to click 'n run is made available so that commercial companies
+can sell their wares on the platform and charge for it. They would
+have to go through compliance first, of course, but if the number of
+boxes out there is large enough, there will be companies interested in
+doing so. This would mean, for example, that a games market could
+begin to emerge based on Wine; instead of having each user test each
+Windows application for their particular setup, with many users having
+mixed results, this would put the onus of the testing on the company
+owning the platform and on the software vendor. Games would have to be
+repackaged as debs and be made installable just like any other Debian
+package. Of course, the same logic could be applied to any windows
+Application.
+
+As I mentioned previously, boxen come with support contracts. A
+standard support contract should provide:
+
+\begin{itemize}
+\item Access to all security fixes;
+\item Troubleshooting of problems, including someone remotely
+  accessing your machine to help you sort it out.
+\end{itemize}
+
+Due its homogeneity, UbuntuBox is very vulnerable to attacks. If an
+exploit is out in the wild, large number of boxen can be compromised
+very quickly. To make things a bit safer, the platform has the
+following features:
+
+\begin{itemize}
+\item SELinux is used throughout;
+\item All remote access is done via SSH and is only enabled on demand
+  (e.g. when tech support needs access);
+\item All users have passwords and must change them regularly;
+\item There is an encrypted folder (or vault) for important documents,
+  available from each user's desktop.
+\end{itemize}
+
+Finally, notice that binary drivers and proprietary applications are
+avoided when possible~--- e.g. Intel drivers would be preferable to
+nVidia, provided they have the same feature-set. However, where the
+proprietary solutions are technically superior, they should be
+used. Skype springs to mind.
+
+\section{UbuntuTerm}
+
+By now you must be wondering, ``this is all very nice and dandy, but
+am I supposed to do my word processing using a TV?''. Well, not
+quite. Whilst the TV is central, its use is focused on the gaming and
+Media Centre aspects of the box. If you want to use UbuntuBox as a
+regular PC, you will need to buy a UbuntuTerm. Just what is a
+UbuntuTerm? It is a dumb terminal of ``old'' in disguise
+(e.g. LTSP). It is nothing but a LCD display of a moderately decent
+size (19" say), with an attached PC~--- the back of the monitor or the
+base would do, as the hardware is minimal. The PC has a basic single
+core chip with low power consumption to avoid fans and on-board video,
+sound and wireless Ethernet. It is designed to boot off the network if
+BOOTP can be used over wireless; if not, from flash. Whichever way it
+boots, its configured to find the mothership and start an XDMCP
+session on it. Its price should hover around the 100 GBP mark.
+
+As with any decent terminal these days, UbuntuTerm is designed to fool
+you in believing you are sitting on the server. X already does most of
+the magic required, but we need to take it one level further: if you
+start playing music, the audio will come out of your local speakers
+via pulseaudio; if you plug your iPod via its USB port, the device
+will show up on your desktop; if you start playing a game, the FPSs
+you get remotely will comparable to playing it on the server. As with
+everything else mentioned in this article, all of these technologies
+are readily available on the wider community; its a matter of
+packaging them in a format that regular users can digest (see Dave's
+blog for example).
+
+The standard hardware on a UbuntuTerm is as follows:
+
+\begin{itemize}
+\item Low RAM, basic video card;
+\item Speakers attached to monitor;
+\item SD Card, compact flash readers;
+\item WebCam, headset;
+\item Lots of USB ports
+\end{itemize}
+
+A house can have as many UbuntuTerms as required, and the server
+should easily cope with at least 6 of them without too much trouble,
+depending on what sort of activities the users get up to.
+
+\section{Conclusions}
+
+UbuntuBox is an attempt to ride the wave of netbooks; it also tries to
+make strengths out of Linux's weaknesses. The box is not may not live
+up to everyone's ideals of Free Software, but its main objective is to
+increase Ubuntu's installed base, allowing us to start applying
+leverage against the hardware and software manufacturers. The design
+of the box takes into account the needs of a very large segment of the
+market which have basic computing needs, but don't want to became
+experts~--- just like a PlayStation owner does not want to know the
+ins-and-outs of the PowerPC chips.
+
+The UbuntuBox is an appliance, and as such is designed to be used in a
+fairly rigid number of ways, but that cannot be avoided if one wants
+to stay true to its nature. The more freedom one gives to users, the
+worse the end product will be for the Regular User, which cares not
+for intricate technical detail.
+
+Note also I haven't spent much time talking about business models for
+the company providing UbuntuBoxen. The opportunities should be there
+to create a sustainable business, based on revenue streams such as
+monthly payments for support, fees from OEMs, payments to access the
+platform (content providers). However, I don't know too much about
+making money so I leave that as an exercise to the reader.
+
+All and all, if there was an UbuntuBox out there for sale, I'd buy
+it. I think such a device would have a good chance of capturing this
+illusive segment of the market, giving Linux a foothold, however
+small, on the desktop.
+
+\chapter{2009: Year of World Domination?}
+
+\begin{flushright}
+  \emph{Sunday, February 1, 2009}
+\end{flushright}
+
+\begin{epigraphs}
+\qitem{Ninety-Ninety Rule: n. The first 90\% of the code accounts for
+  the first 90\% of the development time. The remaining 10\% of the
+  code accounts for the other 90\% of the development time.}
+      {Jargon}
+\end{epigraphs}
+
+\section{World Domination Revisited}
+
+It's hard to believe, but it has been almost two years since I ranted
+on World Domination. Two years have rolled by, and it seems
+appropriate to resume the theme, but from a slightly different angle.
+
+So, lets cut to the chase. Will 2009 be the Year of the Linux Desktop?
+The short answer is no, and I think its now clear it will apply to
+2010, 2011 and so on. In fact, in 2009 we won't even meet the looser
+definition of World Domination I proposed, although we're getting
+closer.
+
+What has happened since 2007? Well, we became a lot more popular in
+the desktop segment, in particular on the whole new category ofMIDs
+and netbooks; at one point we entirely dominated it, but over time
+normal computing trends reasserted themselves. According to the latest
+figures, Linux now ships on around 10-15\% of newnetbooks, as opposed
+to the incredible 100\% we had in the beginning. Netbooks had the
+highest visibility, but, to be fair, some inroads were made on all
+usual areas including server and regular desktop markets. Good, but
+nothing jaw dropping.
+
+So we find ourselves, two years later, asking ourselves the age old
+questions. Why haven't we seen at least one significant large
+migration? Why didn't one of the multinational companies punt on a
+100K RedHat or Novell desktop migration?
+
+\section{A Maturing Industry}
+
+For those who, like me, have been using Linux for over a decade, there
+always has been a lingering feeling, an idea on the back of one's mind
+insisting that one day the world would suddenly get it: the herd would
+finally see the light and the big mass migration would
+begin. Microsoft's time would come to an end, just as the once
+unassailable empires of IBM and DEC eventually faded. But time has
+gone by, the public has been exposed to Free Software, and yet no
+major visible changes have occurred. On the plus side, all these years
+of waiting gave us plenty of data points to calibrate our
+understanding of the software industry. Perhaps now we can begin to
+build a model that explains why things turned out the way they did.
+
+Looking back, one of the key things one cannot fail to notice is how
+the world has changed in the last twenty years. The world in which I
+was brought up was a world of fast paced change, of great volatility:
+companies sprung from nowhere, dominated the market and then
+disappeared as if they never existed. Sinclair'sZX Spectrum,
+Commodore's C-64 and Amiga, Tandy's machines and so many other brands
+came and went, all in the blink of an eye. Those were heady times. It
+happened during so long a period that one started to believe this was
+the way of the world: a superior product immediately bought by a
+significant critical mass of consumers, only to be dumped as soon as a
+new leader emerged.
+
+But the computer world was small then, and it belonged mainly to
+geeks. The homebrew generation had receded into the shade a bit, to be
+sure, and mass production took over; things got easier for
+users. However, the target market was still tiny, and still mainly
+composed of dedicated people willing to put in the hours to get things
+to work.
+
+Non-geeks~--- particularly suits~--- viewed the wild west mentality of
+the technology sector in a completely different light. For them, it
+was a serious problem. The technology was promising and the killer
+applications were beginning to appear, but caution ruled the
+day. After all, one could invest a considerable amount of money on
+hardware and software, make a glorious 3 year plan with all bells and
+whistles, only to find out that the vendors had folded, or gave up on
+the products entirely. This was no way to run a business.
+
+Microsoft saw it clearly and responded by talking the language
+business wanted to hear. It was time for ``workgroups'' and ``solutions'',
+for ``office'' and ``enterprise''. Windows 3.11 was a great step on that
+direction but, SWAGing somewhat, I'd say Windows 95 was the
+cornerstone. It marked the end of the wild frontier days, and signaled
+the consolidation of the new world order. Microsoft's strategies, much
+like those of a Machiavellian prince, were focused on stabilisation
+through domination. It was nasty, but extremely effective. Their
+dominance achieved what business most wanted, which was predictability
+and standardisation. Here was, finally, a solid ground on which to
+plan.
+
+The result was explosive. Microsoft went from a small vendor in a
+highly competitive market to the dominant force. By creating
+standards~--- however closed one may consider them to be~--- the
+company helped expand exponentially the overall size of the market,
+and developed a vital symbiosis with business. Each release of Windows
+provided both stability (through flawless backwards compatibility) and
+a dazzling number of new features; and each release was delivered at a
+rate which fit nicely with business' need for planning.
+
+And so the world went, in this nice happy fashion, from Windows 95 to
+Windows 98, NT 3.5, to NT 4, Windows 2000 to Windows XP. What
+Microsoft managed to achieve between Windows 95 and XP was
+ubiquity. Suddenly everyone everywhere was using Windows and Office,
+and the numbers were huge. Immense. The geeks were finally,
+completely, totally, utterly dwarfed by the non-geeks.
+
+XP was a landmark release in more ways than one, though. It is with XP
+that we meet our second inflection point, at which the symbiosis
+between Microsoft and business started to breakdown. Until XP business
+never really questioned the upgrade cycle: hardware grew so much
+faster from one year to the next that it made perfect sense to upgrade
+machines regularly. Software in itself also suffered dramatic
+improvements from release to release, benefiting those who kept up
+with the times. Being at the cusp of the wave was a competitive
+advantage.
+
+But with XP, strange things begun to happen:
+
+\begin{itemize}
+\item Moore's law hit a social barrier; suddenly people stopped
+  wanting the fastest PCs and started looking instead for other things
+  such as peripherals, bigger and better monitors, etc. And much more
+  importantly, low end PCs became good enough for the vast majority of
+  tasks.
+\item Microsoft's products went from being seen as the cheap
+  alternative to expensive brands, to the expensive brand with no real
+  alternatives. The operative system cost became a significant part of
+  the overall PC cost.
+\item Upgrade fatigue kicked in, and many companies begun to ask just
+  exactly why there was a need to change the entire estate so
+  frequently.
+\item The size of the PC market became so large that it just wasn't
+  feasible for a large part of it to quickly upgrade as it had
+  happened in the past.
+\end{itemize}
+
+In short, the PC market started showing signs of maturity. Microsoft's
+objective~--- their attempt to stabilise and standardise the PC
+market~--- had been achieved; but at the same time, its success may
+have brought about great difficulties for the company. Seen in this
+light, Vista's problems are not so much technical. There may be a
+number of significant issues with the operative system~--- although most
+Windows users I regularly speak to seem to be pretty happy with it. It
+has its rough edges, but so did XP in the beginning and Windows 95
+before it, and that didn't stop them from being huge successes.
+
+What has changed fundamentally is the relationship between Microsoft
+and its user base. There just isn't any need for mass upgrades
+anymore, and the more constrained IT budgets get, the more obvious
+this becomes. After all, Vista was extremely successful on the new PC
+segment; it struggled more when trying to convince existing PC owners
+to upgrade. I am strongly convinced that Windows 7 will suffer the
+same fate. The crucial element on its adoption is going to be the End
+Of Life of XP, because no business will want to run a product that is
+no longer supported by its creator. When EOL is declared for XP , all
+business will start to migrate to Windows 7~--- but not before
+then. They are more than happy with it; it works, it's well supported
+and more importantly, \emph{they know how it behaves}. The learning
+curve will start from scratch, be it Vista or Windows 7, and, from a
+commercial perspective, for no particularly good reason.
+
+In truth, business need only a platform that is
+\begin{inparaenum}[\itshape a\upshape)]
+\item good enough (in which case they won't change)
+\item compellingly better (in which case they will want to change)
+\item compellingly cheaper (in which case they will be made to change
+  by external pressures)
+\end{inparaenum}
+
+Its becoming harder and harder to create software that is so
+compellingly better that would make users upgrade. And Microsoft
+cannot start a cannibalisation strategy based on price, because its
+business model is based on the notion that products become
+progressively more expensive (after all their R\&D costs increase
+dramatically from release to release, in the illusive search for
+killer features). The only weapon left to the company is to force
+customers to upgrade by whatever other means available~--- such asEOLing
+products. This can only be done for so long until business wises up.
+
+It is in the midst of this carnage that Mac and Free Software products
+are competing. In view of this, one can conclude that no one~---
+Microsoft included~--- will have an easy ride convincing large numbers
+of existing users, business or home, to switch. The real fight for
+change is going to happen on the fringes of the PC market, the beaches
+where those new machines are being sold.
+
+Here, there are two weapons available to Free Software: technological
+superiority and price.
+
+\section{Competing on Technological Superiority and Price}
+
+A lot of nerds, to some extent myself included, are convinced that
+Linux is technologically superior to Windows. In short, UNIX is
+elegant and Windows is a kludge. The mystery is why no one else seems
+to see this. However, when one delves a bit further, there are several
+problems with the current state of Linux, and all of them are related
+to the ninety-ninety rule.
+
+The crucial difference between the business oriented approach taken by
+Microsoft and other software vendors is this: its best to have
+something that works somewhat now than something that works perfectly
+in a few years time. With this in mind, one can spot many, many things
+were developed on Windows with an almost exclusive focus on
+time-to-deliver. Microsoft's engineers didn't spend months looking at
+X-Windows to implement a GUI, nor did they worry aboutremoting until
+they were forced to, or with shell scripting; the list goes on and
+on. Now contrast that with Linux:
+
+\begin{itemize}
+\item D-Bus was years in the making, and its only now we're seeing a
+  significant adoption at the application level, with many exported
+  interfaces;
+\item GStreamer was years in the making, and its only now we're seeing
+  stability at the codec level, good support for most popular formats;
+\item PulseAudio has been years in the making and we're still
+  experiencing loss of sound, problems with proprietary applications,
+  etc.;
+\item XFree and X.Org have been years in the making and we still have
+  problems with some drivers, a flickering startup on boot and on user
+  switch;
+\end{itemize}
+
+The list goes on and on. From a user perspective, it matters not that
+PulseAudio (to pick but one victim) is architecturally extremely well
+designed and copes with an horrendously complex problem domain, made
+all the more complex due to the zoo of sound solutions in Linux. What
+matters is that he or she cannot useSkype to talk to their friends
+because it doesn't work. Or it may work, but the instructions are so
+complex that no sane non-geek could follow. Or that using Flash causes
+the web browser to crash.
+
+In general, I think it's fair to say that in places were there was
+enough time to think, design, implement and stabilise a solution, Free
+Software projects did a much better job than Windows; take packaging
+at the distribution level for example and compare that with the amount
+of clicks required to keep all windows applications
+up-to-date. However, due to the very nature of Free Software
+development, solutions have a tendency to take a lot longer to reach
+stability. This is a good thing, because when they mature, they are
+truly technical achievements.
+
+For example, it would have been easy to slot X.Org into the kernel,
+much like Windows did in the past to achieve better performance. Not
+so in Linux. The long path was taken, painstakingly working out which
+bits of code really needed to be in the kernel, and which should live
+in X land. The end result,KMS, is amazing, and will have large amounts
+of side-benefits~--- like most changes in Free Software tend to
+have. But even when all KMS code has been merged, we will still have
+to wait for the binary drivers to pick up these changes, so it may be
+quite some time until end users see any benefits.SELinux is also
+another example. Implementing the infrastructure and changing the
+kernel was in itself hard; but the real toil is now being done
+byRedHat and the community, spending many painstaking hours going
+through applications and creating the appropriate policies. Only then
+willSELinux really shine.
+
+So, whilst I don't think, from a user perspective, that we are
+superior to Windows at present, I do think that in the near future
+(three years) we will be. What's more, we now have a platform for
+growth and its really easy to bring companies on board. For example,
+just look at dropbox and their Nautilus integration.
+
+The Linux desktop of the future will be so uber cool its impossible to
+describe. Insanely fast boots, fantastic graphical support with no
+flickering from boot to desktop or on user switching, great
+integration between apps courtesy of D-Bus, all sorts of weird and
+wonderful sound capabilities courtesy ofPulseAudio, Telepathy for
+presence, great UI in Gnome and KDE. And all because each developer
+chose to take the long and hard path rather than the easy way out.
+
+That being said, we have to live in the present, and we are still at
+the point of paying the cost. Soon the second 90\% will be done.
+
+The last topic I'd like to discuss is price. If there is something
+Microsoft cannot compete on with Free Software, its on price. After
+all, one can't really go much lower than zero. However, it's important
+to notice that when it comes to business, cost is a tricky thing. So
+much of it comes down to perception. After all, one could argue
+successfully that user retraining is required to move from Windows to
+Linux. This would dramatically increase the costs, making such a move
+prohibitively expensive. On the same token, one could look at the
+example of people such as Dave Largo, and conclude that Linux can be
+easily adopted by end users with very little training, requires little
+hardware and is infinitely configurable with little effort.
+
+In truth, cost will never be an easy proposition for Linux until
+technical superiority is attained. On the server side, the battle was
+not ``won'' because Linux was free but because the solutions being
+offered were technically superior, integrated well with Windows and
+were being priced at a significant discount of a Windows
+equivalent. Only then did price become significant. Something similar
+needs to happen to the desktop market.
+
+\section{Conclusion}
+
+I hope I succeeded in demonstrating that there will never be a Year of
+the Linux Desktop as such, but instead, one should expect the
+continuation of present trends: a sequence of years with slow and
+steady gains being made. Maturity changed the rules of the game
+somewhat.
+
+If we had the current Linux desktop a decade or so ago, when the
+market was younger and more fragmented, we would probably take on a
+significant share of the market, even competing againstXP . But things
+changed, and there is a lot more inertia everywhere. With regards to
+the battle for new computers, the key factor there will be
+technological superiority. Linux will stand a good chance of fighting
+for that market in the next three years, once all the core
+infrastructure stabilises.
+
+\chapter{Nerd Food: The Jaunty Jackalope}
+
+\begin{flushright}
+  \emph{Saturday, May 16, 2009}
+\end{flushright}
+
+\begin{epigraphs}
+\qitem{Winning isn't always finishing first. Sometimes winning is just finishing.}
+      {Manuel Diotte}
+\end{epigraphs}
+
+\section{That Time of the Year}
+
+So here we are again. Another six months have gone by, and we're all
+ready and eager to see what those Debian and Ubuntu boys and girls
+were up to. Like everybody else, I dutifully upgraded my Intrepid
+boxes, very much as I have done for every release since Warty. This
+time though I decided to expand a bit more on my experiences~--- the
+main reason being that, for better or for worse, Linux on the desktop
+is now big business. You may not think so, considering we appear to
+still be at around 1\% market share, and considering most people using
+computers are still ignorant of Linux and Free Software in general;
+but, in my personal opinion, we are now on the threshold, on the
+verge, of starting to build a commercial position.
+
+Thus, we can no longer afford to look at Ubuntu~--- or at any other
+Linuces who wish to break through into the desktop mainstream
+market~--- as we have until now. This review is not just a typical
+Linux review. I do not wish in anyway to upset all those people who
+work so hard to make GNU, Linux, Debian and Ubuntu what they are
+now~--- people for which I have the utmost respect. However, I shall
+endeavour to make a frank accessment of the strong points and weak
+points of Ubuntu as it stands at 9.04.
+
+If your main concerns are with software freedom, the remainder of this
+article will not be useful to you at all. I have taken a stance of the
+``ignorant consumer'', the sort of chap who would buy a product based
+on price and quality; a person who does not really care how product
+came to be, but focuses only on features and usability. I think its
+really important to look at the world from this perspective, because
+to some extent, we have taken all the easy pickings. A lot of people
+who care deeply about their freedoms and buy products thoughtfully are
+probably either using GNU/Linux (or some other free operative system)
+or have made a conscious decision not to use it. It is the nature of
+this audience to investigate their choices. It is not the nature of
+the majority of the market though, and to capture them we must play
+the game on their terms~--- not on ours.
+
+In addition, one must bear in mind that GNU/Linux is challenging a
+strong incumbent, and a very strong second place; being as good as
+Windows or MacOS won't win any prizes, because they both possess huge
+advantges: large installed base, marketing, familiarity, large amounts
+of money. From whatever angle you look, these are formidable
+oponents. To beat them at their own game, one must be pretty special
+indeed.
+
+Without further ado, my views on Jaunty.
+
+\section{Booting the Live CD}
+
+One of the many advantages Apple and Microsoft have over Ubuntu is
+installation. Its not that their installation is better~--- its just
+that the vast majority of their users have never installed an
+operative system in their lives. Consumers buy boxes with the
+operative system pre-installed, giving them the false impression that
+installation is trivial. A lot of people see a new operative system
+only when buying a new machine, and, given the choice, would probably
+revert back to the previous version.
+
+This is in stark contrast with Ubuntu. SWAGging, I'd say the vast
+majority of Ubuntu installations are/were done by either the end user
+or its local computer nerd. Dell notwithstanding, until a large number
+of manufacturers offer Ubuntu pre-installed, installation will always
+be a key battlefield, and a really though battle to fight. After all,
+its very difficult to compete against an idealized installation
+process which is just assumed to be easy.
+
+Overall, I think Ubuntu does a good job with installation~--- although
+there are a few niggles. For instance, first impressions are extremely
+important, and unfortunately, the language menu does not quite give
+the best first impression. It takes a lot of screen real estate and
+uses an approach that is just not scalable (what will we do when we
+have more languages than fit the screen?).
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/softpedia_language_menu}
+\end{center}
+\caption{Language Menu. Source: Softpedia.}
+\end{figure}
+
+Its understandable that such an internationalised product as Ubuntu
+wouldn't want to force non-English speakers to understand just what
+``F2 Language'' means; but the approach taken just doesn't look
+professional. A lot of thought should have been given to the language
+list, making it scalable and easy to navigate.
+
+The boot menu has good and bad points. On the plus side, ``Try Ubuntu
+without any changes to your computer'' is a good idea, as many a
+newbie wouldn't understand the concept of a live CD and will think
+that choosing ``Install Ubuntu'' will be a non-reversible operation,
+or one which won't take you to a regular desktop. However, all other
+options should really be under a sub-menu~--- or perhaps accessible
+via F6 Other Options or another such shortcut~--- because they may
+needlessly alarm users (why do I need to test memory? is this going to
+corrupt it? Is my disc defective? what does that mean?)
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/softpedia_boot_menu}
+\end{center}
+\caption{Boot Menu. Source: Softpedia.}
+\end{figure}
+
+If one were to think in terms of flow, the vast majority of users will
+go through the following two use cases:
+
+\begin{itemize}
+\item Choose language, try Ubuntu
+\item Choose language, install Ubuntu.
+\end{itemize}
+
+Anyone trying anything else is an advanced user who knows what they're
+doing. As such, I'd say the boot process should start with a full
+screen combo-box which allows one to scroll up and down to choose a
+language; once the language is chosen, the second menu has two
+options: ``Install Ubuntu'' and ``Try Ubuntu without any changes to
+your computer''. At the bottom, the shortcuts should be:
+
+\begin{itemize}
+\item F1 Help
+\item F2 Language
+\item F3 Accessibility (with, if at all possible, a accessibility icon)
+\item F4 Advanced
+\end{itemize}
+
+All these options are perfectly meaningful to any basic user; anything
+which requires domain knowledge is hidden in ``Advanced''.
+
+At any rate, once Install Ubuntu is chosen, the boot process is
+elegant and blazing fast~--- a great improvement over Intrepid.
+
+\section{Installing}
+
+Overall, the installation process is very clean, with as few steps as
+possible. In fact, I'd go as far as saying that Ubuntu installation is
+probably second to none now. I wasn't very keen on live CDs when they
+first came out~--- couldn't quite see the point~--- but I now
+understand the error of my ways. Having the ability of starting your
+PC with a full blown version of the operative system you're about to
+install is fantastic. You can quickly assess which bits of hardware
+are going to be more problematic, as well as giving Ubuntu a good
+run. For the average consumer this is great, a sort of taste before
+you buy, if you like. The only change I'd perhaps make to the live
+disc~--- for systems with plenty of RAM (say 2 Gb or more)~--- is to
+create a RAM disc with all the apps, to avoid reading so much from the
+(slow) CD-Rom.
+
+With regards to the actual installation steps, there are two points
+which may warrant a bit of attention.
+
+Partitioning is clearly the scariest aspect of the installation
+process, so its important to be clear and reassuring to users. It
+would perhaps be a good idea to make the partitioning options slightly
+clearer, in particular with regards to resizing an existing Windows
+partition. It would also be a good idea to ensure the text below ``Use
+the entire hard disc'' is clearly disabled, as just the words ``This
+will delete Windows XP...'' are enough to dissuade many a newbie.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/softpedia_step_4}
+\end{center}
+\caption{Partitioning. Source: Softpedia.}
+\end{figure}
+
+Users and passwords are also rather important. It is common for a
+single PC to be shared by two or more people, so multi-user support is
+very important. It is also very common for users not to want to type a
+password every time they log in. These use cases are not very well
+served by the current dialog.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/softpedia_step_5}
+\end{center}
+\caption{Users and passwords. Source: Softpedia.}
+\end{figure}
+
+Ideally all the user wants is one of two scenarios:
+
+\begin{itemize}
+\item Setup one or more users and, for each user, decide whether to
+  use a password or not.
+\item For a single user box, probably allow automatically login.
+\end{itemize}
+
+Multi-user polish will be addressed further on in this article.
+
+\section{Logging in}
+
+The new login screen may be perhaps a bit too dark for users with
+accessibility needs, but overall its a triumph of parsimony. Its
+literally impossible to get confused using it. The only slight snag is
+the missing user list. Most people will probably prefer not to type a
+password, so it makes sense not to type a username either. The
+security conscious will no doubt complain, scream and shout~--- but
+from the perspective of the regular user, it makes complete sense
+(it's my house, not a public computer!).
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.50\textwidth]{pics/softpedia_login}
+\end{center}
+\caption{Login Screen. Source: Softpedia.}
+\end{figure}
+
+\section{The Proprietary Question}
+
+One of the greatest problems with Ubuntu (and most linuces) is the
+hidden steps of ``additional setup''. These can be extremely
+costly. Whilst there are enumerable articles, detailing exhaustively
+what needs to be done, and whilst most guides can be followed blindly
+by even the newbiest of all newbies, the very existence of the
+``additional setup'' is a huge barrier of entry to many users. The
+additional setup is exclusively related to installing and configuring
+proprietary applications and drivers. For me these are:
+
+\begin{itemize}
+\item NVidia/ATI drivers
+\item MP3 support
+\item Getting (encrypted) DVDs to play
+\item Wireless drivers
+\item Flash
+\item Adobe acrobat
+\item Skype
+\end{itemize}
+
+For a very large number of users out there, a PC is not usable unless
+all these have been successfully installed and configured. The
+additional setup process has been trimmed to its absolute minimum,
+methinks, particularly if one compares it to how things used to be 5
+or 10 years ago. It is, in fact, trivial in most cases. But this is
+the problem: when we look at where we are, we inevitably see things in
+terms of a natural evolution. A Windows or MacOS user will not see
+things that way; it will become instantly apparent to him or her that
+a lot of things are not setup on Ubuntu out of the box, and setting
+them up is non-trivial (even if all we're talking about is following a
+very simple and detailed procedure) because this is just not the way
+they are used to work.
+
+In my mind, just like we have gNewSense for the purists, we also need
+a ``compromised'' Ubuntu, \emph{even} if it requires users to pay for
+it to ensure all licences are in working order. After all, time is
+money, and I'd much rather pay Canonical 10-30 EUR twice a year for a
+``compromised'' version with all the proprietary stuff installed,
+rather than having to waste time doing it. The ``compromised'' version
+should also be used in any pre-installed PCs.
+
+Alas, this is not how things are at the moment. To make matters worse,
+my ``additional setup'' has been very far from trouble-free. These are
+the issues I've faced:
+
+\begin{itemize}
+\item \emph{Wireless (WPA) is utterly broken for my laptop.} Try as I
+  might, I just can't get my laptop to connect, even though it used to
+  work well with Intrepid. Some people reported this issue in Kubuntu,
+  but I'm seeing it with regular Ubuntu. A few of the proposed
+  workarounds don't seem to work for me either, such as typing the
+  password in hex. Its a rather annoying regression, and until it gets
+  fixed, I've got a big fat Ethernet wire in my living room.
+\item \emph{Recommended NVidia drivers (v180) are broken for my card.}
+  This is \#366222. For me there was a very simple workaround, which
+  was to downgrade the drivers back to v173. No problems since
+  then. Its an annoying bug though.
+\item \emph{Epiphany still crashes frequently} after closing tabs when
+  I'm using flash heavily. This is not a regression; I've had this
+  problem for a long time. Its similar to \#196588.
+\item \emph{Sound in Skype is not working.} This is a regression prior
+  to Intrepid~--- in fact, since PulseAudio. Its getting really close to
+  working though; now the problem seems to be that Skype somehow
+  lowers the volume of the microphone on startup (I can see this from
+  the PulseAudio volume control). I followed many a tutorial
+  (including this one, with amazing screenshots of volume control
+  configuration), to no avail.
+\item \emph{Sound in RealAudio is not working.} Same as for Skype
+  really.
+\end{itemize}
+
+Lets make a few things clear. Setting things up and chasing bug
+tickets is not something that would put me off Ubuntu and GNU/Linux
+the least~--- after all, I've been using GNU/Linux for over 10 years,
+and I value FOSS highly. Also, it is important to understand that none
+of these problems have anything at all to do with FOSS~--- these are
+exactly the issues people have been warning us about with regards to
+binary drivers and closed software. After all, PulseAudio works
+incredibly well for all my other applications~--- its the closed
+source ones that are and have always been the problem (in fact, the
+only real FOSS problem I have with Jaunty is \#366083).
+
+However, this is not an excuse for a commercial company looking to
+increase their market share at the expense of two ferociously
+competitive companies such as Apple and Microsoft. If I was Ubuntu,
+Novell or RedHat, I would have had personal meetings with all key
+companies providing commercial software (Flash and Skype are certainly
+key applications in the desktop space, even if RealAudio is not) and
+would have made available engineers to work with them to sort out the
+PulseAudio mess once and for all. Pulse is the future and its an
+increadible piece of software; Its just that the commercial companies
+seem unable to keep up. The same applies to NVidia/ATI.
+
+Wireless is slightly more complicated, and its a symptom of a more
+difficult problem. The truth is GNU/Linux and Windows work in
+extremely complex ecosystems, with mind-bogglingly complex hardware
+combinations. Many things just cannot be known until releases hit the
+wild and people complain. Microsoft attenuates this problem by
+massively regression testing the most common hardware combinations; as
+far as I am aware, no Linux vendor does something similar. In a way,
+it shouldn't be necessary; after all, the software is provided to all
+at all points of development, so in theory regressions should be
+picked up quickly. Release soon, release often right? In practice, it
+doesn't quite work this way.
+
+The potential number of testers is huge~--- just have a look at the
+number of people that downloaded Jaunty on the last betas and since it
+has gone gold~--- but a very large percentage of users will not
+download until close to the release date. This means that the bugs
+reported during the development process are not representative of
+those that will be found post going gold; and people reporting bugs
+after the official release will be rather more upset with problems
+than those doing the alpha/beta testing. If there was some
+traceability, one could ``register'' all the different hardware
+combinations out there (say those using Jaunty over the next 6
+months), and then check to see how many of those were tried during the
+development phase. But there is no such data, so one is driving
+blind. Metrics here are fundamental, and knowing what was tested and
+when is vital. I'm sure many people would contribute (after all, a lot
+of the testing can be done by booting a live CD) if only they
+understood where they fit in the big scheme of things.
+
+All these problems are clearly distribution issues, and can only be
+fixed if distributors make an incredible effort. In order to have any
+semblance of a chance at attacking the desktop mass market, they must
+be addressed thoroughly and convincingly, or else we risk the ire of
+many a user.
+
+\section{Multi-User Deficiencies}
+
+UNIX is the multi-user operative system par-excellence, and GNU/Linux
+carries on that tradition. However, there is a need to update the
+multi-user view of the world to today's reality. The challenge these
+days is not so much isolating users so that they cannot damage
+eachother or the system, but to create ways in which a machine can be
+shared sensibly. The issues I constantly keep on bumping into are:
+
+\begin{itemize}
+\item \emph{Music.} I spend a lot of time creating groups, shares,
+  permissioning, etc. just to ensure all users of the main PC have got
+  access to a central music collection in RhythmBox. The setup is now
+  more or less stable, but its not conceivable that a newbie would
+  stumble on it after half-hour of googling (I'll write it up one
+  day). This is an incredibly common use case: to have a shared music
+  collection as well as a private music collection. The second problem
+  is to access your music collection from another device, such as a
+  laptop. I've had no luck in setting up DAAP from RhythmBox.
+\item \emph{Photos.} I love F-Spot, its great. But I just cannot set
+  it up in a multi-user environment~--- again with a set of private
+  photos, as well as a set of shared photos that all users in the PC
+  have got access to. As with DAAP, it would be nice to be able to
+  browse the photo collection from a different device too.
+\item \emph{Printers.} Setting up a local printer in Ubuntu is
+  amazingly trivial. However, sharing that printer over the network is
+  not trivial at all. It should really be a matter of right-clicking
+  on a printer and choosing ``Share''. and, funnily enough, there is
+  just such an option in ``Printer Configuration''. Problem is, my
+  printer remained invisible to my laptop even after sharing. Making
+  it visible required a large amount of faffing with CUPS config files
+  and the CUPS web-based config.
+\item \emph{Shutdown with multiple users} logged in requires entering
+  a password. This won't go down well with the average user; a big
+  notice would have sufficed.
+\end{itemize}
+
+All these complaints are sympthoms of a larger problem, which is a
+lack of use case based usability analysis. This should probably be
+done at the Gnome level, as it is not a distribution issue as
+such. There is a lot of focus on Gnome 3.0 these days, but it seems to
+me that the job of Gnome 2.0 is not yet done; the architectural work
+is excellent, but the polish wasn't quite finished.
+
+The final thing with regards to multi-users, is user switching. It
+seems this will be comprehensively sorted out with KMS, at least
+technology-wise, but it will be interesting to see if the user
+switching process is made much smoother (no flickering; allowing
+switching with no password; allowing switching with music still
+playing from previous user; etc.).
+
+\section{Grumpy Old Man?}
+
+By now you probably have made up your mind and judged me as a typical
+grumpy old man, lost to FOSS and soon to migrate to Windows 7 or
+MacOS. In fact, its quite the contrary: I'm a very satisfied Ubuntu
+user, and I think the future will belong, undoubtedly, to Free
+Software.
+
+There are many, many good things to say about Jaunty, and in a way,
+the criticisms laid out above demonstrate just how far we have
+come. After all, Jaunty did do a sterling job of detecting all my
+hardware, other than the wireless / NVidia issues, and NVidia is
+working just fine with v173.
+
+The best thing about Jaunty for me is performance. Its nothing short
+of amazing. I'm using EXT4 for all partitions other than home, but I'm
+not sure if the filesystem is enough to explain the snapiness of this
+baby. For instance, with two users logged in, quite a lot of
+applications open, playing music, 3D effects, etc and my CPU usage
+rarely goes above 10\% and my memory usage has oscillated between 400
+Mb and 1 Gb! Its amazing. All apps have slimmed down so much as to be
+unrecognisable. A two day old loaded Epiphany is still below 100 Mb, a
+sight I don't recall ever seeing. Booting and shutting down are now
+lightening fast. And there are so many unsung heroes: Evolution,
+Evince, Liferea, Nautilus~--- so many applications that just work, and
+do what they're told. I most certaintly recommend upgrading to all
+Interpid users, and I'll certainly will be waiting unpatiently for
+karmic and all the KMS goodness (NVidia/ATI permitting).
+
+This is to say that Ubuntu is certainly working very hard, and
+releasing a product with a lot of quality. But as I said on my opening
+words, good is not good enough; one has to be much better than Apple
+and Microsoft if one is to challenge them.
+
+For me, the big question is: can we put the fantastic engine of FOSS
+to good use in the hard problems of testing and usability? This is the
+key to unlock the mass market consumer desktop market.
+
+\end{document}
