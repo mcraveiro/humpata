@@ -1,4 +1,4 @@
-\documentclass{memoir}
+\documentclass{book}
 % change paper size to novel.
 \usepackage[a5paper,twoside]{geometry}
 
@@ -12,76 +12,119 @@
 \usepackage{paralist}
 
 % increase the size of the mini page width for epigraphs.
-\setlength{\epigraphwidth}{.5\textwidth}
-
-\setlength{\parskip}{0.2ex plus 0.0ex minus 0.0ex}
+%\setlength{\epigraphwidth}{.5\textwidth}
+%\setlength{\parskip}{0.2ex plus 0.0ex minus 0.0ex}
 
 \usepackage{lettrine}
+\usepackage{qlbook}
 
 \begin{document}
+
+%% \vspace*{\fill}
+%% \begin{center}
+%% \HUGE\textsf{Nerd Food: $\leq$ 2009}\par
+%% \end{center}
+
+%% \begin{figure}[h]
+%% \begin{center}
+%% % \includegraphics[width=0.75\textwidth]{pics/lonsv-babb-nerbild} % [angle=90, width=0.7\textwidth]
+%% \end{center}
+%% \end{figure}
+
+%% \vspace*{\fill}
+%% \begin{center}
+%% \Large\textsf{Marco Craveiro}\par
+%% \end{center}
+
+%
+% Colophon
+%
+\newpage
+\pdfbookmark[0]{Colophon}{Colophon}
+\section*{}
 \pagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-\HUGE\textsf{Nerd Food: $\leq$ 2009}\par
-\end{center}
+%\chapter*{}
+\vfill
+\begingroup
+\footnotesize
+\parindent 0pt
+\parskip \baselineskip
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.75\textwidth]{pics/lonsv-babb-nerbild} % [angle=90, width=0.7\textwidth]
-\end{center}
-\end{figure}
+\textcopyright{} 1999-2015 Marco Craveiro. All rights reserved.
 
-\vspace*{\fill}
-\begin{center}
-\Large\textsf{Marco Craveiro}\par
-\end{center}
+Revision \textbf{DRAFT}.
 
+This book was typeset with \LaTeXe. It uses a slightly modified
+version of the \textit{QL Book} style developed by Luigi Ballabio.
+Download the \textit{QL Book} style at
+\url{http://www.implementingquantlib.com/p/the-book.html}.
+
+\endgroup
+
+\pagestyle{empty}
 \clearpage
-\pagestyle{headings}
 \chapter*{}
 \begin{flushright}
-\emph{FIXME: Dedication}
+\emph{To my mother, who always supported me and my crazy ideas.}
 
 \bigskip
 
 \end{flushright}
 
 \clearpage
+
 \pagestyle{headings}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
-\chapter*{Acknowledgements}
-\begin{epigraphs}
-\qitem{test}
-      {test}
-\end{epigraphs}
+\pagestyle{empty}
+\clearpage
 
-\chapter*{Introduction}
+\chapter{Introduction}
 
-here
+\epigraph{The unexamined life is not worth living.}{Socrates}
+
+\lettrine{A}{s we mature}, we tend to introspect more and more, to
+spend time thinking about the path of one's life. Those little twists
+and turns across life's graph, some with dramatic consequences, others
+less so. When in this frame of mind, it is good to read what we had
+once written, if nothing else because it allows us to judge just how
+far one has deviated from those noble ideals of youth.
+
+Having lived most of my life in the technology space, I somewhat
+unwittingly ended up narrating my own evolution across it and, to an
+extremely limited extent, its evolution too. As such it seemed only
+fair to collect all of these writings~--- whatever their merits are in
+a literary sense~--- in an easy to parse from to facilitate reading.
+
+This book thus contains a selection of essays by yours truly on
+software engineering, spanning a period of just over a decade and a
+half. It is made up mainly of blog posts taken from my haphazard
+column ``Nerd Food'', as well as a couple of other early essays which
+never saw the light of day.
+
+\pagestyle{headings}
 
 \chapter{My Emacs and I}
 
-\begin{epigraphs}
-\qitem{Anyone could learn Lisp in one day, except that if they already
-  knew Fortran, it would take three days.}
-      {Marvin Minsky}
-\end{epigraphs}
+\epigraph{Anyone could learn Lisp in one day, except that if they already
+  knew Fortran, it would take three days.}{Marvin Minsky}
 
 \begin{flushright}
   \emph{Circa 1999.}
 \end{flushright}
 
-\lettrine{W}{hen} you are a newbie both to C and to Linux the world is
+\lettrine{W}{hen you are} a newbie both to C and to Linux the world is
 bleak, dark and full of menaces. Every time there is an extremely
 upsetting bug in a package you use often, say Gnome, you prefer
-avoiding it rather then solving the problem by reinstalling the newest
-version; pure windows luser logic. And that is what you feel, that you
-are a natural born luser. 23 years old, computer lover since 12 and
-you cannot recompile the kernel or even install packages from source:
-``darn, another dependency problem!  But why doesn't it \emph{just
-  work}?  Install Shield does!!''. People tell you about the
-advantages of the command line interface (CLI) and you start crying.
+avoiding it rather then solving the problem by re-installing the
+newest version; pure windows \emph{luser} logic. And that is what you
+feel, that you are a natural born \emph{luser}. 23 years old, computer
+lover since 12 and you cannot recompile the kernel or even install
+packages from source: ``darn, another dependency problem!  But why
+doesn't it \emph{just work}?  Install Shield does!!''. People tell you
+about the advantages of the command line interface (CLI) and you start
+crying.
 
 I bet this is a very common picture. You see, I started using linux
 with RH 5.2 mainly because I was tired of DOS (the whole lot, starting
@@ -104,13 +147,13 @@ from floppies, the gurus will say, but bear in mind that Windows 95
 ran in my machine, in 800x600, and didn't complain a lot. Office 97
 was there without a problem.
 
-Still, there was something about this OS... Can't quite put it in
+Still, there was something about this OS\ldots Can't quite put it in
 words but it definetly had the same flair that my ZX Spectrum or
-Borland's Turbo Pascal had, long, long time ago. The fact that I now
+Borland's Turbo Pascal had, a long, long time ago. The fact that I now
 had in my computer the efforts of thousands of developers, the tools
 used by the biggest minds in the computing world for their daily
 hacking was very inspiring; I just couldn't quit and be a standard
-luser.
+\emph{luser}.
 
 And now~--- when I'm almost reaching my larval stage~--- I can see why
 I need to go through this ordeal, probably for years to come. It's
@@ -120,7 +163,7 @@ language designed to take you away from the machine and get you into
 the world of ``easiness''. A world where you don't really need to know
 what you're doing because the wizards do it for you, and where people
 develop languages without believing the least in them. Where you are a
-certified systems engineer, but only for 12 months.
+Certified Systems Engineer, but only for 12 months.
 
 Yes, that is the right attitude for the mainstream. After all, they
 buy the right clothes, the right music, the right tooth paste and the
@@ -138,7 +181,7 @@ right OS because it is easy, its on the telly
     suffocating little nests into the howling gale thinking ``what do
     they know that I do not know?'' when they see us under a lean-to
     hunched over our laptops to shield them from the rain laughing our
-    asses off as we write great code between bong hits.... what was
+    asses off as we write great code between bong hits\ldots what was
     the question?
   \end{quote}
 }. And if you don't, you're a rogue, end of story. But us, those who
@@ -167,17 +210,14 @@ simply not made to be free. End of story.
 
 \chapter{Gnome: A User Perspective}
 
-\begin{epigraphs}
-\qitem{We cannot choose one desktop over the other~--- Gnome or
-  KDE~--- because there's users for both code bases.}
-      {Miguel de Icaza}
-\end{epigraphs}
+\epigraph{We cannot choose one desktop over the other~--- Gnome or
+  KDE~--- because there's users for both code bases.}{Miguel de Icaza}
 
 \begin{flushright}
   \emph{Circa 1999.}
 \end{flushright}
 
-\lettrine{T}{here's} been enough direct and indirect ranting on
+\lettrine{T}{here's been enough} direct and indirect ranting on
 desktop environments over the last few weeks, from articles about how
 C and UNIX are not a match made in heaven to discussions on Slashdot
 that start with ``KDE 2.X is out'' and end with complaints on how
@@ -193,12 +233,12 @@ are like they are and where they may end in the future. I know I lack
 authority to speak about some matters, but this contribution strikes
 me has important since people with more authority seem to lack time or
 inclination; and although I am not a Gnome developer, I do use it
-since the bug infested days of 1.0.x and I do follow quite closely our
+since the bug infested days of 0.x and I do follow quite closely our
 community. So lets get the ball rolling.
 
 \section{Why does KDE move \emph{so} much faster than Gnome?}
 
-There are no easy explanations as to why people perceive gnome as
+There are no easy explanations as to why people perceive Gnome as
 being slow, but there are a few factors that might shed some
 light. Unfortunately, we have to go and dig a bit, back to those long
 forgotten days where licenses were still an issue. Lets make this as
@@ -233,11 +273,11 @@ XML, DOM, a socket abstraction, FTP, and a lot more.
 Also, one should not treat a) lightly. From my knowledge of wxWindows,
 Qt appears to be very well designed and quality of its design surely
 teaches new developers to try to follow the same practice, especially
-with an OO language. And while we're talking about new users,
-I think we all agree when I say that documentation by itself is almost
-decisive when learning something new (hence why I'm such a big
-fan of wxWindows). No one likes to be struggling with the language
-while at the same time trying to make sense of 3rd party libraries.
+with an OO language. And while we're talking about new users, I think
+we all agree when I say that documentation by itself is almost
+decisive when learning something new (hence why I'm such a big fan of
+wxWindows). No one likes to be struggling with the language while at
+the same time trying to make sense of third-party libraries.
 
 On the other hand, things are quite different in our side of the
 fence. Whatever the circumstances were when decisions were made, we
@@ -313,10 +353,10 @@ Bertrand Meyer, we can see that many of the things he considers to be
 determinant factors in a program are present in many C programs:
 robustness, correctness, extensibility, re-usability, compatibility,
 efficiency, portability. All of these apply to our beloved kernel~---
-excelling in some~--- and its done in C. (In terms of re-usability,
-although you cannot inherit functionality cleanly in C, it is
-certainly not the only way to reuse; at any rate I'd probably consider
-design reuse more important that code reuse.)
+excelling in some~--- and its done in C.\footnote{In terms of
+  re-usability, although you cannot inherit functionality cleanly in
+  C, it is certainly not the only way to reuse; at any rate I'd
+  probably consider design reuse more important that code reuse.}
 
 Influenced by Meyer's thinking, I too believe OO is more of a way of
 thinking than it is a language, although languages can embody a bit of
@@ -334,9 +374,8 @@ projects share one fact in common, and that is there were some very
 experienced C++ hackers that laid out the foundations, making tough
 structural decisions at an early stage. For instance, look at
 Abiword's source one of these days and you'll see things along the
-lines of Design Patterns; the code is absolutely
-marvellous\footnote{Changed my mind FIXME.}. That's not work of a kid in
-college that is learning as he goes along.
+lines of Design Patterns; the code is absolutely marvellous. That's
+not work of a kid in college that is learning as he goes along.
 
 More: to get a lot of people to that sort of level you need solid and
 proven standards, a good compiler that respects those standards, lots
@@ -375,7 +414,7 @@ It is most annoying when you get a Red Hat machine and it starts with
 a Red Hat Gnome, and I'm sure most people feel the same way. Red Hat
 is sometimes conservative on their tastes~--- so we don't get the most
 up to date stuff like we're used to with Ximian (or \emph{were} used
-to...); and for those unfortunate enough to live where Dial Up is
+to\ldots); and for those unfortunate enough to live where Dial Up is
 king, upgrading is an issue.
 
 Besides, even if you do have the latest Gnome packaged by Red Hat, you
@@ -410,7 +449,7 @@ So what do we need? I can see some solutions:
 \begin{itemize}
 \item We need to stop this packaging nonsense of my Gnome and your
   Gnome. We need to have a standard packaging the Gnome core, with all
-  the libraries needed. That someone should be the distro. so Red Hat
+  the libraries needed. That someone should be the distro. So Red Hat
   would make RPM's for all the platforms it runs on. This core is
   distributed as one package, that you can install or un-install
   easily.
@@ -425,12 +464,9 @@ Just my two cents.
 
 \chapter{On Optimization}
 
-\begin{epigraphs}
-\qitem{You know you've achieved perfection in design, not when you
+\epigraph{You know you've achieved perfection in design, not when you
   have nothing more to add, but when you have nothing more to take
-  away.}
-      {Antoine De Saint-exupery}
-\end{epigraphs}
+  away.}{Antoine De Saint-exupery}
 
 \begin{flushright}
   \emph{Thursday, December 14, 2006}
@@ -438,14 +474,14 @@ Just my two cents.
 
 \section{The Gnome Has Been Losing Weight}
 
-\lettrine{I}{f} you're a Linux head, in particular a Gnome one, you've
-bound to have noticed the huge amount of work on optimization that has
-been carried out of late. People such as Federico, Ben Maurer, Michael
-Meeks, the OLPC guys and many, many others have been tireless in their
-efforts of shaving memory and cycles from all sorts of libraries and
-applications in the Gnome stack. There is even talk of colouring
-functions according to their cost so that developers are more aware of
-the price they'll pay when they make function calls.
+\lettrine{I}{f you are} a Linux head, in particular a Gnome one,
+you've bound to have noticed the huge amount of work on optimization
+that has been carried out of late. People such as Federico, Ben
+Maurer, Michael Meeks, the OLPC guys and many, many others have been
+tireless in their efforts of shaving memory and cycles from all sorts
+of libraries and applications in the Gnome stack. There is even talk
+of colouring functions according to their cost so that developers are
+more aware of the price they'll pay when they make function calls.
 
 I believe no one, outside or inside the Gnome camp, will dispute that
 it has gotten a bit too fat. Even Gnome 2.16 (desktop and
@@ -615,25 +651,22 @@ the defacto operative system for the low end market, replacing Windows
 
 \chapter{On World Domination}
 
-\begin{epigraphs}
-\qitem{I think my ``plan'' says something like ``World
-  domination. Fast''. But we'll see.}
-      {Linus Torvalds}
-\end{epigraphs}
+\epigraph{I think my ``plan'' says something like ``World
+  domination. Fast''. But we'll see.}{Linus Torvalds}
 
 \begin{flushright}
   \emph{Friday, March 23, 2007 }
 \end{flushright}
 
-Well, three months into 2007 and very few mass migrations to desktop
-Linux have been announced. A few thousands here and there, but not the
-millions we all want. Its beginning to look like our hopes for 2007 as
-the Linux Desktop Year (TM) have been misplaced yet again. The
-algorithm for the Linux Desktop Year is becoming clear now: n + 1,
-where n is the current year. Yep, its always next year. What's going
-on here? Are we never going to have Linux on the desktop? Products
-like Ubuntu and Novell are looking more and more solid, why aren't
-people installing it en masse? What about World Domination?
+\lettrine{W}{ell, three months} into 2007 and very few mass migrations
+to desktop Linux have been announced. A few thousands here and there,
+but not the millions we all want. Its beginning to look like our hopes
+for 2007 as the Linux Desktop Year (TM) have been misplaced yet
+again. The algorithm for the Linux Desktop Year is becoming clear now:
+n + 1, where n is the current year. Yep, its always next year. What's
+going on here? Are we never going to have Linux on the desktop?
+Products like Ubuntu and Novell are looking more and more solid, why
+aren't people installing it en masse? What about World Domination?
 
 Lets start by defining what we really mean by ``World Domination''. It
 is unlikely that we will see a world where Linux has 90\% of market
@@ -838,30 +871,27 @@ the development time.''
 
 \chapter{On Maintenance}
 
-\begin{epigraphs}
-\qitem{Perfection is achieved, not when there is nothing more to add,
-  but when there is nothing left to take away.}
-      {Antoine de Saint-Exupery}
-\end{epigraphs}
+\epigraph{Perfection is achieved, not when there is nothing more to add,
+  but when there is nothing left to take away.}{Antoine de Saint-Exupery}
 
 \begin{flushright}
   \emph{Thursday, May 24, 2007}
 \end{flushright}
 
-The many years I've spent working for the bespoke industry and using
-free software finally made me understand the obvious: the single most
-important aspect in the whole of software development is
-maintenance. Yes, you heard it right. Its not the language, not the
-platform, not the methodologies, not the technologies involved, not
-even the pretty Gantt charts. All these tools are important, of
-course, but if one looks at the entire lifespan of a program,
-maintenance overshadows every other aspect by a wide margin. You may
-think I'm not saying anything new here, and with good reason. Classic
-texts like Bertrand Meyer's Object Oriented Software Construction
-already pointed out that the highest cost in a software project is
-maintenance; Meyer was not the first, by far, to pick up on this. The
-problem was not with their diagnosis but rather with the cure they
-proposed. Allow me to expand on this.
+\lettrine{T}{he many years} I've spent working for the bespoke
+industry and using free software finally made me understand the
+obvious: the single most important aspect in the whole of software
+development is maintenance. Yes, you heard it right. Its not the
+language, not the platform, not the methodologies, not the
+technologies involved, not even the pretty Gantt charts. All these
+tools are important, of course, but if one looks at the entire
+lifespan of a program, maintenance overshadows every other aspect by a
+wide margin. You may think I'm not saying anything new here, and with
+good reason. Classic texts like Bertrand Meyer's Object Oriented
+Software Construction already pointed out that the highest cost in a
+software project is maintenance; Meyer was not the first, by far, to
+pick up on this. The problem was not with their diagnosis but rather
+with the cure they proposed. Allow me to expand on this.
 
 The first thing one must realise is that code is in itself the only
 complete system specification there is. I'm not going to spend much
@@ -877,13 +907,13 @@ always rely on, the only thing that truly documents the behaviour of a
 program is its source code. I know, I know, you'll bring up Knuth and
 literate programming. Unfortunately, I have no option but to
 check-mate you with real world experience. Sad truth is, most people
-don't even know about Knuth. While Doxygen et al are nice and make
-documenting much easier, very few people bother making sure the text
-matches the source when they are on a tight deadline, and the life of
-a bespoke developer is nothing but one tight deadline after another,
-ad infinitum. You can imagine your project manager's face when you
-explain that the deadline won't be met because you still need to
-finishing off commenting.
+don't even know about Knuth. While Doxygen \emph{et al.} are nice and
+make documenting much easier, very few people bother making sure the
+text matches the source when they are on a tight deadline, and the
+life of a bespoke developer is nothing but one tight deadline after
+another, \emph{ad infinitum}. You can imagine your project manager's
+face when you explain that the deadline won't be met because you still
+need to finishing off commenting.
 
 Speaking in very empirical terms, most projects seem to have an
 average lifespan of around seven to ten years, with the caveat that
@@ -976,9 +1006,10 @@ transposed to a new system and will have to be rediscovered. Problem
 is, an existing code-base hasn't got an easily computable dollar
 value~--- man years are a very bad way of estimating effort nor is it
 possible to estimate the cost of a yet-to-develop system~--- so we're
-all in the dark. (Not being an expert, I'm not going to try to propose
-ways of valuing an existing code-base, but whatever methodology one
-comes up with it is bound to produce some astonishingly high figures.)
+all in the dark\footnote{Not being an expert, I'm not going to try to
+  propose ways of valuing an existing code-base, but whatever
+  methodology one comes up with it is bound to produce some
+  astonishingly high figures.}.
 
 Unconvinced, you may ask, what is so wrong with starting new projects?
 After all many lessons can be learned, new technologies can be used
@@ -987,35 +1018,35 @@ maintainable system. Before everyone starts chanting ``oh, you luddite
 in disguise'', it's important to bear in mind the following:
 
 \begin{itemize}
-\item The failure rate for new projects is extremely high;
+\item the failure rate for new projects is extremely high;
 \item Incremental changes have a lower risk, whereas big changes are
   always highly risky;
-\item Its much easier to estimate costs and timescales in an existing
+\item its much easier to estimate costs and timescales in an existing
   project which has been running for years rather than on a new one,
   for which baselines are yet to be created;
-\item The second system effect forces architects and developers to
+\item the second system effect forces architects and developers to
   create new projects that aim to boil the ocean and use every other
   new technology, adding even more variables to an already complex
   problem;
-\item New systems introduce a host of new bugs;
-\item you're basically trading an existing set of bugs that are either
-  known, or not known but also not known to seriously impact
-  production, with an unknown (but almost always large) quantity;
-\item You'll need to find new people or retrain existing people for the
+\item new systems introduce a host of new bugs; you're basically
+  trading an existing set of bugs that are either known, or not known
+  but also not known to seriously impact production, with an unknown
+  (but almost always large) quantity;
+\item you'll need to find new people or retrain existing people for the
   new skills required~--- particularly on the developer side, but quite
   often in the user side too;
-\item Your system and component requirements will almost always miss
+\item your system and component requirements will almost always miss
   vital features or important little bits of detail and ignore many of
   the lessons already learned simply because the latest crop of
   developers writing the specs is not aware of them;
-\item Your project planning will almost always underestimate the
+\item your project planning will almost always underestimate the
   complexity of implementing some or all of the existing features;
-\item Your project managers may be excellent at managing an existing
+\item your project managers may be excellent at managing an existing
   system but totally inexperienced at managing at this huge scale of
-  uncertainty; Your developers may be excellent maintainers of an
+  uncertainty; your developers may be excellent maintainers of an
   ageing code-base but terrible green house developers, getting
   continuously lost in blue-skies approaches;
-\item The architecture of the existing system may not transpose very
+\item the architecture of the existing system may not transpose very
   well to the new technologies your developers insist in using,
   limiting reuse even at this fundamental level.
 \end{itemize}
@@ -1029,36 +1060,35 @@ avoiding the complexity barrier at all costs. In order to do so one
 must maintain a system properly. This entails:
 
 \begin{itemize}
-\item Removing functionality which is no longer necessary, thereby
+\item removing functionality which is no longer necessary, thereby
   reducing complexity; Looking for opportunities to refactor existing
   code into separate modules, and replace existing modules with open
   source libraries if suitable ones exist;
-\item Tracking and fixing \emph{all} reported bugs; Ensuring the code
+\item tracking and fixing \emph{all} reported bugs; Ensuring the code
   compiles with no warnings at the maximum warning level;
-\item Refactoring code when implementing new functionality that does
+\item refactoring code when implementing new functionality that does
   not fit the existing infrastructure;
-\item Continuously measuring system performance, ensuring it does not
+\item continuously measuring system performance, ensuring it does not
   degrade over time;
-\item Ensuring consistency with existing standards and conventions,
-  avoiding in-house protocols; Improving readability of existing code;
-\item Regression testing the code-base after changes;
-\item Striving for platform independence; Making continuous releases
+\item ensuring consistency with existing standards and conventions,
+  avoiding in-house protocols; improving readability of existing code;
+\item regression testing the code-base after changes;
+\item striving for platform independence; making continuous releases
   after changes to ensure there isn't a feature pile-up;
-\item in other words, release early, release often.
 \end{itemize}
 
-Yep, you've noticed it. These are all obvious tasks, pretty much the
-standard you'd expect from an average free software
-maintainer. Unfortunately, for reasons outlined above, these tasks are
-rarely present in bespoke software houses' project plans. You may find
-that some commercial off-the-shelf shops actually take maintenance
-seriously, but most bespoke houses just can't afford to spend the
-required time on maintenance. IMHO, herein lies the key, the biggest
-needed change: project managers have to start allocating slots for
-maintenance. They have to treat maintenance work like they treat
-enhancements, allocating adequate resources for it, asking developers
-to make and keep updated a list of top issues in the code-base and
-make sure these are addressed.
+In other words, release early, release often. Yep, you've noticed
+it. These are all obvious tasks, pretty much the standard you'd expect
+from an average free software maintainer. Unfortunately, for reasons
+outlined above, these tasks are rarely present in bespoke software
+houses' project plans. You may find that some commercial off-the-shelf
+shops actually take maintenance seriously, but most bespoke houses
+just can't afford to spend the required time on maintenance. IMHO,
+herein lies the key, the biggest needed change: project managers have
+to start allocating slots for maintenance. They have to treat
+maintenance work like they treat enhancements, allocating adequate
+resources for it, asking developers to make and keep updated a list of
+top issues in the code-base and make sure these are addressed.
 
 The intrepid reader may reasonably ask: but what if the system is
 designed in such a way that a large new feature just cannot be
@@ -1087,17 +1117,18 @@ mentioned on the first two points above. Code-base reduction may
 appear counter-intuitive at first sight; after all, new features must
 require adding code. However, the best way to look at this is from a
 resource allocation perspective. There is a finite number of
-developers, call it d, working on a code-base of a given size, say
-s. Let's call c the ratio between s and d. I always dreamed to come up
-with a law, and here finally is my chance: Craveiro's law states that
-the higher c is, the harder it is to maintain a code-base. Of course,
-this is a highly empirical law, but useful nonetheless. Now, there are
-two very straightforward ways of reducing c: either increase the
-number of developers until you meet Brook's law, or decrease the size
-of the code-base until you start impacting required features. The
-latter is more interesting, very much reminiscent of St. Exupry: a
-designer knows he has achieved perfection not when there is nothing
-left to add, but when there is nothing left to take away.
+developers, call it \emph{d}, working on a code-base of a given size,
+say \emph{s}. Let's call \emph{c} the ratio between \emph{s} and
+\emph{d}. I always dreamed to come up with a law, and here finally is
+my chance: Craveiro's Law states that the higher \emph{c} is, the
+harder it is to maintain a code-base. Of course, this is a highly
+empirical law, but useful nonetheless. Now, there are two very
+straightforward ways of reducing \emph{c}: either increase the number
+of developers until you meet Brook's law, or decrease the size of the
+code-base until you start impacting required features. The latter is
+more interesting, very much reminiscent of St. Exupry: a designer
+knows he has achieved perfection not when there is nothing left to
+add, but when there is nothing left to take away.
 
 Since you can't literally start removing required functionality, the
 next best thing is to find other people who are willing to share the
@@ -1138,25 +1169,22 @@ Craveiro's law:
 
 \chapter{Take a Walk on the Server Side}
 
-\begin{epigraphs}
-\qitem{Memory is like an orgasm. It's a lot better if you don't have
-  to fake it}
-      {Seymour Cray}
-\end{epigraphs}
+\epigraph{Memory is like an orgasm. It's a lot better if you don't
+  have to fake it.}{Seymour Cray}
 
 \begin{flushright}
   \emph{Saturday, September 22, 2007}
 \end{flushright}
 
-When it comes to programming, for me there isn't much of a choice: the
-place to be is the server side. I may work a lot on the client side
-these days, but GUIs and chrome never had much of an attraction for
-me. I do have a healthy dose of respect for those who love it: client
-side work is a mixture of coding mastery, design skills and a big
-dollop of human psychology. For some reason when I visualise the
-client side I always imagine nice, pristine offices with lots of light
-and huge amounts of human interaction between programmers as well as
-between programmers and users.
+\lettrine{W}{hen it comes} to programming, for me there isn't much of
+a choice: the place to be is the server side. I may work a lot on the
+client side these days, but GUIs and chrome never had much of an
+attraction for me. I do have a healthy dose of respect for those who
+love it: client side work is a mixture of coding mastery, design
+skills and a big dollop of human psychology. For some reason when I
+visualise the client side I always imagine nice, pristine offices with
+lots of light and huge amounts of human interaction between
+programmers as well as between programmers and users.
 
 The server side is a totally different beast. I always visualise it as
 the dark place of green terminals and server rooms, of never ending
@@ -1184,22 +1212,24 @@ that riddle C++ applications (those that haven't discovered shared
 pointers, at any rate). I agree that, in theory, both Java and C\# are
 better options. In practice, however, they become problematic.
 
-\emph{The right staff}. It's difficult to find a good Java/C\#
-programmer, just like it was difficult to find a good VB
-programmer. The client side is a very forgiving land, and not only can
-bad programmers get away with it for years but you also have to
-remember that great client side programmers don't need to know their
-tools to the level of detail that server side programmers do. How many
-times do you need to read up on scheduling to do a GUI? Or on TCP
-flags? Not often, I'd wager. So the reality is, if you have been doing
-any of these languages for a while, you can talk all the right TLAs
-and describe all the right concepts with easiness and fly through most
-interviews. But when it comes to doing the job, you will probably be
-reading manuals for days trying to figure out which subset of
-technologies on your stack are good for server side and which ones are
-just plain evil performance killers. A good server side Java/C\#
-programmer will use only the smallest set of features of the language
-when programming, knowing exactly the cost of those features.
+\subsection{The right staff}
+
+It's difficult to find a good Java/C\# programmer, just like it was
+difficult to find a good VB programmer. The client side is a very
+forgiving land, and not only can bad programmers get away with it for
+years but you also have to remember that great client side programmers
+don't need to know their tools to the level of detail that server side
+programmers do. How many times do you need to read up on scheduling to
+do a GUI? Or on TCP flags? Not often, I'd wager. So the reality is, if
+you have been doing any of these languages for a while, you can talk
+all the right TLAs and describe all the right concepts with easiness
+and fly through most interviews. But when it comes to doing the job,
+you will probably be reading manuals for days trying to figure out
+which subset of technologies on your stack are good for server side
+and which ones are just plain evil performance killers. A good server
+side Java/C\# programmer will use only the smallest set of features of
+the language when programming, knowing exactly the cost of those
+features.
 
 It is, of course, really hard to find a good C++ programmer too. But
 here, there are two things that help us. There are not that many left
@@ -1210,15 +1240,16 @@ thing is, due to C++'s lower level of abstraction, even a bad C++
 programmer is well aware of the bare metal. It basically forces you to
 think harder, rather than just pickup a manual and copy an example.
 
-\emph{Minimise layers of indirection}. Another problem I have with
-Java/C\# is indirection, which is another way of saying
-performance. Now, I know all you Java and .Net heads have many
-benchmarks proving how your AOT compilers optimise on the fly and make
-them even faster than native code, or how your VM is much better at
-understanding application's run time behaviour and optimising itself
-for it. And the fact that you never worry about memory leaks goes
-without saying. Well, that's all fine and dandy as far as the lab is
-concerned.
+\subsection{Minimise layers of indirection}
+
+Another problem I have with Java/C\# is indirection, which is another
+way of saying performance. Now, I know all you Java and .Net heads
+have many benchmarks proving how your AOT compilers optimise on the
+fly and make them even faster than native code, or how your VM is much
+better at understanding application's run time behaviour and
+optimising itself for it. And the fact that you never worry about
+memory leaks goes without saying. Well, that's all fine and dandy as
+far as the lab is concerned.
 
 What I found out on the field is different. Resource allocation is
 still a massive problem, either due to complex cyclical referencing,
@@ -1348,14 +1379,14 @@ these matters lead its development.
 In summary, the key components of a system will be along these lines:
 
 \begin{itemize}
-\item A solid, cross-platform, scalable relational database. Oracle
+\item a solid, cross-platform, scalable relational database. Oracle
   and Sybase are likely candidates, and PostgreSQL on the
   free-software side of things;
-\item A solid, cross-platform, scalable messaging bus. Tibco,
+\item a solid, cross-platform, scalable messaging bus. Tibco,
   Talarian, etc. Choose something you have experience with. Never,
   ever, under any circumstances write your own (at present, I'm not
   aware of any free software alternatives for messaging);
-\item A large number of small servers, communicating over the
+\item a large number of small servers, communicating over the
   messaging bus.
 \end{itemize}
 
@@ -1651,10 +1682,7 @@ proven approaches to the new ideas the market keeps on churning.
 
 \chapter{.signature: David Hilbert}
 
-\begin{epigraphs}
-\qitem{We must know, we shall know}
-      {David Hilbert}
-\end{epigraphs}
+\epigraph{We must know, we shall know.}{David Hilbert}
 
 \begin{flushright}
   \emph{Saturday, September 29, 2007}
@@ -1662,27 +1690,25 @@ proven approaches to the new ideas the market keeps on churning.
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.50\textwidth]{pics/david_hilbert}
+\includegraphics[width=0.50\textwidth]{hilbert}
 \end{center}
 \end{figure}
 
-David Hilbert was a great German mathematician. What I appreciate the
-most about him is his quixotic personality and single-mindedness,
-going along with Bertrand Russel on their impossible quest to clean
-mathematics of all doubt and uncertainty, always searching for strict
-solutions through pure thought. In 1900, Hilbert came up with a list
-of 23 fundamental problems, many of which are still being investigated
-to this day. In 1930, Hilbert finished a famous speech in Königsberg
-with the words ``We must know, we shall know'', a phrase that fits
-perfectly the life-long devotion he had for mathematics.
+\lettrine{D}{avid Hilbert} was a great German mathematician. What I
+appreciate the most about him is his quixotic personality and
+single-mindedness, going along with Bertrand Russel on their
+impossible quest to clean mathematics of all doubt and uncertainty,
+always searching for strict solutions through pure thought.
+
+In 1900, Hilbert came up with a list of 23 fundamental problems, many
+of which are still being investigated to this day. In 1930, Hilbert
+finished a famous speech in K{\"o}nigsberg with the words ``We must
+know, we shall know'', a phrase that fits perfectly the life-long
+devotion he had for mathematics.
 
 \chapter{Interview: Federico Mena-Quintero}
 
-\begin{epigraphs}
-\qitem{Gnome is People.}
-      {Luis Villa}
-
-\end{epigraphs}
+\epigraph{Gnome is People.}{Luis Villa}
 
 \begin{flushright}
   \emph{Wednesday, October 03, 2007}
@@ -1784,13 +1810,13 @@ Like all acquisitions, it was a bit rought at first. It's what you get
 when you switch from being in a small company where you know all of
 the employees, to one with several thousands of people. You have to
 adjust to bigger processes, more layers of management, new locations,
-new paperwork...
+new paperwork\ldots
 
 It has been very interesting to see the mindset of the old-time Novell
 people change over time. At first they seemed reluctant to touch Linux
 and free software, since they were of course Windows users. Then we
 had a period with lots of questions, lots of bugs that needed to be
-fixed, lots of re-training... and now we are in a very nice period,
+fixed, lots of re-training\ldots and now we are in a very nice period,
 when people have accepted that we must all use our own free
 software. People seem to be productive with it and happy.
 
@@ -1817,7 +1843,7 @@ nice to be able to look over someone else's shoulder or talk to them.
 
 \bigskip
 
-Well, since I work from home... :)
+Well, since I work from home\ldots :)
 
 I wake up. If my wife and I are hungry, we make breakfast while my
 email gets downloaded. If we are not hungry, I'll just check for
@@ -1834,7 +1860,7 @@ early dinner. I have the bad habit of not stopping working until I'm
 exhausted or my wife is angry that we haven't gone out to the
 supermarket yet, but I'm trying to fix that :)
 
-In the afternoon I tend to do ``light'' work... maintaining wikis,
+In the afternoon I tend to do ``light'' work\ldots maintaining wikis,
 answering email, coordinating people. I don't really have a fixed work
 schedule.
 
@@ -1874,14 +1900,11 @@ the economic impact of free software there!).
 
 \chapter{.signature: Alan Perlis}
 
-\begin{epigraphs}
-\qitem{One man's constant is another man's variable}
-      {Alan Perlis}
-\end{epigraphs}
+\epigraph{One man's constant is another man's variable.}{Alan Perlis}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=0.50\textwidth]{pics/alan_perlis}
+\includegraphics[width=0.50\textwidth]{alan_perlis}
 \end{center}
 \end{figure}
 
@@ -1889,11 +1912,11 @@ the economic impact of free software there!).
   \emph{Saturday, October 20, 2007}
 \end{flushright}
 
-Alan Perlis was one of the finest specimens of the Real Programmer
-breed. Back in the days where Computer Scientists didn't exist, he and
-his kind were responsible for making many of the decisions that shape
-our view of computers today. I'm particularly fond of Perlis because
-of his views on Compuer Science:
+\lettrine{A}{lan Perlis} was one of the finest specimens of the Real
+Programmer breed. Back in the days where Computer Scientists didn't
+exist, he and his kind were responsible for making many of the
+decisions that shape our view of computers today. I'm particularly
+fond of Perlis because of his views on Compuer Science:
 
 \begin{quote}
 I think that it's extraordinarily important that we in computer
@@ -1927,21 +1950,16 @@ programming due to our human condition.
 
 \chapter{On Evolutionary Methodology}
 
-\begin{epigraphs}
-\qitem{Unix's durability and adaptability have been nothing short of
+\epigraph{Unix's durability and adaptability have been nothing short of
   astonishing. Other technologies have come and gone like
   mayflies. Machines have increased a thousand-fold in power,
   languages have mutated, industry practice has gone through multiple
   revolutions~--- and Unix hangs in there, still producing, still paying
   the bills, and still commanding loyalty from many of the best and
-  brightest software technologists on the planet.}
-      {ESR}
-\end{epigraphs}
-\begin{epigraphs}
-\qitem{Unix...is not so much a product as it is a painstakingly
-  compiled oral history of the hacker subculture.}
-      {Neal Stephenson}
-\end{epigraphs}
+  brightest software technologists on the planet.}{ESR}
+
+\epigraph{Unix\ldots is not so much a product as it is a painstakingly
+  compiled oral history of the hacker subculture.}{Neal Stephenson}
 
 \begin{flushright}
   \emph{Wednesday, June 11, 2008}
@@ -1950,10 +1968,10 @@ programming due to our human condition.
 
 \section{The Impossibly Scalable System}
 
-If development in general is an art or a craft, its finest hour is
-perhaps the maintenance of existing systems which have high
-availability requirements but are still experiencing high rates of
-change. As we covered previously, maintenance in general is a task
+\lettrine{I}{f development in general} is an art or a craft, its
+finest hour is perhaps the maintenance of existing systems which have
+high availability requirements but are still experiencing high rates
+of change. As we covered previously, maintenance in general is a task
 much neglected in the majority of commercial shops, and many products
 suffer from entropic development; that is, the piling on of changes
 which continuously raise the complexity bar, up to a point where it is
@@ -2033,7 +2051,7 @@ introduced over a decade after the project was started; there is no
 clear commercial (or even centralised) ownership; there is no
 ``vision'' and no centralised decision making (Linus may be the final
 arbiter, but he relies on the opinions of a lot of people). The list
-continues ad infinitum.
+continues \emph{ad infinitum}.
 
 And yet, against all expert advice, against all odds, Linux is the
 little kernel that could. If one were to write a spec covering the
@@ -2047,10 +2065,7 @@ far?
 
 \section{Linus' Way}
 
-\begin{epigraphs}
-\qitem{I'm basically a very lazy person who likes to get credit for things other people actually do.}
-      {Linus Torvalds}
-\end{epigraphs}
+\epigraph{I'm basically a very lazy person who likes to get credit for things other people actually do.}{Linus Torvalds}
 
 The engine of Linux's growth is deeply rooted in the kernel's
 methodology of software development, but it manifests itself as a set
@@ -2063,74 +2078,74 @@ redundancy, but some aspects are very interrelated).
 \subsection{Small is beautiful}
 
 \begin{itemize}
-\item Design is only useful on the small scale; there is no need to
-  worry about the big picture~--- if anything, worrying about the big
-  picture is considered harmful. Focus on the little decisions and
-  ensure they are done correctly. From these, a system will emerge
+\item \emph{Design is only useful on the small scale}; there is no
+  need to worry about the big picture~--- if anything, worrying about
+  the big picture is considered harmful. Focus on the little decisions
+  and ensure they are done correctly. From these, a system will emerge
   that \emph{appears} to have had a grand design and purpose.
-\item At a small scale, do not spend too long designing and do not be
-  overambitious. Rapid prototyping is the key. Think simple and do not
-  over design. If you spend too much time thinking about all the
-  possible permutations and solutions, you will create messy and
-  unmaintainable code which will very likely going to be wrong. Best
-  implement a small subset of functionality that works well, is easy
-  to understand and can be evolved over time to cover any additional
-  requirements.
+\item \emph{At a small scale, do not spend too long designing and do
+  not be overambitious}. Rapid prototyping is the key. Think simple
+  and do not over design. If you spend too much time thinking about
+  all the possible permutations and solutions, you will create messy
+  and unmaintainable code which will very likely going to be
+  wrong. Best implement a small subset of functionality that works
+  well, is easy to understand and can be evolved over time to cover
+  any additional requirements.
 \end{itemize}
 
 \subsection{Show me the Code}
 
 \begin{itemize}
-\item Experimentation is much more important than theory by several
-  orders of magnitude. You may know everything there is to know about
-  coding practice and theory, but your opinion will only be heard if
-  you have solid code in the wild to back it up.
-\item Specifications and class diagrams are frowned upon; you can do
-  them for your own benefit, but they won't sell any ideas by
+\item \emph{Experimentation is much more important than theory by
+  several orders of magnitude}. You may know everything there is to
+  know about coding practice and theory, but your opinion will only be
+  heard if you have solid code in the wild to back it up.
+\item \emph{Specifications and class diagrams are frowned upon}; you
+  can do them for your own benefit, but they won't sell any ideas by
   themselves.
-\item Coding is a messy business and is full of compromises. Accept
-  that and get on with it. Do not search for perfection before showing
-  code to a wider audience. Better to have a crap system (sub-system,
-  module, algorithm, etc.) that works somewhat today than a perfect
-  one in a year or two. Crap systems can be made slightly less crappy;
-  vapourware has no redeeming features.
-\item Merit is important, and merit is measured by code. Your ability
-  to do boring tasks well can also earn a lot of brownie points
-  (testing, documentation, bug hunting, etc.) and will have a large
-  positive impact on your status. The more you are known and trusted
-  in the community, the easier it will be for you to merge new code in
-  and the more responsibilities you will end up having. Nothing is
-  more important than merit as gauged by the previous indicators; it
-  matters not what position you hold on your company, how important
-  your company is or how many billions of dollars are at stake~--- nor
-  does it matter how many academic titles you hold. However, past
-  actions do not last forever: you must continue to talk sense to have
-  the support of the community.
-\item Testing is crucial, but not just in the conventional sense. The
-  key is to release things into a wider population (``Release early,
-  release often''). The more exposure code has the more likely bugs
-  will be found and fixed. As ESR put it, ``Given enough eyeballs, all
-  bugs are shallow'' (dubbed Linus' law). Conventional testing is also
-  welcome (the more the merrier), but its no substitute for releasing
-  into the wild.
-\item Read the source, Luke. The latest code is the only authoritative
-  and unambiguous source of understanding. This attitude does not in
-  anyway devalue additional documentation; it just means that the
-  kernel's source code overrides any such document. Thus there is a
-  great impetus in making code readable, easy to understand and
-  conformant to standards. It is also very much in line with Jack
+\item \emph{Coding is a messy business and is full of
+  compromises}. Accept that and get on with it. Do not search for
+  perfection before showing code to a wider audience. Better to have a
+  crap system (sub-system, module, algorithm, etc.) that works
+  somewhat today than a perfect one in a year or two. Crap systems can
+  be made slightly less crappy; vapourware has no redeeming features.
+\item \emph{Merit is important, and merit is measured by code}. Your
+  ability to do boring tasks well can also earn a lot of brownie
+  points (testing, documentation, bug hunting, etc.) and will have a
+  large positive impact on your status. The more you are known and
+  trusted in the community, the easier it will be for you to merge new
+  code in and the more responsibilities you will end up
+  having. Nothing is more important than merit as gauged by the
+  previous indicators; it matters not what position you hold on your
+  company, how important your company is or how many billions of
+  dollars are at stake~--- nor does it matter how many academic titles
+  you hold. However, past actions do not last forever: you must
+  continue to talk sense to have the support of the community.
+\item \emph{Testing is crucial, but not just in the conventional
+  sense}. The key is to release things into a wider population
+  (``Release early, release often''). The more exposure code has the
+  more likely bugs will be found and fixed. As ESR put it, ``Given
+  enough eyeballs, all bugs are shallow'' (dubbed Linus'
+  law). Conventional testing is also welcome (the more the merrier),
+  but its no substitute for releasing into the wild.
+\item \emph{Read the source, Luke}. The latest code is the only
+  authoritative and unambiguous source of understanding. This attitude
+  does not in anyway devalue additional documentation; it just means
+  that the kernel's source code overrides any such document. Thus
+  there is a great impetus in making code readable, easy to understand
+  and conformant to standards. It is also very much in line with Jack
   Reeve's view that source code is the only real specification a
   software system has.
-\item Make it work first, then make it better. When taking on existing
-  code, one should always first make it work as intended by the
-  original coders; then a set of cleanup patches can be written to
+\item \emph{Make it work first, then make it better}. When taking on
+  existing code, one should always first make it work as intended by
+  the original coders; then a set of cleanup patches can be written to
   make it better. Never start by rewriting existing code.
 \end{itemize}
 
 \subsection{No sacred cows}
 
 \begin{itemize}
-\item \emph{anything} related to the kernel can change, including
+\item \emph{Anything related to the kernel can change}, including
   processes, code, tools, fundamental algorithms, interfaces,
   people. Nothing is done ``just because''. Everything can be
   improved, and no change is deemed too risky. It may have to be
@@ -2145,29 +2160,29 @@ redundancy, but some aspects are very interrelated).
   reviewed and validated. In the majority of cases you gracefully
   accept defeat. This may imply a turn-around of 180 degrees; Linus
   has done so on many occasions.
-\item Processes are made to serve development. When a process is found
-  wanting~--- regardless of how ingrained it is or how useful it has
-  been in the past~--- it can and will be changed. This is often done
-  very aggressively. Processes only exist while they provide visible
-  benefits to developers or, in very few cases, due to external
-  requirements (ownership attribution comes to mind). Processes are
-  continuously fine-tuned so that they add the smallest possible
-  amount of overhead to real work. A process that improves things
-  dramatically but adds a large overhead is not accepted until the
-  overhead is shaved off to the bare bone.
+\item \emph{Processes are made to serve development}. When a process
+  is found wanting~--- regardless of how ingrained it is or how useful
+  it has been in the past~--- it can and will be changed. This is
+  often done very aggressively. Processes only exist while they
+  provide visible benefits to developers or, in very few cases, due to
+  external requirements (ownership attribution comes to
+  mind). Processes are continuously fine-tuned so that they add the
+  smallest possible amount of overhead to real work. A process that
+  improves things dramatically but adds a large overhead is not
+  accepted until the overhead is shaved off to the bare bone.
 \end{itemize}
 
 \subsection{Tools}
 
 \begin{itemize}
-\item Must fit the development model~--- the development model should
-  not have to change to fit tools;
-\item Must not dumb down developers (i.e. debuggers); a tool must be
-  an aid and never a replacement for hard-thinking;
-\item Must be incredibly flexible; ease of use can never come at the
-  expense of raw, unadultered power;
-\item Must not force everyone else to use that tool; some exceptions
-  can be made, but on the whole a tool should not add
+\item \emph{Must fit the development model}~--- the development model
+  should not have to change to fit tools;
+\item \emph{Must not dumb down developers} (i.e. debuggers); a tool
+  must be an aid and never a replacement for hard-thinking;
+\item \emph{Must be incredibly flexible}; ease of use can never come
+  at the expense of raw, unadultered power;
+\item \emph{Must not force everyone else to use that tool}; some
+  exceptions can be made, but on the whole a tool should not add
   dependencies. Developers should be free to develop with whatever
   tools they know best.
 \end{itemize}
@@ -2182,12 +2197,12 @@ characteristics of a good maintainer in order to get the changes
 merged in. Some of these traits are:
 
 \begin{itemize}
-\item Good understanding of kernel's processes;
-\item Good social interaction: an ability to listen to other kernel
+\item good understanding of kernel's processes;
+\item good social interaction: an ability to listen to other kernel
   hackers, and be ready to change your code;
-\item An ability to do boring tasks well, such as patch reviews and
+\item an ability to do boring tasks well, such as patch reviews and
   integration work;
-\item An understanding of how to implement disruptive changes,
+\item an understanding of how to implement disruptive changes,
   striving to contain disruption to the absolute minimum and a deep
   understanding of fault isolation.
 \end{itemize}
@@ -2211,25 +2226,25 @@ the subject.
 \subsection{Other}
 
 \begin{itemize}
-\item Keep politics out. The vast majority of decisions are taken on
-  technical merits alone, and very rarely for political
+\item \emph{Keep politics out}. The vast majority of decisions are
+  taken on technical merits alone, and very rarely for political
   reasons. Sometimes the two coincide (such as the dislike for binary
   modules in the kernel), but one must not forget that the key driver
   is always the technical reasoning. For instance, the kernel uses the
   GNU GPL v2 purely because its the best way to ensure its openness, a
   key building block of the development process.
-\item Experience trumps fashion. Whenever choosing an approach or a
-  technology, kernel hackers tend to go for the beaten track rather
-  than new and exciting ones. This is not to say there is no
+\item \emph{Experience trumps fashion}. Whenever choosing an approach
+  or a technology, kernel hackers tend to go for the beaten track
+  rather than new and exciting ones. This is not to say there is no
   innovation in the kernel; but innovators have the onus of proving
   that their approach is better. After all, there is a solid body of
   over 30 years of experience in developing UNIX kernels; its best to
   stand on the shoulders of giants whenever possible.
-\item An aggressive attitude towards bad code, or code that does not
-  follow the standards. People attempting to add bad code are told so
-  in no uncertain terms, in full public view. This discourages many a
-  developer, but also ensures that the entry bar is raised to avoid
-  lowering the signal-to-noise (S/N) ratio.
+\item \emph{An aggressive attitude towards bad code}, or code that
+  does not follow the standards. People attempting to add bad code are
+  told so in no uncertain terms, in full public view. This discourages
+  many a developer, but also ensures that the entry bar is raised to
+  avoid lowering the signal-to-noise (S/N) ratio.
 \end{itemize}
 
 If there ever was a single word that could describe a kernel hacker,
@@ -2249,17 +2264,17 @@ particular, it appears to remove most forms of centralised
 control. For instance:
 
 \begin{itemize}
-\item It does not allow you to know where you're heading in the long
+\item it does not allow you to know where you're heading in the long
   run; all it can tell you is that if you're currently on a favourable
   state, a small, gradual increment is \emph{likely} to take you to
   another, slightly more favourable state. When measured in a large
   timescale it will appear as if you have designed the system as a
   whole with a clear direction; in reality, this ``clearness'' is an
   emergent property (a side-effect) of thousands or small decisions.
-\item It exploits parallelism by trying lots of different gradual
+\item it exploits parallelism by trying lots of different gradual
   increments in lots of members of its population and selecting the
   ones which appear to be the most promising.
-\item It favours promiscuity (or diversity): code coming from anywhere
+\item it favours promiscuity (or diversity): code coming from anywhere
   can intermix with any other code.
 \end{itemize}
 
@@ -2421,25 +2436,28 @@ of large scale software.
 
 \chapter{On the UbuntuBox}
 
+\epigraph{Chrome is, make no mistake, a dagger poised over Microsoft's
+  heart. The only question is whether it's made of steel or rubber.}{Charles Arthur}
+
 \begin{flushright}
   \emph{Thursday, June 19, 2008}
 \end{flushright}
 
 \section{The Regular User}
 
-As with many other geeks, I find myself in the unofficial position of
-``computer guy'' for family and friends (F\&F). This entails sorting out
-broken computers, providing advice on new purchases for a variety of
-devices and software packages, installing said devices and packages,
-doing security updates and giving security advice, providing
-mini-tutorials on applications, teaching basic programming~--- the list
-goes on and on. The funny thing is, much like all other nerds, I may
-moan about my duties but secretly I enjoy performing them. Sometimes I
-get to setup people with cheap Ubuntu boxen, which they may complain
-about a little in the beginning but eventually use in extremely
-productive ways; and even on windows setups, I get to understand what
-drives people to Microsoft and what its weak and strong points
-are. Its a very instructive job.
+\lettrine{A}{s with many other geeks}, I find myself in the unofficial
+position of ``computer guy'' for family and friends (F\&F). This
+entails sorting out broken computers, providing advice on new
+purchases for a variety of devices and software packages, installing
+said devices and packages, doing security updates and giving security
+advice, providing mini-tutorials on applications, teaching basic
+programming~--- the list goes on and on. The funny thing is, much like
+all other nerds, I may moan about my duties but secretly I enjoy
+performing them. Sometimes I get to setup people with cheap Ubuntu
+boxen, which they may complain about a little in the beginning but
+eventually use in extremely productive ways; and even on windows
+setups, I get to understand what drives people to Microsoft and what
+its weak and strong points are. Its a very instructive job.
 
 Things got even more interesting since I bought my eee PC, a device
 that is selling like fire in the polar winter. The eee PC helped me
@@ -2512,8 +2530,8 @@ computers have to change so much so often.
 So what made the eee popular? In my opinion, there are two key points:
 
 \begin{itemize}
-\item Its cheap. No one would even have a look at it if it was 400 GBP
-\item Its easy.
+\item its cheap. No one would even have a look at it if it was 400 GBP
+\item its easy.
 \end{itemize}
 
 These are the key selling points to a regular user. To illustrate the
@@ -2873,22 +2891,20 @@ small, on the desktop.
 
 \chapter{2009: Year of World Domination?}
 
+\epigraph{Ninety-Ninety Rule: n. The first 90\% of the code accounts for
+  the first 90\% of the development time. The remaining 10\% of the
+  code accounts for the other 90\% of the development time.}{Jargon}
+
 \begin{flushright}
   \emph{Sunday, February 1, 2009}
 \end{flushright}
 
-\begin{epigraphs}
-\qitem{Ninety-Ninety Rule: n. The first 90\% of the code accounts for
-  the first 90\% of the development time. The remaining 10\% of the
-  code accounts for the other 90\% of the development time.}
-      {Jargon}
-\end{epigraphs}
-
 \section{World Domination Revisited}
 
-It's hard to believe, but it has been almost two years since I ranted
-on World Domination. Two years have rolled by, and it seems
-appropriate to resume the theme, but from a slightly different angle.
+\lettrine{I}{t's hard to believe}, but it has been almost two years
+since I ranted on World Domination. Two years have rolled by, and it
+seems appropriate to resume the theme, but from a slightly different
+angle.
 
 So, lets cut to the chase. Will 2009 be the Year of the Linux Desktop?
 The short answer is no, and I think its now clear it will apply to
@@ -3185,439 +3201,1403 @@ technological superiority. Linux will stand a good chance of fighting
 for that market in the next three years, once all the core
 infrastructure stabilises.
 
-\chapter{Nerd Food: The Jaunty Jackalope}
+\chapter{On MinGW, Cygwin and Wine}
+
+\epigraph{All problems in computer science can be solved by another
+  level of indirection.} {David Wheeler}
+
+\epigraph{\ldots except for the problem of too many layers of
+  indirection.} {Kevlin Henney}
 
 \begin{flushright}
-  \emph{Saturday, May 16, 2009}
+  \emph{Friday, May 18, 2012}
 \end{flushright}
 
-\begin{epigraphs}
-\qitem{Winning isn't always finishing first. Sometimes winning is just finishing.}
-      {Manuel Diotte}
-\end{epigraphs}
+\emph{Standard Disclaimer}: as with all posts in Nerd Food, this is a
+summary of my notes and experience on the subject. Its likely there
+will be incorrect bits of information so don't start building your
+personal nuclear power station using this article. Or if you do, don't
+blame me.
 
-\section{That Time of the Year}
+\section{UNIX Stranger on a Windows Strange Land}
 
-So here we are again. Another six months have gone by, and we're all
-ready and eager to see what those Debian and Ubuntu boys and girls
-were up to. Like everybody else, I dutifully upgraded my Intrepid
-boxes, very much as I have done for every release since Warty. This
-time though I decided to expand a bit more on my experiences~--- the
-main reason being that, for better or for worse, Linux on the desktop
-is now big business. You may not think so, considering we appear to
-still be at around 1\% market share, and considering most people using
-computers are still ignorant of Linux and Free Software in general;
-but, in my personal opinion, we are now on the threshold, on the
-verge, of starting to build a commercial position.
+\lettrine{L}{ike pretty much} every other UNIX nerd, I've been
+stranded on Windows for long periods many times in my career. Whenever
+that happens, cygwin is what keeps me sane and affords me a modicum of
+productivity in hostile surroundings.
 
-Thus, we can no longer afford to look at Ubuntu~--- or at any other
-Linuces who wish to break through into the desktop mainstream
-market~--- as we have until now. This review is not just a typical
-Linux review. I do not wish in anyway to upset all those people who
-work so hard to make GNU, Linux, Debian and Ubuntu what they are
-now~--- people for which I have the utmost respect. However, I shall
-endeavour to make a frank accessment of the strong points and weak
-points of Ubuntu as it stands at 9.04.
+My relationship with Cygwin started in the long forgotten days of B19
+when Men were Men and there was no setup.exe~---just archives that were
+unpacked manually. I even sent a post or two to the mailing list in
+those days, or so Google says. One thing I never did was to write
+about how Cygwin does its magic, and that's mainly because it has just
+worked for the things I needed it to do. Recently I found myself doing
+some more advanced stuff and it spurred me to write a post.
 
-If your main concerns are with software freedom, the remainder of this
-article will not be useful to you at all. I have taken a stance of the
-``ignorant consumer'', the sort of chap who would buy a product based
-on price and quality; a person who does not really care how product
-came to be, but focuses only on features and usability. I think its
-really important to look at the world from this perspective, because
-to some extent, we have taken all the easy pickings. A lot of people
-who care deeply about their freedoms and buy products thoughtfully are
-probably either using GNU/Linux (or some other free operative system)
-or have made a conscious decision not to use it. It is the nature of
-this audience to investigate their choices. It is not the nature of
-the majority of the market though, and to capture them we must play
-the game on their terms~--- not on ours.
+Before we can understand Cygwin, we need to get some fundamentals out
+of the way. However, if you came here just to get a summary of
+solutions and implications without necessarily understanding the
+fundamentals, feel free to jump straight to Choosing the Environment
+that Fits You.
 
-In addition, one must bear in mind that GNU/Linux is challenging a
-strong incumbent, and a very strong second place; being as good as
-Windows or MacOS won't win any prizes, because they both possess huge
-advantges: large installed base, marketing, familiarity, large amounts
-of money. From whatever angle you look, these are formidable
-oponents. To beat them at their own game, one must be pretty special
-indeed.
+\section{The Kernel and User Space}
 
-Without further ado, my views on Jaunty.
+All operative systems share one feature in common: they all have a
+kernel. The job of the average kernel is to do low-level stuff like
+allowing multiple processes to share a physical machine without
+getting on each others toes. The kernel does this and much, much more,
+either through its core code or via dynamically loaded modules such as
+the device drivers provided for your graphics card.
 
-\section{Booting the Live CD}
+Kernels vary wildly in how they do things internally; that's why there
+are so many different ones. Even more importantly~---at least for our
+purposes~---they greatly differ on how they interface with the layers
+above them, somewhat derogatorily known as the ``user space''. The
+kernel exports an interface to the outside world, but this is normally
+not meant to be consumed directly; instead users rely on higher-level
+components to consume it. There are two sides of this interface: the
+API and the ABI. Unfortunately, very frequently we use API to mean a
+combination of both, but in reality there is a difference.
 
-One of the many advantages Apple and Microsoft have over Ubuntu is
-installation. Its not that their installation is better~--- its just
-that the vast majority of their users have never installed an
-operative system in their lives. Consumers buy boxes with the
-operative system pre-installed, giving them the false impression that
-installation is trivial. A lot of people see a new operative system
-only when buying a new machine, and, given the choice, would probably
-revert back to the previous version.
+\section{The Kernel Application Programming Interface (API)}
 
-This is in stark contrast with Ubuntu. SWAGging, I'd say the vast
-majority of Ubuntu installations are/were done by either the end user
-or its local computer nerd. Dell notwithstanding, until a large number
-of manufacturers offer Ubuntu pre-installed, installation will always
-be a key battlefield, and a really though battle to fight. After all,
-its very difficult to compete against an idealized installation
-process which is just assumed to be easy.
+When we talk about the API we normally mean a set of headers that can
+be used to compile code that talks to the kernel directly. For a
+simple example for the Linux kernel have a look at the Real Time Clock
+Driver Test/Example Program. You can see it includes a linux kernel
+header:
 
-Overall, I think Ubuntu does a good job with installation~--- although
-there are a few niggles. For instance, first impressions are extremely
-important, and unfortunately, the language menu does not quite give
-the best first impression. It takes a lot of screen real estate and
-uses an approach that is just not scalable (what will we do when we
-have more languages than fit the screen?).
+\begin{pseudocode}[backgroundcolor=\color{lightgray}]
+#include <stdio.h>
+#include <linux/rtc.h>
+#include <sys/ioctl.h>
+...
+\end{pseudocode}
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.50\textwidth]{pics/softpedia_language_menu}
-\end{center}
-\caption{Language Menu. Source: Softpedia.}
-\end{figure}
+These are used to talk directly to the RTC, using standard calls such
+as ioctl, etc.
 
-Its understandable that such an internationalised product as Ubuntu
-wouldn't want to force non-English speakers to understand just what
-``F2 Language'' means; but the approach taken just doesn't look
-professional. A lot of thought should have been given to the language
-list, making it scalable and easy to navigate.
+\section{The Kernel Application Binary Interface (ABI)}
 
-The boot menu has good and bad points. On the plus side, ``Try Ubuntu
-without any changes to your computer'' is a good idea, as many a
-newbie wouldn't understand the concept of a live CD and will think
-that choosing ``Install Ubuntu'' will be a non-reversible operation,
-or one which won't take you to a regular desktop. However, all other
-options should really be under a sub-menu~--- or perhaps accessible
-via F6 Other Options or another such shortcut~--- because they may
-needlessly alarm users (why do I need to test memory? is this going to
-corrupt it? Is my disc defective? what does that mean?)
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.50\textwidth]{pics/softpedia_boot_menu}
-\end{center}
-\caption{Boot Menu. Source: Softpedia.}
-\end{figure}
-
-If one were to think in terms of flow, the vast majority of users will
-go through the following two use cases:
+From a kernel perspective, its best to think of the ABI as a
+specification that allows stitching together binary components. The
+ABI is actually huge, and encompasses very many different aspects,
+such as:
 
 \begin{itemize}
-\item Choose language, try Ubuntu
-\item Choose language, install Ubuntu.
+\item the system call ABI, exemplified here for linux. It describes
+  how function calls are setup, how the stack gets cleaned up after
+  the function call, etc.
+\item the object file format, responsible for describing the layout of
+  binaries such as executables and shared libraries. Most Unices
+  support ELF or the older COFF or the even older a.out; Windows uses
+  PE.
 \end{itemize}
 
-Anyone trying anything else is an advanced user who knows what they're
-doing. As such, I'd say the boot process should start with a full
-screen combo-box which allows one to scroll up and down to choose a
-language; once the language is chosen, the second menu has two
-options: ``Install Ubuntu'' and ``Try Ubuntu without any changes to
-your computer''. At the bottom, the shortcuts should be:
+Finally, one last word on internal versus external ABI. Linux tries
+very hard to make sure the external ABI is kept stable; this is why
+you can run the same binaries on pretty much any version of the kernel
+(all things being equal, such as the presence of all dependencies
+required by the binary). However, Linux makes no guarantees whatsoever
+with regards to the internal ABI. This means you cannot compile device
+drivers for a version of the kernel and expect them to work with other
+versions; they may, but then again they may not. Windows takes the
+opposite approach, trying hard not to break binary compatibility.
+
+\section{UNIX and The C Library}
+
+It is somewhat tautological to say that, on UNIX, the outer edge of
+user space begins with the C POSIX Library. It contains all of what is
+available on the C Standard Library~---that is, the library of
+functions and types created for the C programming language~---and, in
+addition, it also contains POSIX extensions. It may also contain other
+non-standard extensions, but we'll ignore these for the sake of
+simplification.
+
+This entire package is what we commonly call the C Library. If you use
+Linux you are probably using glibc, the GNU implementation of the C
+Library. Furthermore:
 
 \begin{itemize}
-\item F1 Help
-\item F2 Language
-\item F3 Accessibility (with, if at all possible, a accessibility icon)
-\item F4 Advanced
+\item when people refer to the C runtime (CRT) they normally mean the
+  shared object (or dynamically linked library) providing the binary
+  implementation of the C Standard Library;
+\item to link statically against the C runtime means that your
+  application will contain the entire run-time rather than share one
+  with other applications.
 \end{itemize}
 
-All these options are perfectly meaningful to any basic user; anything
-which requires domain knowledge is hidden in ``Advanced''.
+Now, its important to bear in mind that there's nothing particularly
+magical about the C library; is just a set of functions defined by the
+C programming language and the POSIX standardisation
+process. Externally it looks like pretty much any other library. What
+tends to make the C Library a bit special is that pretty much
+everything on a UNIX system depends on it in one form or
+another. Also, unlike other libraries, the C Library makes use of
+kernel APIs to implement the interfaces it exports, and as such it
+shields the layers above from the vagaries of any particular kernel.
 
-At any rate, once Install Ubuntu is chosen, the boot process is
-elegant and blazing fast~--- a great improvement over Intrepid.
+You are probably wondering if these functions would not also be useful
+to the kernel itself. After all, it is more often than not built in C,
+right? Unfortunately, due to the highly circular nature of the
+problem, the kernel cannot make use of the C Library. The kernel uses
+what is commonly referred to as pure C; that is, only the core C
+language itself. It must provide its own implementation of all
+required functions, which can be inspired by code in the C library.
 
-\section{Installing}
+\section{The Windows API}
 
-Overall, the installation process is very clean, with as few steps as
-possible. In fact, I'd go as far as saying that Ubuntu installation is
-probably second to none now. I wasn't very keen on live CDs when they
-first came out~--- couldn't quite see the point~--- but I now
-understand the error of my ways. Having the ability of starting your
-PC with a full blown version of the operative system you're about to
-install is fantastic. You can quickly assess which bits of hardware
-are going to be more problematic, as well as giving Ubuntu a good
-run. For the average consumer this is great, a sort of taste before
-you buy, if you like. The only change I'd perhaps make to the live
-disc~--- for systems with plenty of RAM (say 2 Gb or more)~--- is to
-create a RAM disc with all the apps, to avoid reading so much from the
-(slow) CD-Rom.
+On Windows~---as always~---things are not quite as simple. The Windows
+API is the equivalent outer edge of user space on Windows-land (when I
+say API here, I really mean API + ABI, which is traditionally what
+people mean). Instead of a nice separation of core APIs that interface
+with the kernel, the Windows API appears to users as one big monolith
+with many, many responsibilities all bundled together. In reality, its
+actually made up of a great number of distinct libraries, but that's
+not how it seems to the untrained eye.
 
-With regards to the actual installation steps, there are two points
-which may warrant a bit of attention.
+As far as the C Library is concerned, well, it has no direct
+equivalent. The C Standard Library exists on Windows, of course, but
+its not seen as a core component of the operative system; its more of
+a add-on which you can install if required. If one could access the
+source, one imagines that its implementation makes use of Windows API
+calls rather than calling the kernel directly~---but this is gross
+speculation from my part. Implementation details aside, its fair to
+say that the C Standard Library works just fine on Windows.
 
-Partitioning is clearly the scariest aspect of the installation
-process, so its important to be clear and reassuring to users. It
-would perhaps be a good idea to make the partitioning options slightly
-clearer, in particular with regards to resizing an existing Windows
-partition. It would also be a good idea to ensure the text below ``Use
-the entire hard disc'' is clearly disabled, as just the words ``This
-will delete Windows XP...'' are enough to dissuade many a newbie.
+The crux of all our problems is the POSIX API. When a UNIX developer
+means ``POSIX'' he or she means the whole shebang: threads, processes,
+sockets, etc.~---pretty much a complete wrapper around the
+functionality provided by the kernel. Unfortunately, POSIX is very
+much a suite of standards, and its not hard to cherry pick the easier
+bits and claim compliance for marketing purposes; this was what
+Microsoft did in the NT 3.51 days.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.50\textwidth]{pics/softpedia_step_4}
-\end{center}
-\caption{Partitioning. Source: Softpedia.}
-\end{figure}
+To be fair to Microsoft, these days they provide a decent
+implementation on their high-end systems (Interix, or Subsystem for
+Unix-based Applications, can't quite keep up with the names). However,
+its not everywhere by default and its a bit too late to fix the damage
+done by its absence.
 
-Users and passwords are also rather important. It is common for a
-single PC to be shared by two or more people, so multi-user support is
-very important. It is also very common for users not to want to type a
-password every time they log in. These use cases are not very well
-served by the current dialog.
+The other thing to notice is the potential impedance mismatch between
+the NT kernel API and POSIX. The NT kernel comes from a VMS heritage
+and as such is further apart from POSIX, which was in many ways the
+standardisation of what was then current UNIX practice. The further
+apart these two are, the higher the cost of the translation.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.50\textwidth]{pics/softpedia_step_5}
-\end{center}
-\caption{Users and passwords. Source: Softpedia.}
-\end{figure}
+\section{The many facets of Cygwin}
 
-Ideally all the user wants is one of two scenarios:
+It should be fairly clear by now what the first role of Cygwin is: it
+aims to provide the missing POSIX API and run time that is required by
+the majority of applications designed for Linux and other Unices. This
+it provides via its many DLLs such as cygwin.dll. So all software that
+runs on Cygwin requires these DLLs~---very much like the C Library on
+Linux is a central dependency.
+
+The second aspect of Cygwin is a bit less obvious. In my quest to
+explain hows things work I simplified things a bit: POSIX is not only
+a set of APIs~---its also an environment. Yep you heard that right, it
+is well within the rights of POSIX applications to expect the presence
+of the Bourne shell (sh) and a host of other utilities such as make
+and ls.
+
+You may argue that a large number of applications can happily function
+without bash or ls. Indeed they can~---at run-time; however, bear in
+mind that someone has to build these applications somewhere and it is
+this very compilation process that tends to require a POSIX
+environment. Visual Studio does contain fairly capable C and C++
+compilers, and one can even access them for free these days using the
+Express Edition; however, this is a recent development and as such
+most Linux applications do not have Visual Studio solutions or msbuild
+files, so its not possible to build them directly from Visual Studio.
+
+The second aspect of Cygwin is then to provide this environment under
+which to build applications~---loosely called a toolchain. As the DLL
+got closer and closer to POSIX, more and more software has been ported
+over, making the toolchain closer and closer to Linux; this in turn
+has made the porting of additional software easier, and the process
+fed on itself. These days the traditional configure, make and make
+install are likely to work for a very large number of applications
+available on a Linux distribution; most of these are the applications
+shipped with Cygwin, the distribution~---its third aspect.
+
+As with everything in life, there's always a cost. You may have heard
+complaints about Cygwin's performance. Personally I can't moan too
+much but I guess that if you are running performance sensitive code
+such as say PostgreSQL under high loads you are likely to notice
+it. This is for two reasons:
 
 \begin{itemize}
-\item Setup one or more users and, for each user, decide whether to
-  use a password or not.
-\item For a single user box, probably allow automatically login.
+\item there is a natural impedance mismatch between the Windows API
+  and POSIX, as described on the previous section; ironing out this
+  mismatch has to cost CPU cycles;
+\item as a regular Windows denizen, Cygwin has to go via the public
+  Windows API instead of talking directly to the kernel, and as such
+  misses some potential optimisations that Interix/SUA may be using.
 \end{itemize}
 
-Multi-user polish will be addressed further on in this article.
+\section{MinGW and MSYS}
 
-\section{Logging in}
-
-The new login screen may be perhaps a bit too dark for users with
-accessibility needs, but overall its a triumph of parsimony. Its
-literally impossible to get confused using it. The only slight snag is
-the missing user list. Most people will probably prefer not to type a
-password, so it makes sense not to type a username either. The
-security conscious will no doubt complain, scream and shout~--- but
-from the perspective of the regular user, it makes complete sense
-(it's my house, not a public computer!).
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.50\textwidth]{pics/softpedia_login}
-\end{center}
-\caption{Login Screen. Source: Softpedia.}
-\end{figure}
-
-\section{The Proprietary Question}
-
-One of the greatest problems with Ubuntu (and most linuces) is the
-hidden steps of ``additional setup''. These can be extremely
-costly. Whilst there are enumerable articles, detailing exhaustively
-what needs to be done, and whilst most guides can be followed blindly
-by even the newbiest of all newbies, the very existence of the
-``additional setup'' is a huge barrier of entry to many users. The
-additional setup is exclusively related to installing and configuring
-proprietary applications and drivers. For me these are:
+Some people are not happy with the dependency on Cygwin, either due to
+the performance reasons outlined above or due to its fairly viral GPL
+licence. MinGW tries to plug this gap in the market, providing the
+following:
 
 \begin{itemize}
-\item NVidia/ATI drivers
-\item MP3 support
-\item Getting (encrypted) DVDs to play
-\item Wireless drivers
-\item Flash
-\item Adobe acrobat
-\item Skype
+\item a native port of the GNU toolchain to Windows, including GCC, make, etc. These are full-blown windows applications with no other dependencies;
+\item the MinGW run-time: headers and lib files that allow compiling against the Microsoft C Standard Library;
+\item a set of Windows API headers required to compile code against the Windows API.
 \end{itemize}
 
-For a very large number of users out there, a PC is not usable unless
-all these have been successfully installed and configured. The
-additional setup process has been trimmed to its absolute minimum,
-methinks, particularly if one compares it to how things used to be 5
-or 10 years ago. It is, in fact, trivial in most cases. But this is
-the problem: when we look at where we are, we inevitably see things in
-terms of a natural evolution. A Windows or MacOS user will not see
-things that way; it will become instantly apparent to him or her that
-a lot of things are not setup on Ubuntu out of the box, and setting
-them up is non-trivial (even if all we're talking about is following a
-very simple and detailed procedure) because this is just not the way
-they are used to work.
+With these three things one can build native Windows applications that
+do not rely on POSIX at all (they can, of course, rely on any POSIX
+functionality Windows may offer directly).
 
-In my mind, just like we have gNewSense for the purists, we also need
-a ``compromised'' Ubuntu, \emph{even} if it requires users to pay for
-it to ensure all licences are in working order. After all, time is
-money, and I'd much rather pay Canonical 10-30 EUR twice a year for a
-``compromised'' version with all the proprietary stuff installed,
-rather than having to waste time doing it. The ``compromised'' version
-should also be used in any pre-installed PCs.
+As explained previously, many applications require a POSIX environment
+on which to build; for instance they may make use of shell scripts so
+bash is a requirement. To aid in this department, MinGW comes with
+MSYS, which is effectively an extremely cut-down fork of Cygwin that
+contains a very minimalist environment with bash, ls and so on. While
+it may work out of the box for simple use cases, you may find its a
+bit too basic for non-trivial applications. For instance we found that
+the version of tar supplied didn't support 32-bit GIDs, causing a lot
+of spurious warnings. If a basic package like tar, which is trivially
+used for installing software, must be tinkered with in order to work
+you can imagine the difficulties in compiling large and complex
+applications. This is probably not a problem for the typical low-level
+MinGW user, probably accustomed to embedded development, but it makes
+it slightly less accessible to the casual developer not interested in
+the guts of the implementation.
 
-Alas, this is not how things are at the moment. To make matters worse,
-my ``additional setup'' has been very far from trouble-free. These are
-the issues I've faced:
+As you probably already guessed, nothing stops you from using MinGW
+from within Cygwin; in fact, it's available as a package. Doing this
+gives you the advantages of a full-blown POSIX environment in which to
+build, rather than the spartan MSYS, whilst still allowing you to
+generate binaries that do not require Cygwin to run. If you do not
+want to spend time setting up basic environmental details then Cygwin
+is the right choice for a key-in-hand solution for a UNIX environment
+on Windows.
+
+More interesting still, you can run MinGW directly on Linux. Once GCC
+was taught how to generate binaries for the Windows platform, the next
+logical step was to allow it to cross-compile these binaries in
+Linux. This basically means that a MinGW version of GCC is available
+on your Linux distribution as an ELF binary which is able to generate
+PE binaries that can be executed on Windows. In this case you won't
+need MSYS as Linux already provides you with a POSIX environment in
+which to build. To put things slightly more technically, you can use
+Linux as both the build and host system, and generate binaries that
+target Windows.
+
+Finally, a word about MinGW-w64. Originally MinGW only targeted
+Windows 32-bit~---hence why you may see MinGW32 in a lot of places; as
+64-bit became more popular, a compiler for it was required~---that's
+where MinGW-w64 came in. These days it provides both 32-bit and 64-bit
+compilers and it distinguishes itself by both covering more of the
+Windows API and providing really recent GCC releases. For instance,
+snapshots of GCC 4.8 are already available from their download site.
+
+\section{Wine}
+
+A word on Wine is required for symmetry purposes. In many ways, Wine
+is the mirror image of Cygwin, in that it provides the Windows API to
+Linux; but its important to note that whereas Cygwin requires you to
+compile your sources and generate PE binaries to run on Windows, Wine
+actually goes one step further and allows running the PE binaries
+directly on Linux without any modification.
+
+This is much, much more difficult. I can't stress enough that Wine is
+not providing an emulator or VM to run PE binaries~---just like Cygwin
+is not providing an emulator to run ELF binaries. Instead, and unlike
+Cygwin, Wine provides a program loader that understands the PE format
+and is responsible for loading them into memory (you can read about
+all the gory details here.). Wine also has to provide all the headers
+for the Windows API so that you can compile full-blown Windows
+applications on Linux. And, of course, it provides a clean room
+implementation of the Windows API itself in order for you to be able
+to run the binaries.
+
+One can imagine that it could be possible to recompile the entire
+Windows API under Linux using ELF and then compile and run perfectly
+happy applications. Not withstanding any technical challenges~---half
+of windows is probably hard-coded to use PE~---this would not be a
+particularly useful thing to do because it would then require
+recompiling every other windows application under Linux and since we
+don't have the source for them this is a non-starter. For Cygwin it
+makes perfect sense, but not for Wine.
+
+MinGW shines on Wine too because you can now build and run Windows
+applications on Linux without requiring windows at all. Wine provides
+its won version of MinGW called winegcc.
+
+\section{Choosing the Environment that Fits You}
+
+If you need to develop on Windows or for Windows, the following
+checklist may be of assistance:
 
 \begin{itemize}
-\item \emph{Wireless (WPA) is utterly broken for my laptop.} Try as I
-  might, I just can't get my laptop to connect, even though it used to
-  work well with Intrepid. Some people reported this issue in Kubuntu,
-  but I'm seeing it with regular Ubuntu. A few of the proposed
-  workarounds don't seem to work for me either, such as typing the
-  password in hex. Its a rather annoying regression, and until it gets
-  fixed, I've got a big fat Ethernet wire in my living room.
-\item \emph{Recommended NVidia drivers (v180) are broken for my card.}
-  This is \#366222. For me there was a very simple workaround, which
-  was to downgrade the drivers back to v173. No problems since
-  then. Its an annoying bug though.
-\item \emph{Epiphany still crashes frequently} after closing tabs when
-  I'm using flash heavily. This is not a regression; I've had this
-  problem for a long time. Its similar to \#196588.
-\item \emph{Sound in Skype is not working.} This is a regression prior
-  to Intrepid~--- in fact, since PulseAudio. Its getting really close to
-  working though; now the problem seems to be that Skype somehow
-  lowers the volume of the microphone on startup (I can see this from
-  the PulseAudio volume control). I followed many a tutorial
-  (including this one, with amazing screenshots of volume control
-  configuration), to no avail.
-\item \emph{Sound in RealAudio is not working.} Same as for Skype
-  really.
+\item are you building and targeting only Windows? Use Visual Studio
+  with Cygwin to provide you with a nice UNIX like environment with
+  bash, grep and the like. This gives you the best compiler for your
+  platform. You will have to deal with the many quirks of Visual
+  Studio, but on the plus side you can run a lot of it from the
+  command line. Using CMake to generate solutions will make things
+  even easier.
+\item are you developing from Linux but targeting Windows? Use a MinGW
+  cross-compiler to produce the binaries and Wine to test the binaries
+  locally.
+\item do you need to target both Linux as well as Windows and your
+  code is very POSIX dependent? You will probably need either Cygwin
+  or Interix. If your software is closed source, you will have to pay
+  RedHat a licence to use Cygwin.
+\item do you need to target both Linux as well as Windows and your
+  code is not too POSIX dependent? Use MinGW to build on Windows and
+  regular GCC to build on Linux. If you want a lightweight POSIX
+  environment to minimise the risk of unwanted and unnecessary
+  dependencies, use MSYS. It will provide you with a bare-bones
+  environment but it will also allow you to compile against something
+  very close to the windows API. If you need a richer POSIX
+  environment use MinGW from Cygwin.
+\item do you want to use GCC on Windows without UNIX? Install MinGW
+  and use GCC from a cmd.exe shell. If you need a UI, use CodeBlocks.
 \end{itemize}
 
-Lets make a few things clear. Setting things up and chasing bug
-tickets is not something that would put me off Ubuntu and GNU/Linux
-the least~--- after all, I've been using GNU/Linux for over 10 years,
-and I value FOSS highly. Also, it is important to understand that none
-of these problems have anything at all to do with FOSS~--- these are
-exactly the issues people have been warning us about with regards to
-binary drivers and closed software. After all, PulseAudio works
-incredibly well for all my other applications~--- its the closed
-source ones that are and have always been the problem (in fact, the
-only real FOSS problem I have with Jaunty is \#366083).
+We're avoiding the more exotic scenarios such as building Linux
+binaries on Windows or running Cygwin on Wine.
 
-However, this is not an excuse for a commercial company looking to
-increase their market share at the expense of two ferociously
-competitive companies such as Apple and Microsoft. If I was Ubuntu,
-Novell or RedHat, I would have had personal meetings with all key
-companies providing commercial software (Flash and Skype are certainly
-key applications in the desktop space, even if RealAudio is not) and
-would have made available engineers to work with them to sort out the
-PulseAudio mess once and for all. Pulse is the future and its an
-increadible piece of software; Its just that the commercial companies
-seem unable to keep up. The same applies to NVidia/ATI.
+\chapter{.signature: Yanis Varoufakis}
 
-Wireless is slightly more complicated, and its a symptom of a more
-difficult problem. The truth is GNU/Linux and Windows work in
-extremely complex ecosystems, with mind-bogglingly complex hardware
-combinations. Many things just cannot be known until releases hit the
-wild and people complain. Microsoft attenuates this problem by
-massively regression testing the most common hardware combinations; as
-far as I am aware, no Linux vendor does something similar. In a way,
-it shouldn't be necessary; after all, the software is provided to all
-at all points of development, so in theory regressions should be
-picked up quickly. Release soon, release often right? In practice, it
-doesn't quite work this way.
+\epigraph{The problem with economics is that, at best, it can offer an
+  interesting theory of what an economy populated by algorithms will
+  look like.} {Yanis Varoufakis}
 
-The potential number of testers is huge~--- just have a look at the
-number of people that downloaded Jaunty on the last betas and since it
-has gone gold~--- but a very large percentage of users will not
-download until close to the release date. This means that the bugs
-reported during the development process are not representative of
-those that will be found post going gold; and people reporting bugs
-after the official release will be rather more upset with problems
-than those doing the alpha/beta testing. If there was some
-traceability, one could ``register'' all the different hardware
-combinations out there (say those using Jaunty over the next 6
-months), and then check to see how many of those were tried during the
-development phase. But there is no such data, so one is driving
-blind. Metrics here are fundamental, and knowing what was tested and
-when is vital. I'm sure many people would contribute (after all, a lot
-of the testing can be done by booting a live CD) if only they
-understood where they fit in the big scheme of things.
+\begin{flushright}
+  \emph{Wednesday, June 06, 2012}
+\end{flushright}
 
-All these problems are clearly distribution issues, and can only be
-fixed if distributors make an incredible effort. In order to have any
-semblance of a chance at attacking the desktop mass market, they must
-be addressed thoroughly and convincingly, or else we risk the ire of
-many a user.
+\lettrine{O}{One of the few advantages} of the Global Financial Crisis
+is that it opened a profound debate about Economics. As a software
+engineer, I must say I share some of the dislike for the dismal
+science, as it seems far removed from the Popperian principles we hold
+dear. However, people like Varoufakis force me to keep my mind open
+due to their refreshing way of looking at things. In this sentence he
+strikes at the heart of the greatest risk with models: one can stare
+at the model for so long as to confuse it with reality. This is
+something that, unfortunately, computer scientists are not immune
+to. Falsifiability should always be in the back of our minds.
 
-\section{Multi-User Deficiencies}
+\chapter{C++ times, they are a changin'}
 
-UNIX is the multi-user operative system par-excellence, and GNU/Linux
-carries on that tradition. However, there is a need to update the
-multi-user view of the world to today's reality. The challenge these
-days is not so much isolating users so that they cannot damage
-eachother or the system, but to create ways in which a machine can be
-shared sensibly. The issues I constantly keep on bumping into are:
+\epigraph{There are only two kinds of languages: the ones people complain
+  about and the ones nobody uses.} {Bjarne Stroustrup}
+
+\begin{flushright}
+  \emph{Sunday, April 21, 2013}
+\end{flushright}
+
+\lettrine{I} {think most C++ developers} would agree that there has
+never been a better time to be a C++ developer than the present: after
+all, the C++ 11 standard was released adding a slew of modern features
+to the language and we are now seeing clang and gcc nearing 100\%
+feature completion. In addition, there is an amount of activity around
+the language and libraries that I don't ever recall seeing in my
+professional career; the C++ 14 papers give a pretty good idea of the
+diversity and reach of this work.
+
+In effect, C++ is negotiating the transition from a closed, vendor
+driven platform to an open, community driven project. These two
+articles will attempt to narrate the process, from the perspective of
+a long time C++ user.
+
+From the beginning, Stroustrup had always believed that without
+libraries C++ would be a pretty useless language:
+
+Without a good library, most interesting tasks are hard to do in C++;
+but given a good library, almost any task can be made easy.
+
+Plain C++ was a pretty useless language: many developers reinvented
+the wheel, and libraries of poor quality were endlessly rewritten. Its
+hard to remember now, but in the nineties it was a rite of passage to
+write your own containers such as doubly-linked lists. Slashdot user
+VortexCortex gives a pretty insightful picture of those long forgotten
+days:
+
+Well, I wrote my own Hash Map implementation. Before that I had my own
+Linked Lists too. Before C++ came along I even maintained my own OOP
+implementation in C with a spiffy pre-processor to convert syntactic
+sugar into the equivalent ugly object oriented C code riddled with
+namespace prefixes, indecipherable pointer math for dynamic (virtual)
+functions (actions), and statically complied variable (property)
+look-up tables for run-time type inspection (reflection).
+
+It led to incompatibilities between codebases – My Entities+C wouldn't
+be compatible with your C+OOP. Hell, we didn't even use the same
+terminology, or necessarily even support the same feature sets. The
+point is, I wasn't the only one who was doing that (see also:
+Objective C). There were lots of us, it was a huge waste of duplicated
+effort. So many, in fact, that C++ was born, and the STL too […].
+
+It is in this context that the C++ 98 standard emerged, and it was
+seen as a major victory for all involved~---a milestone in the
+development of the language. However, pragmatism won the day and
+parsimony is always a requirement for shipping; the standard library
+was pretty much just the STL, the I/O Library and naively-defined
+string support. Once one exhausted the core functionality of the
+standard library, well, you were on your own. This is were library
+vendors came in.
+
+C++ had always been a highly profitable tooling market for vendors,
+and the vacuum of specification only served to amplify the profits. It
+was now possible to make a true claim for vendor independence~---
+``hey we are 100\% standards compliant!'' ~---while at the same time
+providing large amounts of vendor specific code. Once a vendor was
+chosen, vendor lock-in was almost by design: the libraries provided so
+much functionality and in such vendor-specific ways that changing
+libraries was synonymous to rewriting entire code bases.
+
+The other interesting aspect of these days was that C++ community just
+didn't know how to write good C++. Most of the vendor libraries coped
+out and simply defined object oriented APIs because that was easier to
+create and easier to consume. Stepanov's dreams~---that the STL was
+simply one example of many of a different way of thinking, and a raft
+of libraries along the same lines were soon to follow~---were put on
+hold.
+
+But people were already learning from the success of community driven
+languages such as Perl and Python. A man that was ahead of the curve
+in this regard was Beman Dawes. Not only did he deeply understand the
+standardisation process~---and its flaws~---but he also saw that
+libraries were the key to success. Thus Boost began as an effort to
+provide the missing libraries, in a nimble, community driven way that
+at the same time had high quality standards; these were provided by
+peer reviews, requests for documentation and so on. Boost soon became
+the home for the ``fundamental'' C++ thinking, in many ways continuing
+the discovery process of the Stepanov ideas in libraries such as
+Boost.Graph.
+
+In the mean time, the world didn't stand still. The rich pickings C++
+provided to vendors proved to be their downfall, as the largess of the
+tools market gave way to lean times. The crowds moved over to the new
+shinny toys such as Java and C\#, and the new breed of dynamic
+languages gave C++ the final kick into the legacy bucket. It was just
+not cool anymore to be seen doing C++. These new languages learned
+their lessons and came out of the box with large class libraries that
+provided support for all sorts of things, making the standard library
+look small and antiquated in comparison. Even with Boost, one would
+still be nowhere near the functionality of out-of-the-box Java or C\#,
+let alone Python or Ruby.
+
+When a COBOL-style death appeared certain, a phoenix-like effect
+kicked in. Just as it was with UNIX~---where the death and shrinkage of
+UNIX vendors became the catalyst to create a new breed of UNIX based
+on collaboration rather than competition~---so the same happened to
+C++. When the big money moved away it was suddenly noticed that no
+single company could afford to maintain a large library by themselves
+on the skimpy margins they were now making. Thus many companies opted
+for open sourcing their code~---some just before they went out of
+business, others as a strategic way of staying in business. Many
+vendors died, but the few that remained found healthy niches from
+which to run their businesses.
+
+The second factor that kept C++ alive after all the cool kids moved on
+was that the old school engineers were still around, and when
+efficiency became a key concern~---as it always does in the end~---they
+were there to explain how efficient server side code could be written
+in C++. So whilst uncool, C++ was alive and well, just surviving
+underground in the guts of data centres and in large scientific
+projects. These users were making hefty use of open source, with Linux
+GCC and a plethora of open source libraries as their weapons of
+choice. Together with the appearance of Clang, this mean that both the
+tooling and the libraries in C++ moved forward in leaps and bounds,
+but in a process that was almost entirely divorced from the
+standard. From not having enough libraries we went to having too many
+of them, with lots of overlapping functionality.
+
+Whilst this was happening, C++ didn't stand still. Some of the more
+obvious Boost code got shipped into TRs and made their way to end
+users. And C++ 0x was cooking. This was a major change to the
+standard, composed both of core language changes but much more
+importantly, of a great deal of additions to the standard library. A
+number of Boost libraries were polished up and moved into the std
+namespace.
+
+But this brought with itself its own problems. Some were related to
+the new language features~---its still not certain how some of these
+should be used~---and others are related to the new libraries. For
+those of us heavily reliant on Boost, a difficult problem emerged: the
+standard libraries didn't cover all aspects of the Boost libraries
+they standardised; for instance, Boost Serialisation won't work with
+\texttt{std::shared\_ptr}, so now code bases become a mix of Boost and
+standard library code. Clearly the process of offloading Boost
+libraries to the standard has only begun. And this is what we will be
+covering in part II.
+
+\chapter{Dogen: Lessons in Incremental Coding}
+
+\epigraph{Le mieux est l'ennemi du bien.}{Voltaire}
+
+\begin{flushright}
+  \emph{Sunday, September 07, 2014}
+\end{flushright}
+
+\lettrine{A} {lot of interesting lessons} have been learned during the
+development of Dogen and I'm rather afraid many more are still in
+store. As it is typical with agile, I'm constantly reviewing processes
+in search of improvements. One such idea was that putting pen to paper
+could help improving the retrospective process itself. The result is
+this rather long blog post, which hopefully is of use to developers in
+similar circumstances. Unlike the typical bullet-point based
+retrospective, this post it is a rambling narrative as it aims to
+provide context to the reader. Subsequent retrospectives will be a lot
+smaller and more to the point.
+
+Talking about context: I haven't spoken very much about Dogen in this
+blog, so a small introduction is in order. Dogen is an attempt to
+create a domain model generator. The manual goes into quite a bit more
+detail, but for the purposes of this exercise, it suffices to think of
+it as a C++ code generator. Dogen has been developed continuously
+since 2012~---with a few dry spells~---and reached its fiftieth sprint
+recently. Having said that, our road to a finished product is still a
+long one.
+
+The remainder of this article looks at what what has worked and what
+has not worked so well thus far into Dogen's development history.
+
+\section{Understanding Time}
+
+Dogen was conceived when we were trying to do our first start up. Once
+that ended~---around the back end of 2012~---I kept working on the tool
+in my spare time, and this was a setup that has continued ever
+since. There are no other contributors; development just keeps
+chugging along, slowly but steadily, with no pressures other than to
+enjoy the sights.
+
+Working on my own and in my spare time meant that I had two
+conflicting requirements: very little development resources and very
+ambitious ideas that required lots of work. With family commitments
+and a full time job, I quickly found out that there weren't a lot of
+spare cycles left. In fact, after some analysis, I realised I was in a
+conundrum. Whilst there is was a lot of ``dead-time'' in the average
+week, it was mostly ``low-quality grade time'': lots of discontinued
+segments of varying and unpredictable lengths. Summed together in a
+naive way it seemed like a lot, but~---as every programmer
+knows~---six blocks of ten minutes do not one solid hour make.
+
+Nevertheless, one has to play the game with the cards that were
+dealt. I soon realised that the correct question to ask was: ``what
+kind of development style makes one productive under these
+conditions?''. The answer turned out to be opportunistic coding. This
+is rooted in having a better understanding of the different
+``qualities'' of time and how best to exploit them. For example, when
+you have say five to fifteen minutes available, it makes sense to do
+small updates to the manual or fix trivial problems~---a typo in the
+documentation, renaming variables in a function, mopping up the
+backlog and other activities of that ilk. A solid block of forty
+minutes to an hour affords you more: for instance, implementing part
+or the whole of stories for which the analysis has been completed, or
+doing some analysis for existing stories. On those rare cases where
+half-a-day or longer is available, one must make the most of it and
+take on a complex piece of work that requires sustained
+concentration. This sessions proved to be most valuable when the
+output is a set of well defined stories that are ready for
+implementation.
+
+One needs very good processes in order to be able to manage the usage
+of time in this fashion. Luckily, agile provides it.
+
+\section{Slow Motion Agile}
+
+Looking back on ~2.4k commits, one of the major wins in terms of
+development process was to think incrementally. Of course, agile
+already gives you a mental framework for that, and we had a
+functioning scrum process during our start up days: daily stand-ups,
+bi-weekly sprints, pre-sprint planning, post-sprint reviews, demos and
+all of that good stuff. It worked really well, and keep us honest and
+clean. We used a very simple org-mode file to keep track of all the
+open stories, and at one point we even built a simple burn-down chart
+generator to allow us to measure velocity.
+
+Granted, when you are working alone in your spare time, a chunk of
+agile may not make sense; for instance, providing status updates to
+yourself may not be the most productive use of scarce
+time. Surprisingly, I found quite a bit of process to be vital. I've
+kept the bi-weekly sprint cycle, the sprint logs, the product backlog
+and the time-tracking we had originally setup and found them extremely
+useful~---quite possibly the thing that has kept me going for such an
+extended period of time, to be brutally honest. When you are working
+on an open source project it is very easy to get lost in its
+open-ended-ness and find yourself giving up, particularly if you are
+not getting (or expecting) any user feedback. Even Linus himself has
+said many times he would have given up the kernel if it wasn't for
+other people bringing him problems to keep him interested.
+
+Lacking Linus' ability to attract crowds of interested developers, I
+went for the next best thing: I made them up. Well, at least in
+metaphorical way, I guess, as this is what user stories are when you
+have no external users to drive them. As I am using the product in
+anger, I find it very easy to put myself in the head of a user and
+come up with requirements that push development forward. These stories
+really help, because they transform the cloud of possibilities into
+concrete, simple, measurable deliverables that one can choose to
+deliver or not. Once you have a set of stories, you have no excuse to
+be lazy because you can visualise in your head just how much effort it
+would require you to implement a story~---and hey, since nerds are
+terrible at estimating, it's never that much effort at all. As
+everyone knows, it's not quite that easy in the end; but once you've
+started, you get the feeling you have to at least finish the task at
+hand, and so on, one story at a time, one sprint at a time, until a
+body of work starts building up. It's slow, excruciatingly slow, but
+it's steady like water working in geological time; when you look back
+5 sprints, you cannot help but be amazed on how much can be achieved
+in such a incremental way~---and how much is still left.
+
+And then you get hooked into measurements. I now love measuring
+everything, from how long it takes me to complete a story, to where
+time goes in an sprint, to how many commits I do a day, to, well,
+everything that can easily be measured without adding any
+overhead. There is no incentive for you to game the system~---hell, you
+could create a script that commits 20 times a day, if the commit count
+is all you care about. But it's not, so why bother. Due to this,
+statistics start to actually tell you valuable information about the
+world and to impel you forward. For instance, GitHub streaks mean that
+I always try to at least make one commit per day. Because of this,
+even on days when I'm tired, I always force my self to do something
+and sometimes that quick commit morphs into an hour or two of work
+that wouldn't have happened otherwise.
+
+As I mentioned before, it was revealing to find out that there are
+different types of time. In order to to take advantage of this
+heterogeneity, one must make scrupulous use of the product
+backlog. This has proven invaluable, as you can attest by its current
+size. Whether we are part way through a story or just idly
+daydreaming, each and every idea must be added to the product backlog,
+with sufficient detail to allow one to reconstruct one's train of
+thought at that point in time. Once in the backlog, items can be
+continuously refined until eventually we find a suitable sprint to
+tackle them or they get deprecated altogether. But without an healthy
+backlog it is not possible to make the most these illusive time
+slots. Conversely, it is important to try to make each story as small
+and as focused as possible, and to minimise spikes unless they really
+are on the critical path of the story. This is mainly for
+psychological reasons: one needs to mark stories as complete, to feel
+like work has been done. Never-ending stories are just bad for morale.
+
+In general, this extreme incrementalism has served us well. Not all is
+positive though. The worst problem has been a great difficulty in
+tackling complex problems~---those that require several hours just to
+load them into your head. These are unavoidable in any sufficiently
+large code base. Having lots of discontinued segments of unpredictable
+duration have reduced efficiency considerably. In particular, I notice
+I have spent a lot more time lost in conceptual circles, and I've
+taken a lot longer to explore alternatives when compared to working
+full time.
+
+\section{DVCS to the Core}
+
+We had already started to use git during the start-up days, and it had
+proved to be a major win at the time. After all, one never quite knows
+where one will be coding from, and whether internet access is
+available or not, so it's important to have a self-contained
+environment. In the end we found out it brought many, many more
+advantages such as great collaborative flows, good managed web
+interfaces/hosting providers (GitHub and, to some extent, BitBucket),
+amazing raw speed even on low-powered machines, and a number of other
+wins~---all covered by lots and lots of posts around the web, so I
+won't bore you with that.
+
+On the surface it may seem that DVCS is most useful on a
+multi-developer team. This is not the case. The more discontinued your
+time is, the more you start appreciating its distributed nature. This
+is because each ``kind'' of time has a more suitable device~---perhaps
+a netbook for the train, a desktop at someone's house or even a phone
+while waiting somewhere. With DVCS you can easily to switch devices
+and continue exactly where you left off. With GitHub you can even
+author using the web interface, so a mobile phone suddenly becomes
+useful for reading and writing.
+
+Another decision that turned out to be a major win is still not the
+done thing. Ever the trailblazers, we decided to put everything
+related to the project in version control. And by ``everything'' I do
+mean everything: documentation, bug reports, agile process, blog
+posts, the whole lot. It did seem a bit silly not to use GitHub's Wiki
+and Issues at the time, but, on hindsight, having everything in one
+versioned controlled place proved to be a major win:
 
 \begin{itemize}
-\item \emph{Music.} I spend a lot of time creating groups, shares,
-  permissioning, etc. just to ensure all users of the main PC have got
-  access to a central music collection in RhythmBox. The setup is now
-  more or less stable, but its not conceivable that a newbie would
-  stumble on it after half-hour of googling (I'll write it up one
-  day). This is an incredibly common use case: to have a shared music
-  collection as well as a private music collection. The second problem
-  is to access your music collection from another device, such as a
-  laptop. I've had no luck in setting up DAAP from RhythmBox.
-\item \emph{Photos.} I love F-Spot, its great. But I just cannot set
-  it up in a multi-user environment~--- again with a set of private
-  photos, as well as a set of shared photos that all users in the PC
-  have got access to. As with DAAP, it would be nice to be able to
-  browse the photo collection from a different device too.
-\item \emph{Printers.} Setting up a local printer in Ubuntu is
-  amazingly trivial. However, sharing that printer over the network is
-  not trivial at all. It should really be a matter of right-clicking
-  on a printer and choosing ``Share''. and, funnily enough, there is
-  just such an option in ``Printer Configuration''. Problem is, my
-  printer remained invisible to my laptop even after sharing. Making
-  it visible required a large amount of faffing with CUPS config files
-  and the CUPS web-based config.
-\item \emph{Shutdown with multiple users} logged in requires entering
-  a password. This won't go down well with the average user; a big
-  notice would have sufficed.
+\item searching is never further than a couple of greps away, and it's
+  not sensitive to connectivity;
+\item all you need is a tiny sliver of connectivity to push or pull,
+  and work can be batched to wait for that moment;
+\item updates by other people come in as commits and can be easily
+  reviewed as part of the normal push/pull process~---not that we got
+  any of late, to be fair; changes can easily be diffed;
+\item history can be checked using the familiar version control
+  interface, which is available wherever you go.
 \end{itemize}
 
-All these complaints are sympthoms of a larger problem, which is a
-lack of use case based usability analysis. This should probably be
-done at the Gnome level, as it is not a distribution issue as
-such. There is a lot of focus on Gnome 3.0 these days, but it seems to
-me that the job of Gnome 2.0 is not yet done; the architectural work
-is excellent, but the polish wasn't quite finished.
+When you have little time, these advantages are life-savers.
 
-The final thing with regards to multi-users, is user switching. It
-seems this will be comprehensively sorted out with KMS, at least
-technology-wise, but it will be interesting to see if the user
-switching process is made much smoother (no flickering; allowing
-switching with no password; allowing switching with music still
-playing from previous user; etc.).
+The last but very important lesson learned was to commit early and
+commit often. It's rather obvious in hindsight, really. After all, if
+you have very small blocks of time to do work, you want to make sure
+you don't break anything; last thing you need is to spend a week
+debugging a tricky problem, with no idea of where you're going or how
+far you still have to travel. So it's important to make your commits
+very small and very focused such that a bisection would almost
+immediately reveal a problem~---or at least provide you with an obvious
+rollback strategy. This has proved itself to be invaluable far too
+many times to count. The gist of this approach it is to split changes
+in an almost OCD sort of way, to the point that anyone can look at the
+commit comment and the commit diff and make a judgement as to whether
+the change was correct or not. To be fair, it's not quite always that
+straightforward, but that has been the overall aim.
 
-\section{Grumpy Old Man?}
+\section{Struggling to stay Continuously Integrated}
 
-By now you probably have made up your mind and judged me as a typical
-grumpy old man, lost to FOSS and soon to migrate to Windows 7 or
-MacOS. In fact, its quite the contrary: I'm a very satisfied Ubuntu
-user, and I think the future will belong, undoubtedly, to Free
-Software.
+After the commit comes the build, and the proof is in the pudding, as
+they say. When it comes to code, that largely means CI; granted, it
+may not be a very reliable proof, but nevertheless it is the best
+proof we've got. One of the major wins from the start up days was to
+setup CI, and to give it as wide a coverage as we could muster. We
+setup multiple build agents across compilers and platforms, added
+dynamic analysis, code coverage, packaging and basic sanity tests on
+those packages.
 
-There are many, many good things to say about Jaunty, and in a way,
-the criticisms laid out above demonstrate just how far we have
-come. After all, Jaunty did do a sterling job of detecting all my
-hardware, other than the wireless / NVidia issues, and NVidia is
-working just fine with v173.
+All of these have proven to be major steps in keeping the show on the
+road, and once setup, they were normally fairly trivial to
+maintain. We did have a couple of minor issues with CDash whilst we
+were running our own server. Eventually we moved over to the hosted
+CDash server but it has limitations on the number of builds, which
+meant I had to switch some build agents off. In addition to this, the
+main other stumbling block is finding the time to do large
+infrastructural updates to the build agents such as setting up new
+versions of Boost, new compilers and so on. These are horrendously
+time consuming across platforms because you never know what issues you
+are going to hit, and each platform has their own way of doing things.
 
-The best thing about Jaunty for me is performance. Its nothing short
-of amazing. I'm using EXT4 for all partitions other than home, but I'm
-not sure if the filesystem is enough to explain the snapiness of this
-baby. For instance, with two users logged in, quite a lot of
-applications open, playing music, 3D effects, etc and my CPU usage
-rarely goes above 10\% and my memory usage has oscillated between 400
-Mb and 1 Gb! Its amazing. All apps have slimmed down so much as to be
-unrecognisable. A two day old loaded Epiphany is still below 100 Mb, a
-sight I don't recall ever seeing. Booting and shutting down are now
-lightening fast. And there are so many unsung heroes: Evolution,
-Evince, Liferea, Nautilus~--- so many applications that just work, and
-do what they're told. I most certaintly recommend upgrading to all
-Interpid users, and I'll certainly will be waiting unpatiently for
-karmic and all the KMS goodness (NVidia/ATI permitting).
+The biggest lesson we learned here is that CI is vital but software
+products with no time at all should not waste time managing their own
+CI. There are just not enough hours in the day. I have been looking
+into travis to make this process easier in the future. Also, whilst
+being cross-platform is a very worthy objective, one has to weigh the
+costs with the benefits. If you have a tiny user base, it may make
+sense to stick to one platform and continue to do portable coding
+without ``proof''; once users start asking for multiple platforms, it
+is then worth considering doing the work required to support them.
 
-This is to say that Ubuntu is certainly working very hard, and
-releasing a product with a lot of quality. But as I said on my opening
-words, good is not good enough; one has to be much better than Apple
-and Microsoft if one is to challenge them.
+The packaging story was also a very good one to start off with~---after
+all, most users will probably rely on those~---but it turned out to be
+much harder than first thought. We spent quite a bit of time
+integrating with the GitHub API, uploading packages into their
+downloads section, downloading them from there, testing, and then
+renaming them for user consumption. Whilst it lasted, this setup was
+very useful. Unfortunately it didn't last very long as GitHub decided
+to decommission their downloads section. Since most of the upload and
+download code was GitHub specific, we could not readily move over to a
+different location. The lesson here was that this sort of
+functionality is extremely useful, and it is worth dedicating time to
+it, but one should always have a plan B and even a plan C. To make a
+long story short, the end result is that we don't have any downloads
+available at all~---not even a stale ones~---nor do we have any sanity
+checks on packages we produce; they basically go to /dev/null.
 
-For me, the big question is: can we put the fantastic engine of FOSS
-to good use in the hard problems of testing and usability? This is the
-key to unlock the mass market consumer desktop market.
+In summary, all of our pains led us to conclude that one should
+externalise early, externalise often and externalise everything. If
+there is a free (or cheap) provider in the cloud that can take on some
+or all of your infrastructure work away, you should always consider
+using them first rather than host your own infrastructure. And
+remember: your time is worth some money, and it is better spent
+coding. Of course, it is important to ensure that the provider is
+reliable, has been around for a while and is used by a critical
+mass. There is nothing worse than spending a lot of effort migrating
+to a platform, only to find out that it is about to dramatically
+change its APIs, prices, terms and conditions~---or even worse, to be
+shutdown altogether.
+
+\section{Loosely Coupled}
+
+Another very useful lesson I learned was to keep the off-distro
+dependencies to a minimum. This is rather related to the previous
+points on CI and cross-platform-ness, really. During the start up days
+we started off by requiring a C++ compiler with good C++ 11 support,
+and a Boost library with a few off-tree libraries~---mainly
+Boost.Log. This meant we had to have our own little ``chroot'' with
+all of these, and we had to build them by hand, sprinkled with plenty
+of helper scripts. In those dark days, almost nothing was supplied by
+the distro and life was painful. It was just about workable when we
+had time on our hands, but this is really not the sort of thing you
+want to spend time maintaining if you are working on a project in your
+spare time.
+
+To be fair, I had always intended to move to distro-supplied packages
+as soon as they caught up, and when that happened the transition was
+smooth enough. As things stand, we have a very small off-distro
+footprint~---mainly ODB and EOS. The additional advantage of not having
+off-distro dependencies is that you can start to consider yourself for
+inclusion on a distro. Even in these days of Docker, being shipped by
+a distro is still a good milestone for any open source project, so
+it's important to aim for it. Once more, it's the old psychological
+factors.
+
+All and all, it seems to me we took the right decisions as both C++ 11
+and Boost.Log have proven quite useful; but in the future I certainly
+will think very carefully about adding dependencies to off-distro
+libraries.
+
+\section{Conclusions}
+
+In general, the first fifty iterations of Dogen have been very
+positive. It has been a rather interesting journey, and dealing with
+pure uncertainty is not always easy~---after all, one always wants to
+reach a destination. At the same time, much has been learned in the
+process, and a setup has been created that is sustainable given the
+available resources. In the near future I intend to improve the
+visibility of the project as I believe that, for all it's faults, it
+is still useful in its current form.
+
+\chapter{Start-ups at the Gate}
+
+\epigraph{The tricky thing about predicting things when there is an
+  exponential is that an exponential looks linear close up but
+  actually, its not linear.}{Elon Musk}
+
+\begin{flushright}
+  \emph{Thursday, September 25, 2014}
+\end{flushright}
+
+\lettrine{I}{t is very difficult} to convey the vast scale at which
+the largest Internet companies operate. To make matters worse, we are
+fast becoming immune to statistics such as ``one billion
+users''\cite{Mashable01} and ``five trillion searches per
+day''\cite{StatisticsBrain01}, surrounded as we are by a sea of large
+numbers on a daily basis. Having said that, any Information Technology
+(IT) professional worth his or her salt cannot help but feel in awe at
+what has been achieved. It is not just that these platforms are big;
+they work at a scale that is \emph{qualitatively} different from
+anything that has come before. The sort of things that are possible at
+this scale are mind-boggling, and we have only begun to scratch the
+surface\footnote{As one of many examples, see Google Flu Trends
+  \cite{Wikipedia02}. It is a predictor of outbreaks of the flu virus,
+  with a prediction rate of about 97\%. For a more comprehensive~---
+  if somewhat popular~--- take on the possibilities of large data
+  sets, see \cite{Cukier01}. For a very different take~--- highliting
+  the dangers of Big Data~--- see Taleb's views on the ever decreasing
+  noise to signal ratio \cite{Taleb01}.}.
+
+Perhaps even more revolutionary is the fact that these companies have
+made it possible for anyone to start thinking about data in the same
+way as they do, and to start handling it using the very same tools
+they use. There is now a never-ending archive of the very best
+large-scalability tools, all available for free, with code that anyone
+can inspect, modify and optimise to meet their specific
+requirements. The tools come with a wealth of practical documentation
+on how to put solutions together~--- either freely available or at
+low-cost~--- and with a number of passionate user communities that
+provide expert advice and are eager to accept modifications.
+
+The ecosystem they have created is truly staggering. As an example,
+Facebook has open sourced almost 10M lines of code to
+date\cite{Facebook01}. Twitter, Google and LinkedIn are not far
+behind\footnote{In fact, by some measures, Google has contributed
+  several times that amount. For one such take, see
+  \cite{Orsini01}. It is also important to notice that non-Internet
+  companies are making extremely large contributions too, such as
+  Microsoft and IBM. All told, the overall pool of open source code is
+  growing exponentially, as demonstrated by a 2008 study
+  \cite{DeshpandeRiehle01}.}. In most cases, these are full-fledged
+products, tested in the most challenging production conditions
+imaginable. Of course, one must also not forget the contributions made
+to projects that are not under company control such as the Linux
+Kernel, the Apache web-server and the GNU Compiler GCC.
+
+In order to understand why modern start-ups provide such a compelling
+financial case, one must first understand how we got to the amazing
+technology landscape we have today. To do so, we shall divide recent
+technology history into eras, and explain each era's contribution. We
+will then focus on modern start-ups, and explain how this model can be
+deployed to a large gamut of industries and in particular to the
+financial sector.
+
+\section{First Era: Dot-com Bubble}
+
+Silicon Valley was and still is the world's start-up factory so,
+unsurprisingly, it was ground zero for the start-up revolution that
+took place at the end of the nineties. It would eventually be known as
+\emph{The Dot-com Bubble}. Most people remember those days as a heady
+time, where each and every idea was packaged as a website and sold for
+millions or in some cases billions of dollars. Of course, we all had a
+steep price to pay when the bubble burst~--- an extinction event that
+decimated the young Internet sector and IT companies in
+general\footnote{For an overview on the dot-com bubble, including the
+  valuation of some of the companies during this period, see
+  \cite{Wikipedia01}}.
+
+There is however another way to look at this bubble: it was a gigantic
+experiment to determine whether there were successful business models
+to be found in the large scale of the Internet. Whilst much
+mal-investment occurred, the bubble still produced or pushed forward
+several of the giants of today such as Google, Amazon and Yahoo.
+
+Most of these companies share a similar technology story. Originally
+faced with a dearth of investment but with bright young engineers,
+they found themselves relying on Free and Open Source Software (FOSS)
+and cheap, off-the shelf hardware. Once they became big enough, it
+just didn't make sense to replace all of that infrastructure with
+software and hardware supplied by commercial vendors.
+
+This turn of events was crucial. If these companies had had larger
+budgets and less skilled engineers, they would have relied on the
+cutting edge technology of the time. The short-term gain would reveal
+itself as long term pain, for their ability to scale would be
+inevitably restricted. In addition, many of the business models
+wouldn't have worked due to this cost structure\footnote{As an
+  example, it was common practice for vendors to charge according to
+  the number of processors, users and so on. Many of the better funded
+  start-ups made use of technology from Cisco, Sun, Oracle and other
+  large commercial vendors, but companies that did so are not very
+  well represented in the population that survived the dot-com bubble,
+  and they are not represented at all in the 2014 Fortune 500
+  list. Google, Amazon and E-Bay are the only Fortune 500 companies
+  from that crop and they all relied to a very large extent on
+  in-house technology. See \cite{CRN01} for the list of Fortune 500
+  tech companies in 2014. Note though that we are making an empirical
+  argument here rather than a statistical one, both due to the lack of
+  data available, as well as concern for Survivorship Bias.}. As it
+was, since they couldn't even afford the relatively cheap licences of
+commercial software, they had to make do with what was available for
+free.
+
+The engineers in these companies~--- and many others that didn't make
+it through the dot-com filter~--- spent countless hours improving FOSS
+tools and gave back much of these improvements to communities such as
+Linux, MySQL, Apache, GCC and so on. However, they kept private the
+plumbing work done to manage the large cluster of cheap machines, as
+well as the domain related technology~--- in industry-speak, the
+\emph{Secret Sauce}.
+
+By the time the dot-com bubble had run its course and the dust
+settled, the landscape looked as follows:
+
+\begin{itemize}
+\item A model had been created whereby a small number of engineers
+  could bootstrap an Internet-based company at very low cost, serving
+  a small number of users initially.
+\item The model had been stretched to very large numbers of users and
+  had been found to scale extremely well; as the business proved
+  itself and investment came in, it was possible increase the size of
+  the computing infrastructure to cope with demand.
+\item Because of the open nature of the technologies involved, the
+  ideas became widespread over the internet.
+\end{itemize}
+
+The basic high-scalability FOSS stack~--- ready for start-ups~--- was
+born; the Data Centre, where large amounts of computing are available
+at low cost, soon followed. It would eventually morph into the Cloud.
+
+\section{Second Era: Social Media}
+
+The bursting of the dot-com bubble did not dampen the entrepreneurial
+spirits, but it did dry up all the easily available capital and thus
+pushed the aspiring start-ups to be ever more frugal. In addition, VCs
+started to look for better ways to evaluate prospects. The problem
+they faced was no different from what they had faced during the
+dot-com days: how to figure out the potential of a company with no
+defined business model and nothing else to compare it against.
+
+Google had proved comprehensively that the traditional valuation
+methods did not make sense in the world of start-ups. After all, here
+was a company which it's founders couldn't sell for 1M USD and yet a
+few years later was generating billions of dollars in revenues. Very
+few saw this coming. VCs were keen not to make the same mistake with
+the next Google\footnote{For one of many takes on the attempt to sell
+  Google, see \cite{TechCrunch01}. To get a flavour of how poorly
+  understood Google's future was as late as 2000, see
+  \cite{Kopytoff01}. Finally, the success story is best told by the
+  growth of revenues between 2001 and 2003 \cite{Google01}.}.
+
+So it was that a system to determine potential by proxy emerged over
+the years, using indicators such as the size of the user base, time
+spent by users on the platform and so on~--- effectively, any
+attribute that was deemed to have given a competitive advantage to
+Google and other successful dot-com companies.
+
+In this environment, \emph{social media} start-ups took took centre
+stage\footnote{For an overview on social media see
+  \cite{Wikipedia03}.}. Following on from the examples of their
+predecessors, these companies took for granted that they were to
+operate on very large data sets. They inherited a very good set of
+scalable tools, but found that much still had to be built on
+top. Unlike their predecessors, many chose to do some or all of the
+infrastructure work out in the open, joining or creating new
+communities around the tools. This was in no small part due to the
+scarcity of funds, which encouraged collaboration.
+
+The social media start-ups soon found themselves locked in an arms
+race for size, where the biggest would be the winner and all others
+would be doomed to irrelevance\footnote{Twitter, Facebook, YouTube,
+  LinkedIn and the like were the victors, but for every victor, a
+  worthwhile foe was defeated; MySpace, Hi5, Orkut and many others
+  were all very popular at one time but lost the war and faded into
+  obscurity.}. The size of the user base of the successful companies
+exploded\footnote{As an example, the number of Facebook users grew at
+  an exponential rate between 2004 and 2013 \cite{Sedghi01}.}, and the
+tooling required to manage such incredibly large volumes of data had
+to improve at the same pace or faster. Interestingly, these start-ups
+continued to view in-house code largely as a cost, not an asset, even
+after they started to bring in large revenues. The size of the secret
+sauce was to be kept at a minimum and the pace of open sourcing
+accelerated over time\footnote{A possible explanation for this
+  decision is the need for continuous scalability. Even companies as
+  large as Facebook or Google cannot dedicate the resources required
+  to adequately maintain every single tool they own; their code bases
+  are just too large. At the same time, they cannot afford for code to
+  become stale because it must continually withstand brutal
+  scalability challenges. The solution to this conundrum was to open
+  source aggressively and to create vibrant communities around
+  tooling. Converting themselves to stewards of the tools, they could
+  now place quasi-skeleton crews to give direction to development, and
+  then rely on the swarms of new start-ups to contribute patches. Once
+  there are enough improvements, the latest version of these tools can
+  be incorporated into the internal infrastructure. This proved to be
+  a very cost-effective strategy, even for large companies, and
+  allowed continued investment across the technology stack.}.
+
+A final factor was the rise of the next iteration of the data centre,
+popularised by Amazon with AWS and EC2\cite{Wikipedia04}. It allowed
+\emph{any} company to scale out without ever having to concern
+themselves with physical hardware. This was revolutionary because it
+allowed razor-thin costs for scalability:
+
+\begin{itemize}
+\item \emph{Pay only for what you use}: the \emph{elastic} nature of EC2
+  meant that one could grow or shrink one's cluster based on real time
+  traffic demands and availability of capital.
+\item \emph{Zero-cost software}: FOSS was available in Amazon from the
+  very beginning and was extremely popular with start-ups.
+\item \emph{Fully automated environments via APIs}: resource
+  constrained start-ups could now start to automate all aspects of the
+  product life-cycle. This meant they could release faster, which in
+  turn allowed them to fight more effectively for their user
+  base. This would in time become the DevOps
+  movement\cite{Wikipedia05}.
+\end{itemize}
+
+By the end of the decade, the scalability tooling was largely
+complete. It was now possible for a small start-up to create a small
+website and to see it scale from hundreds to millions, restricted only
+by their ability to bring in capital.
+
+\section{Third Era: Mobile}
+
+Mobile phones have been growing close to an exponential rate for over
+two decades. However, the rise of the smart phones was a game changer,
+and the line in the sand was drawn with the release of the iPhone in
+2007. What makes mobile so important to our story is it's
+penetration. Until smart phones became ubiquitous, there was a large
+segment of the population that was either totally inaccessible or
+accessible for limited periods of time. With increasingly large
+numbers of people carrying smart phones as they go about their day,
+many use cases that were never before thought possible came to the
+table. So whilst we call this ``the Mobile era'', the true heroes are
+smart phones and, to a smaller extent, the tablets.
+
+The mobile era started with simple apps. Smart phones were still new
+and applications for each platform were novelty. There was a need to
+reinvent all that existed before in the world of PCs and adapt it to
+the new form factor. It was during this phase that the economies of
+scale of mobile phones became obvious. Whereas consumer PC software
+had prices on the range of tens to hundreds of dollars, mobile phones
+bootstrapped a completely different pricing model, with many apps
+selling for less than one dollar. Volume made up for the loss in
+revenue per unit. The model was so incredibly successful that a
+vibrant environment of apps sprung up around each of the successful
+platforms, carefully nurtured by the companies running the show via
+their \emph{app stores}.
+
+Soon enough the more complex apps came about. Companies like Four
+Square and WhatsApp were trailblazers in the mobile space, merging it
+with ideas from social media. Many others like Spotify took their
+wares from the stagnant PC environment and moved to the ever growing
+mobile space. Complex apps differed from the simple apps in that they
+required large backends to manage operations. Since these companies
+were cash strapped~--- a perennial condition of all start-ups~--- they
+found themselves reusing all of the technology developed by the social
+media companies and became part of the exact same landscape. Of
+course, the social media companies were eventually forced to jump on
+the mobile bandwagon~--- lest they got crushed by it.
+
+So it was that the circle was closed between the three eras.
+
+\section{Evolutionary Pressures and Auto-Catalytic Processes}
+
+The changes just described are so revolutionary that one cannot help
+but look for models to approximate some kind of explanation for what
+took place. Two stand out. The first is to imagine the population of
+start-up companies as a small segment of the overall company
+population that was submitted to an unbelievably harsh fitness
+function: to grow the data volumes exponentially while growing costs
+less than linearly. This filter generated new kinds of companies, new
+kinds of technologies and new kinds of ways of managing
+technology.
+
+Secondly, there is the auto-catalytic nature of the processes that
+shaped the current technology landscape. Exponential growth tends to
+have at its root this kind of self-reinforcing cycle, whereby
+improvements in an area A trigger improvements in another area B,
+which in turn forces A to improve. The process keeps on repeating
+itself whilst it manages to retain stability.
+
+It is this relationship we currently have between start-ups and FOSS:
+the better the software gets, the cheaper it is to create new
+start-ups and the faster these can grow with the same amount of
+capital. By the same token, the more start-ups rely on FOSS, the more
+they find themselves contributing back or else risk falling behind~---
+both technologically and cost-wise. This feedback loop is an emerging
+property of the entire system and it has become extremely pronounced
+over time.
+
+\section{Finance and the Age of Disruption}
+
+The concept of \emph{disruption} was developed in the nineties by
+Clayton Christensen in \emph{Innovator's
+  Dilemma}\cite{Christensen01}. This book has seen a resurgence in
+popularity as well as in criticism\footnote{There are quite a few to
+  choose from but Lepore's \cite{Lepore01} is one of the best because
+  it robustly attacks both the ideology and the quality of the
+  data.}. For good or bad, the ideas in this book became the
+intellectual underpinnings of a new generation of start-ups.
+
+They seek to combine all of the advances of the previous start-ups to
+create solutions to problems far outside the traditional IT
+realm. Examples are the hotel industry (AirBnB), the taxi industry
+(Uber, Lyft) and even the banking industry (Simple). Whilst it's still
+early days, and whilst there have been many teething problems such as
+issues with regulation, the destination of travel is already clear:
+there will be more and more start-ups following the disruptive route.
+
+What makes these companies a compelling proposition to VCs is that
+they are willing to take on established concerns, with cost structures
+that are orders of magnitude larger than that of these
+start-ups. Their thinking is two-fold: the established companies are
+leaving a lot of money on the table, consumed by their inefficiency;
+and they are not exploiting the opportunities to their full potential
+because they do not understand how to operate at a vast scale.
+
+It is in this context that finance scene comes into the picture~--- as
+part of the expansionary movement of the disruption movement. VCs have
+longed eyed enviously the financial industry because they believed
+that the problems being solved in trading are not that dissimilar to
+those faced by many large scale start-ups. And yet the rewards are
+disproportional large in Finance, when compared with say social media.
+
+\emph{Fintech} soon emerged. As applied to start-ups, Fintech is the
+umbrella name given to the ecosystem of start-ups and VCs that focus
+specifically on financial technology. This ecosystem has grown from
+930M USD in 2008 to around 3Bn in 2013\cite{Accenture01}. Centred
+mainly in London, but with smaller offshoots in other financial
+centres, the Fintech scene is starting to attract established players
+in the world of Finance. For instance, Barclays has joined the fray by
+creating an \emph{incubator}~--- a company that helps start-ups grow
+by providing them capital, infrastructure and know-how. They farmed
+off the work to a third-party (Tech Stars) but allowed all the
+start-ups in the programme to have unprecedented access to their
+Mobile APIs. Their target is to own the next generation of financial
+applications on Mobile devices\footnote{For details see \sloppy
+  \url{http://www.barclaysaccelerator.com/} and \sloppy
+  \url{http://www.techstars.com/announcing-11-new-companies-for-barclays-accelerator-powered-by-techstars/}.}.
+
+Whist Barclays is disrupting from the outside, it is obvious that the
+investment banking legacy platforms are a fertile ground for
+start-ups. This is where the scalability stack has a near-perfect
+fit. A typical example is OpenGamma. The start-up designed an open
+source Risk platform, initially focused on back office use. They have
+received over 20M USD in funding as of 2014\cite{OpenGamma01} and have
+already been the recipient of several of industry
+awards\cite{OpenGamma02}, \cite{RiskFocus01}. There are now several
+open source trading platforms to choose from including TradeLink and
+OpenGamma, as well as the popular quantitative analytics library
+QuantLib.
+
+As we have seen in the previous sections, there is an auto-catalytic
+process at play here. Once source code becomes widely available, the
+cost of creating the next Financial startup goes down dramatically
+because they can reuse the tools. This in turn means many more
+start-ups will emerge, thus improving the general quality of the
+publicly available source code.
+
+\section{Conclusions}
+
+The objective of this paper was to provide a quick survey of the
+impact of start-up companies in the technology landscape, and how
+these relate to finance. We now turn our attention to the logical
+conclusions of these developments.
+
+\begin{itemize}
+\item \emph{Finance will increasingly be the target of VCs and
+  start-ups}: The Fintech expansion is to continue over the coming
+  years and it will affect everyone involved in the industry,
+  particularly the established participants. More companies will take
+  the route of Barclays, trying to be part of the revolution rather
+  than dethroned by it.
+\item \emph{Banks and other established companies will begin to
+  acquire start-ups}: Related to the previous item in some ways; but
+  also with a twist. As part of the Deloitte TMT predictions
+  event\footnote{Details available here: \sloppy
+    \url{http://www2.deloitte.com/global/en/pages/technology-media-and-telecommunications/articles/tmt-predictions-2013-technology-media-telecommunications-report.html}.},
+  Greg Rogers~--- the manager of Barclays Accelerator~--- stated that
+  the acquisition of non-financial start-ups by banks was on the
+  cards. He was speaking about Facebook's acquisition of WhatsApp for
+  18Bn USD, one of the largest of the year. As Google and Facebook
+  begin integrating payments into their social platforms, banking
+  firms will find their traditional business models under attack and
+  will have no option but to retaliate.
+\item \emph{Finance will turn increasingly to FOSS}: The cost
+  structure that finance firms had up to 2008 is not suitable to the
+  post 2008 world. At present, the volume of regulatory work is
+  allowing these cost structures to persist (and in cases
+  increase). However, eventually banks will have to face reality and
+  dramatically reduce their costs, in line with the new kind of
+  revenues they are expected to make in a highly-regulated financial
+  world. There will be a dramatic shift away from proprietary
+  technologies of traditional vendors, unless these become much more
+  competitive against their fierce FOSS rivals.
+\item \emph{A FOSS financial stack will emerge over the next five
+  years}: Directly related to the previous point, but taking it
+  further. Just as it was with social media companies, so it seems
+  likely that financial firms will eventually realise that they cannot
+  afford to maintain all the infrastructure code. Once an investment
+  bank takes the leap and starts relying on FOSS for trading or
+  back-office, the change will ripple through the industry. The state
+  of the FOSS code is production ready, and a number of hedge funds
+  are already using it in anger. All that is required is for the cost
+  structure to be squeezed even further in the investment banking
+  sector.
+\end{itemize}
+
+\chapter{Pull Request Driven Development}
+
+\epigraph{Malembe, Malembe.}{Angola proverb}
+
+\begin{flushright}
+  \emph{Friday, December 11, 2015}
+\end{flushright}
+
+\lettrine{B}{eing in this game} for the best part of twenty years, I
+must confess that its not often I find something that revolutionises
+my coding ways. I do tend to try a lot of things, but most of them end
+up revealing themselves as fads or are incompatible with my flow. For
+instance, I never managed to get BDD to work for me, try as I might. I
+will keep trying because it sounds really useful, but it hasn't
+clicked just yet.
+
+Having said all of that, these moments of enlightenment do
+occasionally happen, and when they do, nothing beats that
+life-changing feeling. ``Pull Request Driven Development'' (or PRDD)
+is my latest find. I'll start by confessing that ``PRDD'' as a name
+was totally made up for this post and hopefully you can see its rather
+tongue in cheek. However, the benefits of this approach are very
+real. In fact, I've been using PRDD for a while now but I just never
+really noticed its presence creeping in. Today, as I introduced a new
+developer to the process, I finally had the eureka moment and saw just
+how brilliant it has been thus far. It also made me realise that some
+people are not aware of this great tool in the developer's arsenal.
+
+But first things first. In order to explain what I mean by PRDD, I
+need to provide a bit of context. Everyone is migrating to git these
+days, even those of us locked behind corporate walls; in our
+particular case, the migration path implied exposure to Git Stash. For
+those not in the know, picture it as an expensive and somewhat less
+featureful version of GitHub, but with most of the core functionality
+there. Of course, I'm sure GitHub is not that cheap for enterprises
+either, but hey at least its the tool everyone uses. Anyway -
+grumbling or not~---we moved to Stash and all development started to
+revolve around Pull Requests (PRs), raised for each new feature.
+
+Not long after PRs were introduced, a particularly interesting habit
+started to appear: developers begun opening the PRs earlier and
+earlier during the feature cycle rather than waiting to the very
+end. Taking this approach to the limit, the idea is that when you
+start to work on a new feature, you raise the ticket and the PR before
+you write any code at all. In practice~---due to Stash's anachronisms -
+you need to push at least one commit, but the general notion is
+valid. This was never mandated anywhere, and there was no particular
+coordination. I guess one possible explanation for this behaviour is
+that one wants to get rid of the paperwork as quickly as possible to
+get to the coding. At any rate, the causes may be obscure but the
+emerging behaviour was not.
+
+When you combine early PRs with the commit early and commit often
+approach~---which you should be using anyway~---the PR starts to become
+a living document; people see your development work as it progresses
+and they start commenting on it and possibly even sending you patches
+as you go along. In a way, this is an enabler for a very efficient
+kind of peer programming~---particularly if you have a tightly knit
+team~---because it gives you maximum parallelism but in a very subtle,
+non-noticeable way. The main author of the PR is coding as she would
+normally be, but whenever there is a lull in development~---those
+moments where you'd be browsing the web for five minutes or so~---you
+can quickly check for any comments on your PR and react to
+those. Similarly, other developers can carry on doing their own work
+and browse the PRs on their downtime; this allows them to provide
+feedback whenever it is convenient to them, and to choose the format
+of the feedback~---lengthy or quick, as time permits.
+
+Quick feedback is many a times invaluable in large code bases because
+everyone tends to know their own little corner of the code and only
+very few old hands know how it all hangs together. Thus, seemingly
+trivial one liners such as ``have you considered using API xyz instead
+of rolling your own'' or ``don't forget to do abc when you do that''
+could save you many hours of pain and enable knowledge to be
+transferred organically~---something that no number of wiki pages
+could hope to achieve in a million years because its very difficult to
+find these pearls in a sea of uncurated content. And because you
+committed early and often, each commit is very small and very easy to
+parse in a small interval of time, so people are much more willing to
+review~---as opposed to that several Kb (or even Mb!) patch that you
+will have to allocate a day or two for. Further: if you take your
+commit message seriously~---as, again, you should~---you will find
+that the number of reviewers will grow rapidly simply because
+developers are nosy and opinionated.
+
+Note that this review process involves no vague meetings and no
+lengthy and unfocused email chains; it is very high-quality because it
+is (or can be) very focused to specific lines of code; it causes no
+unwanted disruptions because you review where and when you choose to
+review; reviewers can provide examples and even fix things themselves
+if they so choose; it is totally inclusive because anyone who wants to
+participate can, but no one is forced to; and it equalises local and
+remote developers because they all have access to the same data
+(modulus some IRL conversations that always take place)~---an important
+feature in this world of near-shoring, off-shoring and
+home-working. Most importantly, instead of finding out some
+fundamental errors of approach at the end of an intense period of
+coding, you now have timely feedback. This saves an enormous amount of
+time~---an advantage that anyone who has been through lengthy code
+reviews and then spent a week or two reacting to that feedback can
+appreciate.
+
+I am now a believer in PRDD. So much so that whenever I go back to
+work on legacy projects in svn, I find myself cringing all the way to
+the end of the feature. It just feels so nineties.
+
+\section*{Update}
+
+As I finished penning this post and started reflecting about it it
+suddenly dawned on me that a lot of things we now take for granted are
+only possible because of git. And I don't mean DVCS', I specifically
+mean git. For example PRDD is made possible to a large extent because
+committing in git is a reversible process and history can be fluid if
+required. This means that people are not afraid of committing, which
+in turn enables a lot of the goodness I described above. Many DVCS'
+didn't like this way of viewing history~---and to be fair, I know of
+very few people that liked the idea until they started using it. Once
+you figure out what it is good for (and not so good for), it suddenly
+becomes an amazing tool. Git is full of little decisions like this
+that at first sight look either straight insane or just not
+particularly useful but then turn out to change entire development
+flows.
+
+\bibliography{nerd_food}
+\bibliographystyle{acm}
 
 \end{document}
