@@ -15,26 +15,51 @@
 %\setlength{\epigraphwidth}{.5\textwidth}
 %\setlength{\parskip}{0.2ex plus 0.0ex minus 0.0ex}
 
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+\let\cleardoublepage\clearemptydoublepage
+
 \usepackage{lettrine}
 \usepackage{qlbook}
 
 \begin{document}
 
-%% \vspace*{\fill}
-%% \begin{center}
-%% \HUGE\textsf{Nerd Food: $\leq$ 2009}\par
-%% \end{center}
+\clearpage
 
-%% \begin{figure}[h]
-%% \begin{center}
-%% % \includegraphics[width=0.75\textwidth]{pics/lonsv-babb-nerbild} % [angle=90, width=0.7\textwidth]
-%% \end{center}
-%% \end{figure}
+\newcommand\nbvspace[1][3]{\vspace*{\stretch{#1}}}
+\newcommand\nbstretchyspace{\spaceskip0.5em plus 0.25em minus 0.25em}
+\newcommand{\nbtitlestretch}{\spaceskip0.6em}
+\pagestyle{empty}
+\begin{center}
+\bfseries
+\nbvspace[1]
+\Huge
+{\nbtitlestretch\huge
+  NERD FOOD\\SELECTED ESSAYS}
 
-%% \vspace*{\fill}
-%% \begin{center}
-%% \Large\textsf{Marco Craveiro}\par
-%% \end{center}
+\nbvspace[1]
+\normalsize
+
+\nbvspace[1]
+\small BY\\
+\Large MARCO CRAVEIRO\\[0.5em]
+
+\nbvspace[2]
+
+\begin{center}
+  \includegraphics[width=4.5in]{difference_engine_cogs}
+\end{center}
+\nbvspace[3]
+\normalsize
+
+Hatfield\\
+\large
+PUBLISHED IN THE WILD
+\nbvspace[1]
+\end{center}
 
 %
 % Colophon
@@ -59,16 +84,23 @@ version of the \textit{QL Book} style developed by Luigi Ballabio.
 Download the \textit{QL Book} style at
 \url{http://www.implementingquantlib.com/p/the-book.html}.
 
+The cover was typeset using a modified version of the design by
+Yiannis Lazarides, available at
+\url{http://tex.stackexchange.com/questions/17579/how-can-i-design-a-book-cover}.
+
+The cover picture decipts the cogs of Babbage's Difference Engine and
+was obtained on Benjamin Slade's website:
+\url{http://www.jnanam.net/slade/}.
+
 \endgroup
 
 \pagestyle{empty}
 \clearpage
 \chapter*{}
-\begin{flushright}
-\emph{To my mother, who always supported me and my crazy ideas.}
-
 \bigskip
-
+\begin{flushright}
+\footnotesize \emph{To my mother, who always supported me and my crazy ideas.}
+\bigskip
 \end{flushright}
 
 \clearpage
@@ -93,7 +125,7 @@ far one has deviated from those noble ideals of youth.
 
 Having lived most of my life in the technology space, I somewhat
 unwittingly ended up narrating my own evolution across it and, to an
-extremely limited extent, its evolution too. As such it seemed only
+extremely limited extent, its evolution too. As such, it seemed only
 fair to collect all of these writings~--- whatever their merits are in
 a literary sense~--- in an easy to parse from to facilitate reading.
 
@@ -102,6 +134,12 @@ software engineering, spanning a period of just over a decade and a
 half. It is made up mainly of blog posts taken from my haphazard
 column ``Nerd Food'', as well as a couple of other early essays which
 never saw the light of day.
+
+\vfill
+
+\begin{flushright}
+\emph{Marco Craveiro, \today}
+\end{flushright}
 
 \pagestyle{headings}
 
